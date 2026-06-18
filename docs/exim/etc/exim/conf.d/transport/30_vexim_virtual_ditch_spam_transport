@@ -1,0 +1,26 @@
+
+### transport/30_vexim_virtual_ditch_spam_transport
+#######################################
+
+virtual_ditch_spam_transport:
+  driver = appendfile
+  envelope_to_add
+  return_path_add
+  mode = 0600
+  maildir_format = true
+  create_directory = true
+  user = ${lookup mysql{ \
+    SELECT u.uid \
+    FROM users u \
+      INNER JOIN domains d ON (u.domain_id = d.domain_id) \
+    WHERE u.localpart = '${quote_mysql:$local_part}' \
+      AND d.domain = '${quote_mysql:$domain}' \
+    }}
+  group = ${lookup mysql{ \
+    SELECT u.gid \
+    FROM users u \
+      INNER JOIN domains d ON (u.domain_id = d.domain_id) \
+    WHERE u.localpart = '${quote_mysql:$local_part}' \
+      AND d.domain = '${quote_mysql:$domain}' \
+    }}
+  maildir_use_size_file = false

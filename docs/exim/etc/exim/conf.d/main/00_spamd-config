@@ -1,0 +1,5 @@
+# For SpamAssassin
+# spamd_address = 127.0.0.1 783
+
+# For RSpamd
+spamd_address = 127.0.0.1 11333 variant=rspamd

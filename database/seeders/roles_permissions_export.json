@@ -1,0 +1,2262 @@
+[
+    {
+        "id": 1,
+        "name": "system_admin",
+        "guard_name": "web",
+        "created_at": "2026-05-30T21:23:44.000000Z",
+        "updated_at": "2026-05-30T21:23:44.000000Z",
+        "permissions": [
+            {
+                "id": 1,
+                "name": "ViewAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 1
+                }
+            },
+            {
+                "id": 2,
+                "name": "View:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 2
+                }
+            },
+            {
+                "id": 3,
+                "name": "Create:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 3
+                }
+            },
+            {
+                "id": 4,
+                "name": "Update:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 4
+                }
+            },
+            {
+                "id": 5,
+                "name": "Delete:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 5
+                }
+            },
+            {
+                "id": 6,
+                "name": "DeleteAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 6
+                }
+            },
+            {
+                "id": 7,
+                "name": "Restore:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 7
+                }
+            },
+            {
+                "id": 8,
+                "name": "ForceDelete:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 8
+                }
+            },
+            {
+                "id": 9,
+                "name": "ForceDeleteAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 9
+                }
+            },
+            {
+                "id": 10,
+                "name": "RestoreAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 10
+                }
+            },
+            {
+                "id": 11,
+                "name": "Replicate:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 11
+                }
+            },
+            {
+                "id": 12,
+                "name": "Reorder:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 12
+                }
+            },
+            {
+                "id": 13,
+                "name": "ViewAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 13
+                }
+            },
+            {
+                "id": 14,
+                "name": "View:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 14
+                }
+            },
+            {
+                "id": 15,
+                "name": "Create:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 15
+                }
+            },
+            {
+                "id": 16,
+                "name": "Update:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 16
+                }
+            },
+            {
+                "id": 17,
+                "name": "Delete:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 17
+                }
+            },
+            {
+                "id": 18,
+                "name": "DeleteAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 18
+                }
+            },
+            {
+                "id": 19,
+                "name": "Restore:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 19
+                }
+            },
+            {
+                "id": 20,
+                "name": "ForceDelete:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 20
+                }
+            },
+            {
+                "id": 21,
+                "name": "ForceDeleteAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 21
+                }
+            },
+            {
+                "id": 22,
+                "name": "RestoreAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 22
+                }
+            },
+            {
+                "id": 23,
+                "name": "Replicate:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 23
+                }
+            },
+            {
+                "id": 24,
+                "name": "Reorder:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 24
+                }
+            },
+            {
+                "id": 25,
+                "name": "ViewAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 25
+                }
+            },
+            {
+                "id": 26,
+                "name": "View:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 26
+                }
+            },
+            {
+                "id": 27,
+                "name": "Create:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 27
+                }
+            },
+            {
+                "id": 28,
+                "name": "Update:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 28
+                }
+            },
+            {
+                "id": 29,
+                "name": "Delete:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 29
+                }
+            },
+            {
+                "id": 30,
+                "name": "DeleteAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 30
+                }
+            },
+            {
+                "id": 31,
+                "name": "Restore:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 31
+                }
+            },
+            {
+                "id": 32,
+                "name": "ForceDelete:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 32
+                }
+            },
+            {
+                "id": 33,
+                "name": "ForceDeleteAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 33
+                }
+            },
+            {
+                "id": 34,
+                "name": "RestoreAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 34
+                }
+            },
+            {
+                "id": 35,
+                "name": "Replicate:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 35
+                }
+            },
+            {
+                "id": 36,
+                "name": "Reorder:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 36
+                }
+            },
+            {
+                "id": 37,
+                "name": "ViewAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 37
+                }
+            },
+            {
+                "id": 38,
+                "name": "View:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 38
+                }
+            },
+            {
+                "id": 39,
+                "name": "Create:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 39
+                }
+            },
+            {
+                "id": 40,
+                "name": "Update:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 40
+                }
+            },
+            {
+                "id": 41,
+                "name": "Delete:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 41
+                }
+            },
+            {
+                "id": 42,
+                "name": "DeleteAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 42
+                }
+            },
+            {
+                "id": 43,
+                "name": "Restore:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 43
+                }
+            },
+            {
+                "id": 44,
+                "name": "ForceDelete:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 44
+                }
+            },
+            {
+                "id": 45,
+                "name": "ForceDeleteAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 45
+                }
+            },
+            {
+                "id": 46,
+                "name": "RestoreAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 46
+                }
+            },
+            {
+                "id": 47,
+                "name": "Replicate:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 47
+                }
+            },
+            {
+                "id": 48,
+                "name": "Reorder:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 48
+                }
+            },
+            {
+                "id": 49,
+                "name": "ViewAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 49
+                }
+            },
+            {
+                "id": 50,
+                "name": "View:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 50
+                }
+            },
+            {
+                "id": 51,
+                "name": "Create:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 51
+                }
+            },
+            {
+                "id": 52,
+                "name": "Update:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "name": "Delete:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 53
+                }
+            },
+            {
+                "id": 54,
+                "name": "DeleteAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 54
+                }
+            },
+            {
+                "id": 55,
+                "name": "Restore:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 55
+                }
+            },
+            {
+                "id": 56,
+                "name": "ForceDelete:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 56
+                }
+            },
+            {
+                "id": 57,
+                "name": "ForceDeleteAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 57
+                }
+            },
+            {
+                "id": 58,
+                "name": "RestoreAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 58
+                }
+            },
+            {
+                "id": 59,
+                "name": "Replicate:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 59
+                }
+            },
+            {
+                "id": 60,
+                "name": "Reorder:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 60
+                }
+            },
+            {
+                "id": 61,
+                "name": "ViewAny:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 61
+                }
+            },
+            {
+                "id": 62,
+                "name": "View:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 62
+                }
+            },
+            {
+                "id": 63,
+                "name": "Create:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 63
+                }
+            },
+            {
+                "id": 64,
+                "name": "Update:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 64
+                }
+            },
+            {
+                "id": 65,
+                "name": "Delete:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 65
+                }
+            },
+            {
+                "id": 66,
+                "name": "DeleteAny:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 66
+                }
+            },
+            {
+                "id": 67,
+                "name": "Restore:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 67
+                }
+            },
+            {
+                "id": 68,
+                "name": "ForceDelete:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 68
+                }
+            },
+            {
+                "id": 69,
+                "name": "ForceDeleteAny:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 69
+                }
+            },
+            {
+                "id": 70,
+                "name": "RestoreAny:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 70
+                }
+            },
+            {
+                "id": 71,
+                "name": "Replicate:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 71
+                }
+            },
+            {
+                "id": 72,
+                "name": "Reorder:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 72
+                }
+            },
+            {
+                "id": 73,
+                "name": "ViewAny:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 73
+                }
+            },
+            {
+                "id": 74,
+                "name": "View:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 74
+                }
+            },
+            {
+                "id": 75,
+                "name": "Create:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 75
+                }
+            },
+            {
+                "id": 76,
+                "name": "Update:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 76
+                }
+            },
+            {
+                "id": 77,
+                "name": "Delete:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 77
+                }
+            },
+            {
+                "id": 78,
+                "name": "DeleteAny:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 78
+                }
+            },
+            {
+                "id": 79,
+                "name": "Restore:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 79
+                }
+            },
+            {
+                "id": 80,
+                "name": "ForceDelete:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 80
+                }
+            },
+            {
+                "id": 81,
+                "name": "ForceDeleteAny:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 81
+                }
+            },
+            {
+                "id": 82,
+                "name": "RestoreAny:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 82
+                }
+            },
+            {
+                "id": 83,
+                "name": "Replicate:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 83
+                }
+            },
+            {
+                "id": 84,
+                "name": "Reorder:Setting",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 84
+                }
+            },
+            {
+                "id": 85,
+                "name": "ViewAny:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 85
+                }
+            },
+            {
+                "id": 86,
+                "name": "View:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 86
+                }
+            },
+            {
+                "id": 87,
+                "name": "Create:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 87
+                }
+            },
+            {
+                "id": 88,
+                "name": "Update:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 88
+                }
+            },
+            {
+                "id": 89,
+                "name": "Delete:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 89
+                }
+            },
+            {
+                "id": 90,
+                "name": "DeleteAny:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 90
+                }
+            },
+            {
+                "id": 91,
+                "name": "Restore:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 91
+                }
+            },
+            {
+                "id": 92,
+                "name": "ForceDelete:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 92
+                }
+            },
+            {
+                "id": 93,
+                "name": "ForceDeleteAny:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 93
+                }
+            },
+            {
+                "id": 94,
+                "name": "RestoreAny:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 94
+                }
+            },
+            {
+                "id": 95,
+                "name": "Replicate:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 95
+                }
+            },
+            {
+                "id": 96,
+                "name": "Reorder:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 96
+                }
+            },
+            {
+                "id": 97,
+                "name": "ViewAny:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 97
+                }
+            },
+            {
+                "id": 98,
+                "name": "View:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 98
+                }
+            },
+            {
+                "id": 99,
+                "name": "Create:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 99
+                }
+            },
+            {
+                "id": 100,
+                "name": "Update:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 100
+                }
+            },
+            {
+                "id": 101,
+                "name": "Delete:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 101
+                }
+            },
+            {
+                "id": 102,
+                "name": "DeleteAny:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 102
+                }
+            },
+            {
+                "id": 103,
+                "name": "Restore:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 103
+                }
+            },
+            {
+                "id": 104,
+                "name": "ForceDelete:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 104
+                }
+            },
+            {
+                "id": 105,
+                "name": "ForceDeleteAny:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 105
+                }
+            },
+            {
+                "id": 106,
+                "name": "RestoreAny:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 106
+                }
+            },
+            {
+                "id": 107,
+                "name": "Replicate:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 107
+                }
+            },
+            {
+                "id": 108,
+                "name": "Reorder:EmailTemplate",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 108
+                }
+            },
+            {
+                "id": 109,
+                "name": "ViewAny:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 109
+                }
+            },
+            {
+                "id": 110,
+                "name": "View:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 110
+                }
+            },
+            {
+                "id": 111,
+                "name": "Create:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 111
+                }
+            },
+            {
+                "id": 112,
+                "name": "Update:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 112
+                }
+            },
+            {
+                "id": 113,
+                "name": "Delete:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 113
+                }
+            },
+            {
+                "id": 114,
+                "name": "DeleteAny:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 114
+                }
+            },
+            {
+                "id": 115,
+                "name": "Restore:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 115
+                }
+            },
+            {
+                "id": 116,
+                "name": "ForceDelete:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 116
+                }
+            },
+            {
+                "id": 117,
+                "name": "ForceDeleteAny:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 117
+                }
+            },
+            {
+                "id": 118,
+                "name": "RestoreAny:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 118
+                }
+            },
+            {
+                "id": 119,
+                "name": "Replicate:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 119
+                }
+            },
+            {
+                "id": 120,
+                "name": "Reorder:EmailTheme",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 120
+                }
+            },
+            {
+                "id": 121,
+                "name": "View:Dashboard",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 121
+                }
+            },
+            {
+                "id": 122,
+                "name": "View:ManageGeneralSettings",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 122
+                }
+            },
+            {
+                "id": 123,
+                "name": "View:ManageBrandingSettings",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 123
+                }
+            },
+            {
+                "id": 124,
+                "name": "View:ManageAuthEmailSettings",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 124
+                }
+            },
+            {
+                "id": 125,
+                "name": "View:ManageLoggingSettings",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 125
+                }
+            },
+            {
+                "id": 126,
+                "name": "View:ManageAttachmentSettings",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 126
+                }
+            },
+            {
+                "id": 127,
+                "name": "View:DomainStats",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 127
+                }
+            },
+            {
+                "id": 128,
+                "name": "View:AccountTypesChart",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 128
+                }
+            },
+            {
+                "id": 129,
+                "name": "view domains",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 129
+                }
+            },
+            {
+                "id": 130,
+                "name": "create domains",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 130
+                }
+            },
+            {
+                "id": 131,
+                "name": "edit domains",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 131
+                }
+            },
+            {
+                "id": 132,
+                "name": "delete domains",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 132
+                }
+            },
+            {
+                "id": 133,
+                "name": "view users",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 133
+                }
+            },
+            {
+                "id": 134,
+                "name": "create users",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 134
+                }
+            },
+            {
+                "id": 135,
+                "name": "edit users",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 135
+                }
+            },
+            {
+                "id": 136,
+                "name": "delete users",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 136
+                }
+            },
+            {
+                "id": 137,
+                "name": "view email accounts",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 137
+                }
+            },
+            {
+                "id": 138,
+                "name": "create email accounts",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 138
+                }
+            },
+            {
+                "id": 139,
+                "name": "edit email accounts",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 139
+                }
+            },
+            {
+                "id": 140,
+                "name": "delete email accounts",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 140
+                }
+            },
+            {
+                "id": 141,
+                "name": "ViewAny:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 141
+                }
+            },
+            {
+                "id": 142,
+                "name": "View:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 142
+                }
+            },
+            {
+                "id": 143,
+                "name": "Create:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 143
+                }
+            },
+            {
+                "id": 144,
+                "name": "Update:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 144
+                }
+            },
+            {
+                "id": 145,
+                "name": "Delete:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 145
+                }
+            },
+            {
+                "id": 146,
+                "name": "DeleteAny:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 146
+                }
+            },
+            {
+                "id": 147,
+                "name": "Restore:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 147
+                }
+            },
+            {
+                "id": 148,
+                "name": "ForceDelete:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 148
+                }
+            },
+            {
+                "id": 149,
+                "name": "ForceDeleteAny:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 149
+                }
+            },
+            {
+                "id": 150,
+                "name": "RestoreAny:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 150
+                }
+            },
+            {
+                "id": 151,
+                "name": "Replicate:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 151
+                }
+            },
+            {
+                "id": 152,
+                "name": "Reorder:Role",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:35:33.000000Z",
+                "updated_at": "2026-05-30T21:35:33.000000Z",
+                "pivot": {
+                    "role_id": 1,
+                    "permission_id": 152
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "domain_admin",
+        "guard_name": "web",
+        "created_at": "2026-05-30T21:23:44.000000Z",
+        "updated_at": "2026-05-30T21:23:44.000000Z",
+        "permissions": [
+            {
+                "id": 1,
+                "name": "ViewAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 1
+                }
+            },
+            {
+                "id": 2,
+                "name": "View:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 2
+                }
+            },
+            {
+                "id": 3,
+                "name": "Create:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 3
+                }
+            },
+            {
+                "id": 4,
+                "name": "Update:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 4
+                }
+            },
+            {
+                "id": 5,
+                "name": "Delete:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 5
+                }
+            },
+            {
+                "id": 6,
+                "name": "DeleteAny:Domain",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 6
+                }
+            },
+            {
+                "id": 13,
+                "name": "ViewAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 13
+                }
+            },
+            {
+                "id": 14,
+                "name": "View:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 14
+                }
+            },
+            {
+                "id": 15,
+                "name": "Create:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 15
+                }
+            },
+            {
+                "id": 16,
+                "name": "Update:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 16
+                }
+            },
+            {
+                "id": 17,
+                "name": "Delete:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 17
+                }
+            },
+            {
+                "id": 18,
+                "name": "DeleteAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 18
+                }
+            },
+            {
+                "id": 25,
+                "name": "ViewAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 25
+                }
+            },
+            {
+                "id": 26,
+                "name": "View:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 26
+                }
+            },
+            {
+                "id": 27,
+                "name": "Create:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 27
+                }
+            },
+            {
+                "id": 28,
+                "name": "Update:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 28
+                }
+            },
+            {
+                "id": 29,
+                "name": "Delete:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 29
+                }
+            },
+            {
+                "id": 30,
+                "name": "DeleteAny:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 30
+                }
+            },
+            {
+                "id": 37,
+                "name": "ViewAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 37
+                }
+            },
+            {
+                "id": 38,
+                "name": "View:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 38
+                }
+            },
+            {
+                "id": 39,
+                "name": "Create:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 39
+                }
+            },
+            {
+                "id": 40,
+                "name": "Update:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 40
+                }
+            },
+            {
+                "id": 41,
+                "name": "Delete:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 41
+                }
+            },
+            {
+                "id": 42,
+                "name": "DeleteAny:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 42
+                }
+            },
+            {
+                "id": 49,
+                "name": "ViewAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 49
+                }
+            },
+            {
+                "id": 50,
+                "name": "View:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 50
+                }
+            },
+            {
+                "id": 51,
+                "name": "Create:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 51
+                }
+            },
+            {
+                "id": 52,
+                "name": "Update:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 52
+                }
+            },
+            {
+                "id": 53,
+                "name": "Delete:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 53
+                }
+            },
+            {
+                "id": 54,
+                "name": "DeleteAny:DomainAlias",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 54
+                }
+            },
+            {
+                "id": 62,
+                "name": "View:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 62
+                }
+            },
+            {
+                "id": 86,
+                "name": "View:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 86
+                }
+            },
+            {
+                "id": 87,
+                "name": "Create:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 87
+                }
+            },
+            {
+                "id": 88,
+                "name": "Update:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 88
+                }
+            },
+            {
+                "id": 89,
+                "name": "Delete:User",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 89
+                }
+            },
+            {
+                "id": 121,
+                "name": "View:Dashboard",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 121
+                }
+            },
+            {
+                "id": 127,
+                "name": "View:DomainStats",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 127
+                }
+            },
+            {
+                "id": 128,
+                "name": "View:AccountTypesChart",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 2,
+                    "permission_id": 128
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "domain_user",
+        "guard_name": "web",
+        "created_at": "2026-05-30T21:23:44.000000Z",
+        "updated_at": "2026-05-30T21:23:44.000000Z",
+        "permissions": [
+            {
+                "id": 13,
+                "name": "ViewAny:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 13
+                }
+            },
+            {
+                "id": 14,
+                "name": "View:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 14
+                }
+            },
+            {
+                "id": 16,
+                "name": "Update:EximUser",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 16
+                }
+            },
+            {
+                "id": 26,
+                "name": "View:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 26
+                }
+            },
+            {
+                "id": 27,
+                "name": "Create:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 27
+                }
+            },
+            {
+                "id": 28,
+                "name": "Update:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 28
+                }
+            },
+            {
+                "id": 29,
+                "name": "Delete:Blocklist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 29
+                }
+            },
+            {
+                "id": 38,
+                "name": "View:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 38
+                }
+            },
+            {
+                "id": 39,
+                "name": "Create:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 39
+                }
+            },
+            {
+                "id": 40,
+                "name": "Update:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 40
+                }
+            },
+            {
+                "id": 41,
+                "name": "Delete:Whitelist",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 41
+                }
+            },
+            {
+                "id": 62,
+                "name": "View:Activity",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 62
+                }
+            },
+            {
+                "id": 121,
+                "name": "View:Dashboard",
+                "guard_name": "web",
+                "created_at": "2026-05-30T21:23:44.000000Z",
+                "updated_at": "2026-05-30T21:23:44.000000Z",
+                "pivot": {
+                    "role_id": 3,
+                    "permission_id": 121
+                }
+            }
+        ]
+    }
+]

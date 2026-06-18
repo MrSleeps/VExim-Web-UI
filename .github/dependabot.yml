@@ -1,0 +1,49 @@
+# `.github/dependabot.yml`
+version: 2
+updates:
+  # Composer (PHP dependencies)
+  - package-ecosystem: "composer"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "php"
+    commit-message:
+      prefix: "deps"
+    groups:
+      php-dependencies:
+        patterns:
+          - "*"
+
+  # npm (JavaScript dependencies)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "deps"
+    groups:
+      javascript-dependencies:
+        patterns:
+          - "*"
+
+  # GitHub Actions (CI/CD workflows)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github_actions"
+    groups:
+      actions-dependencies:
+        patterns:
+          - "*" 

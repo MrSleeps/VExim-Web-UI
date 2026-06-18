@@ -1,0 +1,24 @@
+
+### transport/30_vexim_virtual_vacation_delivery
+#######################################
+
+virtual_vacation_delivery:
+  driver = autoreply
+  from = "${local_part}@${domain}"
+  to = ${sender_address}
+  subject = "Autoreply from ${local_part}@${domain}"
+  headers = "Content-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: quoted-printable"
+  text = ${lookup mysql{ \
+    SELECT u.vacation \
+    FROM users u \
+      INNER JOIN domains d ON (u.domain_id = d.domain_id) \
+    WHERE d.domain='${quote_mysql:$domain}' \
+      AND u.localpart='${quote_mysql:$local_part}' \
+    }}
+  once = ${lookup mysql{SELECT CONCAT(maildir, '/', localpart, '/.vacation.db') \
+         FROM users,domains \
+         WHERE domain='${quote_mysql:$domain}' \
+         AND localpart='${quote_mysql:$local_part}' \
+         AND users.domain_id=domains.domain_id}}
+  once_repeat = 86400
+  once_file_size = 5000000  # 5MB limit, auto-prunes old entries

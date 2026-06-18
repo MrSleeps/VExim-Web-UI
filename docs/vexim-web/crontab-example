@@ -1,0 +1,1 @@
+* * * * * cd /home/veximweb/vexim_web && php artisan schedule:run >> /dev/null 2>&1
