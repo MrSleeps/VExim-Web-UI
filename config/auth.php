@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use VEximweb\Core\Data\Models\User;
 
 return [
 

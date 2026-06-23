@@ -2,7 +2,7 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use Elemind\FilamentECharts\Widgets\EChartWidget;
 use Illuminate\Support\Facades\Auth;
 

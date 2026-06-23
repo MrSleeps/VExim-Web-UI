@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34a2b448530babb0aabd1be143533817",
+    "content-hash": "6d430c0e5eb5499f92cabb40ffc6056d",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -2585,16 +2585,16 @@
         },
         {
             "name": "intervention/image-laravel",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image-laravel.git",
-                "reference": "03660a35e1007389db35f54fb44f4ae8fbfe0b2b"
+                "reference": "84a730b7c2aa58c8760f27b2aa656cab827e9ffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image-laravel/zipball/03660a35e1007389db35f54fb44f4ae8fbfe0b2b",
-                "reference": "03660a35e1007389db35f54fb44f4ae8fbfe0b2b",
+                "url": "https://api.github.com/repos/Intervention/image-laravel/zipball/84a730b7c2aa58c8760f27b2aa656cab827e9ffd",
+                "reference": "84a730b7c2aa58c8760f27b2aa656cab827e9ffd",
                 "shasum": ""
             },
             "require": {
@@ -2649,7 +2649,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image-laravel/issues",
-                "source": "https://github.com/Intervention/image-laravel/tree/4.0.0"
+                "source": "https://github.com/Intervention/image-laravel/tree/4.0.1"
             },
             "funding": [
                 {
@@ -2665,7 +2665,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2026-03-28T07:12:58+00:00"
+            "time": "2026-06-19T14:17:46+00:00"
         },
         {
             "name": "kirschbaum-development/eloquent-power-joins",
@@ -3556,16 +3556,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.34.0",
+            "version": "3.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "2daaac3b0d4c83ea7ed5d8586e786f5d00f3540e"
+                "reference": "d0a405f03d980461e4b6e08cfed2c162650f9f6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/2daaac3b0d4c83ea7ed5d8586e786f5d00f3540e",
-                "reference": "2daaac3b0d4c83ea7ed5d8586e786f5d00f3540e",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d0a405f03d980461e4b6e08cfed2c162650f9f6b",
+                "reference": "d0a405f03d980461e4b6e08cfed2c162650f9f6b",
                 "shasum": ""
             },
             "require": {
@@ -3633,9 +3633,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.34.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.35.0"
             },
-            "time": "2026-05-14T10:28:08+00:00"
+            "time": "2026-06-22T20:12:06+00:00"
         },
         {
             "name": "league/flysystem-local",
@@ -4086,16 +4086,16 @@
         },
         {
             "name": "marcelweidum/filament-passkeys",
-            "version": "v4.0.2",
+            "version": "v4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MarcelWeidum/filament-passkeys.git",
-                "reference": "7c97c920b70221c08cb6a5f28bfa2e9c66b0f549"
+                "reference": "d4d72fdd39482f00026fdb8fa08faf31d97fd3e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MarcelWeidum/filament-passkeys/zipball/7c97c920b70221c08cb6a5f28bfa2e9c66b0f549",
-                "reference": "7c97c920b70221c08cb6a5f28bfa2e9c66b0f549",
+                "url": "https://api.github.com/repos/MarcelWeidum/filament-passkeys/zipball/d4d72fdd39482f00026fdb8fa08faf31d97fd3e4",
+                "reference": "d4d72fdd39482f00026fdb8fa08faf31d97fd3e4",
                 "shasum": ""
             },
             "require": {
@@ -4154,7 +4154,7 @@
                     "type": "buy_me_a_coffee"
                 }
             ],
-            "time": "2026-06-14T02:51:48+00:00"
+            "time": "2026-06-22T16:40:05+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4258,6 +4258,612 @@
                 }
             ],
             "time": "2026-01-02T08:56:05+00:00"
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-blocklist",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-blocklist",
+                "reference": "9e4db4fae1760370f5c42ac0ade8a722a809ff55"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Blocklist\\BlocklistServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Blocklist\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Blocklist management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-data",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-data",
+                "reference": "2cd464f118e3ea5a1e1cd9dd113dc9fb5acee5cd"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Data\\Providers\\VEximwebDataServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Data\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Models and Repositories for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-domain",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domain",
+                "reference": "724aa7740fd90a3da1cfbd40019e0b9a59d264cc"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Domain\\DomainServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Domain\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Domain management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-domainalias",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domainalias",
+                "reference": "42fa546d218cc365ddac2b168f9cc1c0818fc79a"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\DomainAlias\\DomainAliasServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\DomainAlias\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Domain Aliases management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-eximalias",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximalias",
+                "reference": "66eae65f507086db4b5a464e6caf5262bbb32287"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\EximAlias\\EximAliasServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\EximAlias\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Email alias management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-eximcatchall",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximcatchall",
+                "reference": "2b3517acfa853a94b7c3c8197a14e36ef6cf622d"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\EximCatchAll\\EximCatchAllServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\EximCatchAll\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Catchall email address management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-eximfail",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximfail",
+                "reference": "632c7685c99093f6e3756cc39c37fb96ac9a35ad"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\EximFail\\EximFailServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\EximFail\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Email address fail management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-eximuser",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximuser",
+                "reference": "37733f79903cafaa1c340f853b16ba1bf6ab22a6"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\EximUser\\EximUserServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\EximUser\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Email management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-group",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-group",
+                "reference": "dba648e9e0e787c3e0baf2465dd39570a2a44669"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Group\\GroupServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Group\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Groups management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-settings",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-settings",
+                "reference": "2fcbe1737baeccee64e735492fea86c17628a6f1"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Settings\\SettingsServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Settings\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Settings module for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-webuser",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-webuser",
+                "reference": "62f1dbfb2fa860a1712f3122ee866057f8607027"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\WebUser\\WebUserServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\WebUser\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Web account management for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-core-whitelist",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-whitelist",
+                "reference": "7a7601dc041230b53f70e5393dcfc0555fd18426"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Core\\Whitelist\\WhitelistServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Core\\Whitelist\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "Whitelist management for VExim Web UI",
+            "support": {
+                "issues": "https://github.com/MrSleeps/VExim-Web-UI/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-whitelist"
+            },
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-plugin-rspamd",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd",
+                "reference": "41abb06e0e5ddaa2694017e72508a6f87f1c496b"
+            },
+            "require": {
+                "filament/filament": "^5.0",
+                "illuminate/support": "^13.0",
+                "mrsleeps/vexim-web-plugin-rspamd-core": "^1.0",
+                "php": "^8.4"
+            },
+            "type": "filament-plugin",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Plugin\\RSpamd\\RSpamdServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Plugin\\RSpamd\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "RSpamd Plugin for VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
+        },
+        {
+            "name": "mrsleeps/vexim-web-plugin-rspamd-core",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd-core",
+                "reference": "2fd219294715d97d92daea1e066d664fe3629ad8"
+            },
+            "require": {
+                "illuminate/support": "^13.0",
+                "php": "^8.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "VEximweb\\Plugin\\RSpamd\\Core\\Providers\\RSpamdServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VEximweb\\Plugin\\RSpamd\\Core\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Mr Sleeps"
+                }
+            ],
+            "description": "The core module for RSpamD support in VExim Web UI",
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "nesbot/carbon",
@@ -6306,16 +6912,16 @@
         },
         {
             "name": "relaticle/activity-log",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/relaticle/activity-log.git",
-                "reference": "80a3e6373eddb5f89123a6ae0731c2a7bd76995b"
+                "reference": "cfe587a778854db17f719765306500247f7182fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/relaticle/activity-log/zipball/80a3e6373eddb5f89123a6ae0731c2a7bd76995b",
-                "reference": "80a3e6373eddb5f89123a6ae0731c2a7bd76995b",
+                "url": "https://api.github.com/repos/relaticle/activity-log/zipball/cfe587a778854db17f719765306500247f7182fd",
+                "reference": "cfe587a778854db17f719765306500247f7182fd",
                 "shasum": ""
             },
             "require": {
@@ -6354,9 +6960,9 @@
             "description": "Reusable Filament plugin that renders a unified activity-log timeline for any Eloquent model",
             "support": {
                 "issues": "https://github.com/relaticle/activity-log/issues",
-                "source": "https://github.com/relaticle/activity-log/tree/v1.1.1"
+                "source": "https://github.com/relaticle/activity-log/tree/v1.2.0"
             },
-            "time": "2026-06-15T01:49:04+00:00"
+            "time": "2026-06-20T10:08:17+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",
@@ -7281,16 +7887,16 @@
         },
         {
             "name": "spatie/temporary-directory",
-            "version": "2.3.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/temporary-directory.git",
-                "reference": "662e481d6ec07ef29fd05010433428851a42cd07"
+                "reference": "32cbb9645b28839cf4f476708e99a2c70e6802c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/662e481d6ec07ef29fd05010433428851a42cd07",
-                "reference": "662e481d6ec07ef29fd05010433428851a42cd07",
+                "url": "https://api.github.com/repos/spatie/temporary-directory/zipball/32cbb9645b28839cf4f476708e99a2c70e6802c9",
+                "reference": "32cbb9645b28839cf4f476708e99a2c70e6802c9",
                 "shasum": ""
             },
             "require": {
@@ -7326,7 +7932,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/temporary-directory/issues",
-                "source": "https://github.com/spatie/temporary-directory/tree/2.3.1"
+                "source": "https://github.com/spatie/temporary-directory/tree/2.4.0"
             },
             "funding": [
                 {
@@ -7338,7 +7944,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-12T07:42:22+00:00"
+            "time": "2026-06-22T07:55:44+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",
@@ -11014,6 +11620,62 @@
                 "source": "https://github.com/webmozarts/assert/tree/2.4.1"
             },
             "time": "2026-06-15T15:31:57+00:00"
+        },
+        {
+            "name": "wikimedia/composer-merge-plugin",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/composer-merge-plugin.git",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/composer-merge-plugin/zipball/a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "reference": "a03d426c8e9fb2c9c569d9deeb31a083292788bc",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1||^2.0",
+                "php": ">=7.2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1||^2.0",
+                "ext-json": "*",
+                "mediawiki/mediawiki-phan-config": "0.11.1",
+                "php-parallel-lint/php-parallel-lint": "~1.3.1",
+                "phpspec/prophecy": "~1.15.0",
+                "phpunit/phpunit": "^8.5||^9.0",
+                "squizlabs/php_codesniffer": "~3.7.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Wikimedia\\Composer\\Merge\\V2\\MergePlugin",
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wikimedia\\Composer\\Merge\\V2\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Davis",
+                    "email": "bd808@wikimedia.org"
+                }
+            ],
+            "description": "Composer plugin to merge multiple composer.json files",
+            "support": {
+                "issues": "https://github.com/wikimedia/composer-merge-plugin/issues",
+                "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
+            },
+            "time": "2023-04-15T19:07:00+00:00"
         }
     ],
     "packages-dev": [
@@ -11702,16 +12364,16 @@
         },
         {
             "name": "laravel/pao",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pao.git",
-                "reference": "8f6c8094d701a03041c85ba583ca233398c792ec"
+                "reference": "41b3c61ebeddce52a446afe6d21e0b02983fb2f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pao/zipball/8f6c8094d701a03041c85ba583ca233398c792ec",
-                "reference": "8f6c8094d701a03041c85ba583ca233398c792ec",
+                "url": "https://api.github.com/repos/laravel/pao/zipball/41b3c61ebeddce52a446afe6d21e0b02983fb2f6",
+                "reference": "41b3c61ebeddce52a446afe6d21e0b02983fb2f6",
                 "shasum": ""
             },
             "require": {
@@ -11783,7 +12445,7 @@
                 "issues": "https://github.com/laravel/pao/issues",
                 "source": "https://github.com/laravel/pao"
             },
-            "time": "2026-06-12T08:00:22+00:00"
+            "time": "2026-06-22T19:58:00+00:00"
         },
         {
             "name": "laravel/pint",
@@ -14183,7 +14845,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "mrsleeps/vexim-web-core-data": 20,
+        "mrsleeps/vexim-web-plugin-rspamd": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -27,7 +27,7 @@ use App\Filament\Widgets\DomainStats;
 use App\Filament\Resources\DomainUsers\DomainUserResource; 
 use Filament\Navigation\NavigationItem;
 use Filament\Support\Icons\Heroicon;
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use FinityLabs\FinMail\FinMailPlugin;
 use App\Filament\Pages\Auth\CustomResetPassword;
 use App\Filament\Pages\Auth\CustomRequestPasswordReset;
@@ -64,7 +64,7 @@ class VeximPanelProvider extends PanelProvider
             ->passwordReset()
             ->profile(EditProfile::class, isSimple: false)
             ->colors([
-                'primary' => Color::Blue,  // The Shadcn effect
+                'primary' => Color::Blue,
             ])
             ->brandLogo(asset('images/logo.svg'))
             ->favicon(asset('favicon/favicon-96x96.png'))
@@ -94,7 +94,6 @@ class VeximPanelProvider extends PanelProvider
                 DomainStats::class,
                 AccountTypesChart::class,
                 RecentLoginActivity::class,
-            SpamStats::class,
             ])
             ->plugins($plugins)
             ->middleware([

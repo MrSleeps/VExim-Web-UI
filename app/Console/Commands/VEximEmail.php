@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use App\Repositories\Interfaces\DomainRepositoryInterface;
-use App\Repositories\Interfaces\EximUserRepositoryInterface;
-use App\Repositories\Interfaces\SettingRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\DomainRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\EximUserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\SettingRepositoryInterface;
 use Illuminate\Console\Command;
 
 class VEximEmail extends Command
@@ -725,7 +725,7 @@ class VEximEmail extends Command
     /**
      * Find user by username or ID.
      */
-    protected function findUserByIdentifier(string $identifier, array $relations = []): ?\App\Models\EximUser
+    protected function findUserByIdentifier(string $identifier, array $relations = []): ?\VEximweb\Core\Data\Models\EximUser
     {
         if (is_numeric($identifier)) {
             return $this->eximUserRepository->findById((int)$identifier, $relations);

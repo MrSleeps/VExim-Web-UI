@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use App\Observers\EximUserObserver;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;

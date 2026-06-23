@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Repositories\Interfaces\DomainAliasRepositoryInterface;
-use App\Repositories\Interfaces\DomainRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\DomainAliasRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\DomainRepositoryInterface;
 use App\Repositories\Interfaces\DomainUserRepositoryInterface;
-use App\Repositories\Interfaces\SettingRepositoryInterface;
-use App\Repositories\Interfaces\UserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\SettingRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\UserRepositoryInterface;
 use Illuminate\Console\Command;
 
 class VEximDomains extends Command
@@ -888,7 +888,7 @@ class VEximDomains extends Command
     /**
      * Find domain by ID or name.
      */
-    protected function findDomainByIdentifier(string $identifier, array $relations = []): ?\App\Models\Domain
+    protected function findDomainByIdentifier(string $identifier, array $relations = []): ?\VEximweb\Core\Data\Models\Domain
     {
         if (is_numeric($identifier)) {
             return $this->domainRepository->findById((int)$identifier, $relations);
@@ -900,7 +900,7 @@ class VEximDomains extends Command
     /**
      * Find user by ID or email.
      */
-    protected function findUserByIdentifier(string $identifier): ?\App\Models\User
+    protected function findUserByIdentifier(string $identifier): ?\VEximweb\Core\Data\Models\User
     {
         if (is_numeric($identifier)) {
             return $this->userRepository->findById((int)$identifier);

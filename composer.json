@@ -3,8 +3,13 @@
     "name": "mrsleeps/vexim-web-ui",
     "type": "project",
     "description": "VExim Web UI - Laravel UI for VExim2.",
-    "keywords": ["laravel", "framework", "VExim2", "Exim"],
-    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "framework",
+        "VExim2",
+        "Exim"
+    ],
+    "license": "GPL-3.0-only",
     "require": {
         "php": "^8.4",
         "andreiio/blade-remix-icon": "^3.9",
@@ -20,6 +25,19 @@
         "laravel/tinker": "^3.0",
         "livewire/livewire": "^4.0",
         "marcelweidum/filament-passkeys": "^4.0",
+        "mrsleeps/vexim-web-core-blocklist": "^1.0",
+        "mrsleeps/vexim-web-core-data": "^1.0@dev",
+        "mrsleeps/vexim-web-core-domain": "^1.0",
+        "mrsleeps/vexim-web-core-domainalias": "^1.0",
+        "mrsleeps/vexim-web-core-eximalias": "^1.0",
+        "mrsleeps/vexim-web-core-eximcatchall": "^1.0",
+        "mrsleeps/vexim-web-core-eximfail": "^1.0",
+        "mrsleeps/vexim-web-core-eximuser": "^1.0",
+        "mrsleeps/vexim-web-core-group": "^1.0",
+        "mrsleeps/vexim-web-core-settings": "^1.0",
+        "mrsleeps/vexim-web-core-webuser": "^1.0",
+        "mrsleeps/vexim-web-core-whitelist": "^1.0",
+        "mrsleeps/vexim-web-plugin-rspamd": "^1.0@dev",
         "openplain/filament-shadcn-theme": "^1.1",
         "phpseclib/phpseclib": "^3.0",
         "rawilk/filament-password-input": "^3.2",
@@ -27,7 +45,8 @@
         "spatie/laravel-activitylog": "^5.0",
         "spatie/laravel-health": "^1.40",
         "spatie/laravel-permission": "^7.4",
-        "spatie/laravel-settings": "^3.8"
+        "spatie/laravel-settings": "^3.8",
+        "wikimedia/composer-merge-plugin": "^2.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -54,8 +73,6 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": [
-    ],
     "scripts": {
         "setup": [
             "composer install",
@@ -96,6 +113,13 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "merge-plugin": {
+            "include": [
+                "composer.local.json"
+            ],
+            "ignore-duplicates": true,
+            "merge-dev": true
         }
     },
     "config": {
@@ -104,7 +128,8 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "minimum-stability": "dev",

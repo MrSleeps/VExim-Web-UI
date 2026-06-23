@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 

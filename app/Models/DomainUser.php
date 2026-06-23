@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use VEximweb\Core\Data\Models\Domain;
 
 /**
  * Represents the relationship between a user and a domain.

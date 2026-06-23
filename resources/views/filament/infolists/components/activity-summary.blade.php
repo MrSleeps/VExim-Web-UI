@@ -61,9 +61,9 @@
     
     // Load the actual model to get missing data (like type)
     $modelData = null;
-    if ($rawData->subject_id && $rawData->subject_type === 'App\Models\EximUser') {
+    if ($rawData->subject_id && $rawData->subject_type === 'VEximweb\Core\Data\Models\EximUser') {
         try {
-            $modelData = \App\Models\EximUser::where('user_id', $rawData->subject_id)->first();
+            $modelData = \VEximweb\Core\Data\Models\EximUser::where('user_id', $rawData->subject_id)->first();
         } catch (\Exception $e) {
             // Model might be deleted
         }

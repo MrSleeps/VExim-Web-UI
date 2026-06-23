@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use App\Models\Domain;
-use App\Models\EximUser;
-use App\Models\DomainAlias;
-use App\Models\Blocklist;
-use App\Models\Setting;
-use App\Models\User;
+use VEximweb\Core\Data\Models\Domain;
+use VEximweb\Core\Data\Models\EximUser;
+use VEximweb\Core\Data\Models\DomainAlias;
+//use App\Models\Blocklist;
+//use App\Models\Setting;
+use VEximweb\Core\Data\Models\User;
 use App\Observers\GlobalActivityObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Auth\MultiTableUserProvider;

@@ -2,10 +2,10 @@
 
 namespace App\Auth;
 
-use App\Models\User;
-use App\Models\EximUser;
-use App\Repositories\Interfaces\UserRepositoryInterface;
-use App\Repositories\Interfaces\EximUserRepositoryInterface;
+use VEximweb\Core\Data\Models\User;
+use VEximweb\Core\Data\Models\EximUser;
+use VEximweb\Core\Data\Repositories\Interfaces\UserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\EximUserRepositoryInterface;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Support\Facades\Hash;

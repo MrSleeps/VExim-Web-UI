@@ -27,4 +27,8 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 bootstrap/cache/
-composer.dev.json
+composer.dev
+OLDBACKUPS
+composer.local.json
+build/
+test_curl

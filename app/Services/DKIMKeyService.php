@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use phpseclib3\Crypt\RSA;
-use App\Models\Domain;
+use VEximweb\Core\Data\Models\Domain;
 use App\Models\DKIM;
 
 class DKIMKeyService

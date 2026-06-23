@@ -15,7 +15,7 @@ class ListDomainUsers extends ListRecords
         parent::mount();
 
         $user = auth()->user();
-        if ($user instanceof \App\Models\EximUser) {
+        if ($user instanceof \VEximweb\Core\Data\Models\EximUser) {
             $this->redirect(DomainUserResource::getUrl('edit', ['record' => $user->getKey()]));
         }
     }

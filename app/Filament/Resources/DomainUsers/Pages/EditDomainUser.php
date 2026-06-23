@@ -17,7 +17,7 @@ class EditDomainUser extends EditRecord
         // Always return the logged-in user
         $user = auth()->user();
         
-        if (!$user instanceof \App\Models\EximUser) {
+        if (!$user instanceof \VEximweb\Core\Data\Models\EximUser) {
             abort(403, 'Unauthorized access.');
         }
         
