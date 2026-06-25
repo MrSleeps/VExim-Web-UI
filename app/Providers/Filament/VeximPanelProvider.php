@@ -85,9 +85,9 @@ class VeximPanelProvider extends PanelProvider
                 'Mailing Lists',
                 'Website Management',
                 'DNS Management',
+                'Reports & Analytics',
                 'Communications',
                 'System Settings',
-                'Reports & Analytics',
             ])           
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([

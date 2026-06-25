@@ -37,6 +37,7 @@
         "mrsleeps/vexim-web-core-settings": "^1.0",
         "mrsleeps/vexim-web-core-webuser": "^1.0",
         "mrsleeps/vexim-web-core-whitelist": "^1.0",
+        "mrsleeps/vexim-web-plugin-dmarc": "^1.0@dev",
         "mrsleeps/vexim-web-plugin-rspamd": "^1.0@dev",
         "openplain/filament-shadcn-theme": "^1.1",
         "phpseclib/phpseclib": "^3.0",
