@@ -32,3 +32,4 @@ OLDBACKUPS
 composer.local.json
 build/
 test_curl
+config/mta-sts.php
