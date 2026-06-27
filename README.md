@@ -402,6 +402,13 @@ Then for each domain you have you need to add an alias/forwarder to that dmarc a
 
 Then you need to change the dns for all the domains (ball ache, I know) to deliver to dmarc@domain
 
+### MTA-STS
+php artisan vendor:publish --tag=mtasts-config
+
+Then edit app/config/mta-sts.php and choose "testing" or "enforce".
+* testing - does not reject the email
+* enforce - will reject the email
+
 ## Other things it does
 
 ### autodiscover
