@@ -41,6 +41,22 @@ class AppServiceProvider extends ServiceProvider
             $editor->extraAttributes([
                 'style' => 'min-height: 650px;',
             ]);
-        });           
+        });   #
+\DB::listen(function ($query) {
+    if (str_contains($query->sql, 'delete') && str_contains($query->sql, 'vw_notifications')) {
+        \Log::warning('Raw DELETE on vw_notifications', [
+            'sql' => $query->sql,
+            'bindings' => $query->bindings,
+            'trace' => collect(debug_backtrace())->take(15)->map(fn($t) => ($t['class'] ?? '') . ($t['type'] ?? '') . $t['function'])->implode("\n"),
+        ]);
+    }
+});        
+        
+\VEximweb\Core\Data\Models\VwDatabaseNotification::deleting(function ($notification) {
+    \Log::warning('VwDatabaseNotification being deleted', [
+        'id' => $notification->id,
+        'trace' => collect(debug_backtrace())->take(15)->map(fn($t) => ($t['class'] ?? '') . ($t['type'] ?? '') . $t['function'] . ' (' . ($t['file'] ?? 'unknown') . ':' . ($t['line'] ?? '?') . ')')->implode("\n"),
+    ]);
+});        
     }
 }

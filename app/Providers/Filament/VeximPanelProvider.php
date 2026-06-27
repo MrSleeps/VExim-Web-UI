@@ -35,6 +35,7 @@ use App\Filament\Pages\Auth\EditProfile;
 use App\Filament\Widgets\RecentLoginActivity;
 use Openplain\FilamentShadcnTheme\Color;
 use App\Filament\Widgets\SpamStats;
+use VEximweb\Core\Data\Models\VwDatabaseNotification;
 
 class VeximPanelProvider extends PanelProvider
 {
@@ -61,6 +62,8 @@ class VeximPanelProvider extends PanelProvider
             ->viteTheme('resources/css/filament/vexim/theme.css')
             ->login()
             ->authGuard('web')
+            ->databaseNotifications()
+            ->databaseNotificationsPolling('89s')
             ->passwordReset()
             ->profile(EditProfile::class, isSimple: false)
             ->colors([

@@ -1,0 +1,111 @@
+{
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-blocklist",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domain",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domainalias",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domainuser",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximalias",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximcatchall",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximfail",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximuser",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-group",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-settings",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-webuser",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-whitelist",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-mailman3",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-pdns",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd-core",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dns-core",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-auth",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/modules/vexim-web-core-data",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dmarc",
+            "options": { "symlink": true }
+        },
+        {
+            "type": "path",
+            "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dnstools",
+            "options": { "symlink": true }
+        }
+
+
+    ]
+}

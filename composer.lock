@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b47ae3fc7abb047e7823e7e64679ab14",
+    "content-hash": "58ab8fd5528976271de346f52748f1bc",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -856,68 +856,6 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
-        },
-        {
-            "name": "directorytree/imapengine",
-            "version": "v1.25.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DirectoryTree/ImapEngine.git",
-                "reference": "ac8a4d028334c2d3a4bc8fd975317a75cd968a47"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DirectoryTree/ImapEngine/zipball/ac8a4d028334c2d3a4bc8fd975317a75cd968a47",
-                "reference": "ac8a4d028334c2d3a4bc8fd975317a75cd968a47",
-                "shasum": ""
-            },
-            "require": {
-                "egulias/email-validator": "^4.0",
-                "illuminate/collections": ">=9.0",
-                "nesbot/carbon": ">=2.0",
-                "php": "^8.1",
-                "symfony/mime": ">=6.0",
-                "zbateson/mail-mime-parser": "^3.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^2.0|^3.0|^4.0",
-                "spatie/ray": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DirectoryTree\\ImapEngine\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Steve Bauman",
-                    "email": "steven_bauman@outlook.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fully-featured IMAP library -- without the PHP extension",
-            "homepage": "https://github.com/directorytree/imapengine",
-            "keywords": [
-                "engine",
-                "imap",
-                "mail"
-            ],
-            "support": {
-                "issues": "https://github.com/DirectoryTree/ImapEngine/issues",
-                "source": "https://github.com/DirectoryTree/ImapEngine/tree/v1.25.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/stevebauman",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-19T17:03:06+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -3086,16 +3024,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.20",
+            "version": "v0.3.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "6d53c826dfd33ec5f4ac91f816ff327727c7988b"
+                "reference": "7753c65c281c2550c7c183f14e18062073b7d821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/6d53c826dfd33ec5f4ac91f816ff327727c7988b",
-                "reference": "6d53c826dfd33ec5f4ac91f816ff327727c7988b",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/7753c65c281c2550c7c183f14e18062073b7d821",
+                "reference": "7753c65c281c2550c7c183f14e18062073b7d821",
                 "shasum": ""
             },
             "require": {
@@ -3139,9 +3077,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.20"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.21"
             },
-            "time": "2026-06-24T19:16:38+00:00"
+            "time": "2026-06-26T00:11:25+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -4072,16 +4010,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v4.3.1",
+            "version": "v4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "6a9dd03f45a4b200abfd0ff644745b23fa7baaaa"
+                "reference": "4ac7f483a4e9779297826c431b5f49ea8f24cbad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/6a9dd03f45a4b200abfd0ff644745b23fa7baaaa",
-                "reference": "6a9dd03f45a4b200abfd0ff644745b23fa7baaaa",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/4ac7f483a4e9779297826c431b5f49ea8f24cbad",
+                "reference": "4ac7f483a4e9779297826c431b5f49ea8f24cbad",
                 "shasum": ""
             },
             "require": {
@@ -4136,7 +4074,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v4.3.1"
+                "source": "https://github.com/livewire/livewire/tree/v4.3.2"
             },
             "funding": [
                 {
@@ -4144,7 +4082,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-02T08:58:52+00:00"
+            "time": "2026-06-26T11:39:23+00:00"
         },
         {
             "name": "marcelweidum/filament-passkeys",
@@ -4327,7 +4265,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-blocklist",
-                "reference": "31d0acd668ea5c647cd723a9edfcdbdc45caae9e"
+                "reference": "728a2a3536a9ebda438e1ed4b9b39f627cb24342"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4370,7 +4308,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-data",
-                "reference": "7f4c37d951dd59d49135a76bf09ab874c1fa2967"
+                "reference": "5eec1cbf0761ea4ffdb99229833b38d0e55d634c"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4413,7 +4351,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domain",
-                "reference": "e3d516f71a18c15c45b0004a6dd4eebd2ed309f6"
+                "reference": "ae298d5e3c071f92867e58f30a8ba3272d5a5aa3"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4456,7 +4394,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domainalias",
-                "reference": "cf935fc179aa4dee74873cff9ca8e7d801f20393"
+                "reference": "5de7806aea2676256bd1bd4a8043ac4b534ceef9"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4499,7 +4437,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximalias",
-                "reference": "6e1f111831bb6540dfb73e91b57f229b3a6435e2"
+                "reference": "df77ed0f52c87be7cfc4c851e7edbdeb40a86b5a"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4542,7 +4480,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximcatchall",
-                "reference": "ab43ee260db852c9073f7f42a4ba16b8192e2b68"
+                "reference": "ee3dcbb597ee9697f15f834d14a7266ca02f62e9"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4585,7 +4523,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximfail",
-                "reference": "50ff7f1170273ae695fddc258a8b112dfc8e615e"
+                "reference": "0421118fd36fcd726bc5a1c830826a0ca477482d"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4628,7 +4566,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximuser",
-                "reference": "e885a045000a06838be763cf8ef8f9b60a969ac3"
+                "reference": "fe08c5367ad8a435f4aa5df8aef46b6874693e1f"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4671,7 +4609,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-group",
-                "reference": "724335b155b1fd5492559605990ad2b6506fc14b"
+                "reference": "1190719aef6c346eb882313bc01f5d3b9ecedea9"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4714,7 +4652,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-settings",
-                "reference": "0bef4c452b38b31e33ea8723abcd1a3955db22fe"
+                "reference": "0184e940d7b86d9fbd7a8b16e37d507d3905dae8"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4757,7 +4695,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-webuser",
-                "reference": "355d680cb662b0d5d372e9c2dd3229026893ea48"
+                "reference": "5839901939553a0aee12712e368766ba6b0d131d"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4800,7 +4738,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/modules/vexim-web-core-whitelist",
-                "reference": "1d544f376e67d380d88847485294542a3751940c"
+                "reference": "2c28405a5fdf64627b2c61bc3f0bf45e8234d19e"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4842,15 +4780,14 @@
             }
         },
         {
-            "name": "mrsleeps/vexim-web-plugin-dmarc",
+            "name": "mrsleeps/vexim-web-plugin-dns-core",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dmarc",
-                "reference": "de540290256dfde21ccd6699e8a38e40146c9905"
+                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dns-core",
+                "reference": "a218747d430f4be6f4e4c045eea983ea93ed415f"
             },
             "require": {
-                "directorytree/imapengine": "^1.25",
                 "filament/filament": "^5.0",
                 "php": "^8.4",
                 "spatie/laravel-permission": "^7.4"
@@ -4870,7 +4807,7 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "VEximweb\\Plugin\\DMARC\\DMARCServiceProvider"
+                        "VEximweb\\Plugin\\DnsCore\\DnsCoreServiceProvider"
                     ]
                 },
                 "branch-alias": {
@@ -4879,7 +4816,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "VEximweb\\Plugin\\DMARC\\": "src/"
+                    "VEximweb\\Plugin\\DnsCore\\": "src/"
                 }
             },
             "license": [
@@ -4891,8 +4828,8 @@
                     "homepage": "https://github.com/MrSleeps"
                 }
             ],
-            "description": "DMARC package for VExim Web UI dns plugins.",
-            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dmarc",
+            "description": "Core DNS package for VExim Web UI dns plugins.",
+            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dns-core",
             "keywords": [
                 "cloudflare",
                 "dns",
@@ -4906,67 +4843,41 @@
             }
         },
         {
-            "name": "mrsleeps/vexim-web-plugin-rspamd",
+            "name": "mrsleeps/vexim-web-plugin-pdns",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd",
-                "reference": "8bcaae73e263bfdeac0bcdaa4c3ff515d158fc7f"
+                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-pdns",
+                "reference": "3812010909939bf7d628ea781ea1962f57ac7026"
             },
             "require": {
                 "filament/filament": "^5.0",
-                "illuminate/support": "^13.0",
-                "mrsleeps/vexim-web-plugin-rspamd-core": "^1.0",
-                "php": "^8.4"
+                "guzzlehttp/guzzle": "^7.11",
+                "mrsleeps/vexim-web-plugin-dns-core": "^1.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.15.0",
+                "spatie/laravel-permission": "^7.4"
             },
-            "type": "filament-plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\RSpamd\\RSpamdServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\RSpamd\\": "src/"
-                }
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps"
-                }
-            ],
-            "description": "RSpamd Plugin for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-rspamd-core",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-rspamd-core",
-                "reference": "ab19f70d9c4bc5ea6a88489a0313d4a72fd10c9c"
-            },
-            "require": {
-                "illuminate/support": "^13.0",
-                "php": "^8.4"
+            "require-dev": {
+                "larastan/larastan": "^3.0",
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^8.0",
+                "orchestra/testbench": "^9.0|^10.0|^11.0",
+                "pestphp/pest": "^3.7|^4.0",
+                "pestphp/pest-plugin-arch": "^3.0|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.0|^4.0",
+                "pestphp/pest-plugin-livewire": "^3.0|^4.0",
+                "rector/rector": "^2.0"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "VEximweb\\Plugin\\RSpamd\\Core\\Providers\\RSpamdServiceProvider"
-                    ]
+                        "VEximweb\\Plugin\\PDNS\\VEximPdnsServiceProvider"
+                    ],
+                    "aliases": {
+                        "VeximPdns": "VEximweb\\Plugin\\PDNS\\Facades\\VEximPdns"
+                    }
                 },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
@@ -4974,18 +4885,62 @@
             },
             "autoload": {
                 "psr-4": {
-                    "VEximweb\\Plugin\\RSpamd\\Core\\": "src/"
+                    "VEximweb\\Plugin\\PDNS\\": "src/",
+                    "VEximweb\\Plugin\\PDNS\\Database\\Factories\\": "database/factories/"
                 }
             },
+            "autoload-dev": {
+                "psr-4": {
+                    "VEximweb\\Plugin\\PDNS\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-autoload-dump": [
+                    "@php ./vendor/bin/testbench package:discover --ansi"
+                ],
+                "analyse": [
+                    "phpstan analyse"
+                ],
+                "lint": [
+                    "pint"
+                ],
+                "refactor": [
+                    "rector"
+                ],
+                "test": [
+                    "pest"
+                ],
+                "test:lint": [
+                    "pint --test"
+                ],
+                "test:refactor": [
+                    "rector --dry-run"
+                ]
+            },
             "license": [
-                "GPL-3.0-only"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Mr Sleeps"
+                    "name": "Mr Sleeps",
+                    "homepage": "https://github.com/MrSleeps",
+                    "role": "Developer"
                 }
             ],
-            "description": "The core module for RSpamD support in VExim Web UI",
+            "description": "A Package that allows VExim Web UI to interact with a PowerDNS API",
+            "homepage": "https://github.com/mrsleeps/vexim-web-plugin-pdns",
+            "keywords": [
+                "MrSleeps",
+                "filament",
+                "filament-plugin",
+                "filamentphp",
+                "laravel",
+                "vexim-web-plugin-pdns"
+            ],
+            "support": {
+                "issues": "https://github.com/mrsleeps/vexim-web-plugin-pdns/issues",
+                "source": "https://github.com/mrsleeps/vexim-web-plugin-pdns"
+            },
             "transport-options": {
                 "symlink": true,
                 "relative": false
@@ -5743,134 +5698,6 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
-        },
-        {
-            "name": "php-di/invoker",
-            "version": "2.3.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-DI/Invoker.git",
-                "reference": "3c1ddfdef181431fbc4be83378f6d036d59e81e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/3c1ddfdef181431fbc4be83378f6d036d59e81e1",
-                "reference": "3c1ddfdef181431fbc4be83378f6d036d59e81e1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "psr/container": "^1.0|^2.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1.8",
-                "mnapoli/hard-mode": "~0.3.0",
-                "phpunit/phpunit": "^9.0 || ^10 || ^11 || ^12"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Invoker\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Generic and extensible callable invoker",
-            "homepage": "https://github.com/PHP-DI/Invoker",
-            "keywords": [
-                "callable",
-                "dependency",
-                "dependency-injection",
-                "injection",
-                "invoke",
-                "invoker"
-            ],
-            "support": {
-                "issues": "https://github.com/PHP-DI/Invoker/issues",
-                "source": "https://github.com/PHP-DI/Invoker/tree/2.3.7"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-08-30T10:22:22+00:00"
-        },
-        {
-            "name": "php-di/php-di",
-            "version": "7.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-DI/PHP-DI.git",
-                "reference": "f88054cc052e40dbe7b383c8817c19442d480352"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/f88054cc052e40dbe7b383c8817c19442d480352",
-                "reference": "f88054cc052e40dbe7b383c8817c19442d480352",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/serializable-closure": "^1.0 || ^2.0",
-                "php": ">=8.0",
-                "php-di/invoker": "^2.0",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "provide": {
-                "psr/container-implementation": "^1.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3",
-                "friendsofphp/proxy-manager-lts": "^1",
-                "mnapoli/phpunit-easymock": "^1.3",
-                "phpunit/phpunit": "^9.6 || ^10 || ^11",
-                "vimeo/psalm": "^5|^6"
-            },
-            "suggest": {
-                "friendsofphp/proxy-manager-lts": "Install it if you want to use lazy injection (version ^1)"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "DI\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The dependency injection container for humans",
-            "homepage": "https://php-di.org/",
-            "keywords": [
-                "PSR-11",
-                "container",
-                "container-interop",
-                "dependency injection",
-                "di",
-                "ioc",
-                "psr11"
-            ],
-            "support": {
-                "issues": "https://github.com/PHP-DI/PHP-DI/issues",
-                "source": "https://github.com/PHP-DI/PHP-DI/tree/7.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/php-di/php-di",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-16T11:10:48+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -9526,90 +9353,6 @@
             "time": "2026-04-10T16:19:22+00:00"
         },
         {
-            "name": "symfony/polyfill-iconv",
-            "version": "v1.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "2c5729fd241b4b22f6e4b436bc3354a4f262df57"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/2c5729fd241b4b22f6e4b436bc3354a4f262df57",
-                "reference": "2c5729fd241b4b22f6e4b436bc3354a4f262df57",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "provide": {
-                "ext-iconv": "*"
-            },
-            "suggest": {
-                "ext-iconv": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Iconv\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Iconv extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "iconv",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.37.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-04-10T16:19:22+00:00"
-        },
-        {
             "name": "symfony/polyfill-intl-grapheme",
             "version": "v1.38.1",
             "source": {
@@ -12014,214 +11757,6 @@
                 "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
             },
             "time": "2023-04-15T19:07:00+00:00"
-        },
-        {
-            "name": "zbateson/mail-mime-parser",
-            "version": "3.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/mail-mime-parser.git",
-                "reference": "395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/mail-mime-parser/zipball/395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0",
-                "reference": "395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/psr7": "^2.5",
-                "php": ">=8.0",
-                "php-di/php-di": "^6.0|^7.0",
-                "psr/log": "^1|^2|^3",
-                "zbateson/mb-wrapper": "^2.0",
-                "zbateson/stream-decorators": "^2.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "monolog/monolog": "^2|^3",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6"
-            },
-            "suggest": {
-                "ext-iconv": "For best support/performance",
-                "ext-mbstring": "For best support/performance"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\MailMimeParser\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/zbateson/mail-mime-parser/graphs/contributors"
-                }
-            ],
-            "description": "MIME email message parser",
-            "homepage": "https://mail-mime-parser.org",
-            "keywords": [
-                "MimeMailParser",
-                "email",
-                "mail",
-                "mailparse",
-                "mime",
-                "mimeparse",
-                "parser",
-                "php-imap"
-            ],
-            "support": {
-                "docs": "https://mail-mime-parser.org/#usage-guide",
-                "issues": "https://github.com/zbateson/mail-mime-parser/issues",
-                "source": "https://github.com/zbateson/mail-mime-parser"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-24T13:42:46+00:00"
-        },
-        {
-            "name": "zbateson/mb-wrapper",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/mb-wrapper.git",
-                "reference": "50a14c0c9537f978a61cde9fdc192a0267cc9cff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/mb-wrapper/zipball/50a14c0c9537f978a61cde9fdc192a0267cc9cff",
-                "reference": "50a14c0c9537f978a61cde9fdc192a0267cc9cff",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0",
-                "symfony/polyfill-iconv": "^1.9",
-                "symfony/polyfill-mbstring": "^1.9"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6|^10.0"
-            },
-            "suggest": {
-                "ext-iconv": "For best support/performance",
-                "ext-mbstring": "For best support/performance"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\MbWrapper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                }
-            ],
-            "description": "Wrapper for mbstring with fallback to iconv for encoding conversion and string manipulation",
-            "keywords": [
-                "charset",
-                "encoding",
-                "http",
-                "iconv",
-                "mail",
-                "mb",
-                "mb_convert_encoding",
-                "mbstring",
-                "mime",
-                "multibyte",
-                "string"
-            ],
-            "support": {
-                "issues": "https://github.com/zbateson/mb-wrapper/issues",
-                "source": "https://github.com/zbateson/mb-wrapper/tree/2.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-20T22:05:33+00:00"
-        },
-        {
-            "name": "zbateson/stream-decorators",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/stream-decorators.git",
-                "reference": "32a2a62fb0f26313395c996ebd658d33c3f9c4e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/stream-decorators/zipball/32a2a62fb0f26313395c996ebd658d33c3f9c4e5",
-                "reference": "32a2a62fb0f26313395c996ebd658d33c3f9c4e5",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/psr7": "^2.5",
-                "php": ">=8.0",
-                "zbateson/mb-wrapper": "^2.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6|^10.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\StreamDecorators\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                }
-            ],
-            "description": "PHP psr7 stream decorators for mime message part streams",
-            "keywords": [
-                "base64",
-                "charset",
-                "decorators",
-                "mail",
-                "mime",
-                "psr7",
-                "quoted-printable",
-                "stream",
-                "uuencode"
-            ],
-            "support": {
-                "issues": "https://github.com/zbateson/stream-decorators/issues",
-                "source": "https://github.com/zbateson/stream-decorators/tree/2.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-04-29T21:42:39+00:00"
         }
     ],
     "packages-dev": [
@@ -13302,16 +12837,16 @@
         },
         {
             "name": "pestphp/pest",
-            "version": "v4.7.3",
+            "version": "v4.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pestphp/pest.git",
-                "reference": "87882a8561bf3ddf230b9a6b764f367f687d5b2f"
+                "reference": "ee2e97e932d158faceeaa63a4dc17324b15152cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pestphp/pest/zipball/87882a8561bf3ddf230b9a6b764f367f687d5b2f",
-                "reference": "87882a8561bf3ddf230b9a6b764f367f687d5b2f",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/ee2e97e932d158faceeaa63a4dc17324b15152cb",
+                "reference": "ee2e97e932d158faceeaa63a4dc17324b15152cb",
                 "shasum": ""
             },
             "require": {
@@ -13324,12 +12859,12 @@
                 "pestphp/pest-plugin-mutate": "^4.0.1",
                 "pestphp/pest-plugin-profanity": "^4.2.1",
                 "php": "^8.3.0",
-                "phpunit/phpunit": "^12.5.29",
+                "phpunit/phpunit": "^12.5.30",
                 "symfony/process": "^7.4.13|^8.1.0"
             },
             "conflict": {
                 "filp/whoops": "<2.18.3",
-                "phpunit/phpunit": ">12.5.29",
+                "phpunit/phpunit": ">12.5.30",
                 "sebastian/exporter": "<7.0.0",
                 "webmozart/assert": "<1.11.0"
             },
@@ -13405,7 +12940,7 @@
             ],
             "support": {
                 "issues": "https://github.com/pestphp/pest/issues",
-                "source": "https://github.com/pestphp/pest/tree/v4.7.3"
+                "source": "https://github.com/pestphp/pest/tree/v4.7.4"
             },
             "funding": [
                 {
@@ -13417,7 +12952,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-12T05:57:27+00:00"
+            "time": "2026-06-25T19:09:05+00:00"
         },
         {
             "name": "pestphp/pest-plugin",
@@ -14230,16 +13765,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.5.29",
+            "version": "12.5.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9aa66a47db3ea70f1a468e66dd969f67e594945a"
+                "reference": "900400a5b616d6fb306f9549f6da33ba615d3fbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9aa66a47db3ea70f1a468e66dd969f67e594945a",
-                "reference": "9aa66a47db3ea70f1a468e66dd969f67e594945a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/900400a5b616d6fb306f9549f6da33ba615d3fbb",
+                "reference": "900400a5b616d6fb306f9549f6da33ba615d3fbb",
                 "shasum": ""
             },
             "require": {
@@ -14308,7 +13843,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.29"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.5.30"
             },
             "funding": [
                 {
@@ -14316,7 +13851,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-06-04T06:14:42+00:00"
+            "time": "2026-06-15T13:12:30+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -15391,11 +14926,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mrsleeps/vexim-web-core-data": 20,
-        "mrsleeps/vexim-web-plugin-dmarc": 20,
-        "mrsleeps/vexim-web-plugin-rspamd": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
