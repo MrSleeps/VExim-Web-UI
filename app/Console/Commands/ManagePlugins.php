@@ -17,7 +17,7 @@ class ManagePlugins extends Command
 
     protected $description = 'List, install, or remove VExim Web plugins via composer.local.json';
 
-    protected const MANIFEST_URL = 'https://raw.githubusercontent.com/MrSleeps/vexim-plugin-registry/refs/heads/main/main/plugins.json';
+    protected const MANIFEST_URL = 'https://raw.githubusercontent.com/MrSleeps/vexim-web-plugin-registry/refs/heads/main/main/plugins.json';
 
     protected const MANIFEST_CACHE_KEY = 'vexim.plugin-manifest';
 

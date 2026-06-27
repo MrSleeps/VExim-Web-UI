@@ -31,7 +31,7 @@ class DnsRecordFailedNotification extends Notification implements ShouldQueue
         return [
             'format' => 'filament',
             'duration' => 'persistent',
-            'title' => 'DNS Record Creation Failed',
+            'title' => $this->event->message,
             'icon' => 'heroicon-o-exclamation-triangle',
             'color' => 'danger',
             'message' => "Failed to create {$this->event->recordType} record for {$this->event->domain->domain}",
@@ -50,7 +50,7 @@ class DnsRecordFailedNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'title' => 'DNS Record Creation Failed',
+            'title' => $this->event->message,
             'message' => "Failed to create {$this->event->recordType} record for {$this->event->domain->domain}",
             'domain' => $this->event->domain->domain,
             'record_type' => $this->event->recordType,

@@ -26,17 +26,14 @@ class DnsRecordCreatedNotification extends Notification implements ShouldQueue
 
     public function toDatabase($notifiable)
     {
-        // Use Filament's resource URL generator
         $url = DomainResource::getUrl('edit', ['record' => $this->event->domain->domain_id]);
 
         return [
             'format' => 'filament',
             'duration' => 'persistent',
-            //'title' => 'DNS Record Created',
             'title' => $this->event->message,
             'icon' => 'heroicon-o-document-plus',
             'color' => 'success',
-            //'message' => "A new {$this->event->recordType} record has been created for {$this->event->domain->domain}",
             'message' => $this->event->message,
             'domain_id' => $this->event->domain->domain_id,
             'domain' => $this->event->domain->domain,
@@ -53,9 +50,7 @@ class DnsRecordCreatedNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            //'title' => 'DNS Record Created',
             'title' => $this->event->message,
-            //'message' => "{$this->event->recordType} record created for {$this->event->domain->domain}",
             'message' => $this->event->message,
             'domain' => $this->event->domain->domain,
             'record_type' => $this->event->recordType,

@@ -292,18 +292,34 @@ I have included a basic set of CLI commands that you can use. You can do basic c
 
 # Plugins
 
-Plugins extend VExim Web UI by adding extra features, there are currently **3** plugins available:
+Plugins extend VExim Web UI by adding extra features, there are currently **4** plugins available.
+
+All plugins are installed via the cli, to get a list of available plugins cd into your vexim_web directory and run
+
+`php artisan vw:plugin list`
+
+This lists the available plugins. To Install a particular plugin you then need to run
+
+`php artisan vw:plugin install mrsleeps/package-name`
+
+Obviously replacing the package name with whatever plugin you are trying to install.
+
+Once that has run, you should always run
+
+`php artisan migrate`
+
+To update the database with any new tables/modifications
 
 ### RSpamd
 As mentioned earlier, RSpamd is supported (currently for whitelists and blacklists). It does this by calling an API route.
 
-To get it working you need to run
+To install you need to run:
 
-```
-cd ~/vexim_web
-composer require mrsleeps/vexim-web-plugin-rspamd
-php artisan migrate
-```
+`php artisan vw:plugin install mrsleeps/vexim-web-plugin-rspamd`
+
+and then
+
+`php artisan migrate`
 
 Then have a look in the docs/rspamd folder and copy the files into their respective folders.
 
@@ -322,11 +338,13 @@ Restart rspamd and watch your log files!
 ### PowerDNS
 Automatically add your DKIM values to your dns records via your PowerDNS API. Easy to install:
 
-```
-cd ~/vexim_web
-composer require mrsleeps/vexim-web-plugin-pdns
-php artisan migrate
-```
+To install you need to run:
+
+`php artisan vw:plugin install mrsleeps/vexim-web-plugin-pdns`
+
+and then
+
+`php artisan migrate`
 
 Then you head over to the VExim web ui and add your PowerDNS servers. You will then have to link every domain you want controlled via PDNS by visiting the domain page in the ui (sorry! A command will be in the next release).
 
@@ -335,11 +353,13 @@ We have provided a MM3 module that allows you to automatically add/delete mail l
 
 However, if you want to have a look it's easy to install.
 
-```
-cd ~/vexim_web
-composer require mrsleeps/vexim-web-plugin-mailman3
-php artisan migrate
-```
+To install you need to run:
+
+`php artisan vw:plugin install mrsleeps/vexim-web-plugin-pdns`
+
+and then
+
+`php artisan migrate`
 
 Then add the following to your .env file:
 ```
@@ -352,15 +372,45 @@ MAILMAN_TIMEOUT=30
 ```
 Once they are correctly added the Mailman 3 plugin will synch your lists (currently only manually, click the synch button).
 
+### DMARC
+
+This adds DMARC report collection and display on the VExim Web UI.
+
+To install you need to run:
+
+`php artisan vw:plugin install mrsleeps/vexim-web-plugin-dmarc`
+
+and then
+
+`php artisan migrate`
+
+For this you need to add a dmarc reporting local account to your VExim database (or you can use any IMAP email address).
+
+Add the following to your .env file
+```
+DMARC_IMAP_HOST=
+DMARC_IMAP_PORT=
+DMARC_IMAP_ENCRYPTION=
+DMARC_IMAP_USERNAME=
+DMARC_IMAP_PASSWORD=
+DMARC_IMAP_VALIDATE_CERT=false
+DMARC_IMAP_DEBUG=false
+```
+Then for each domain you have you need to add an alias/forwarder to that dmarc address. A cli command is available which will create a dmarc forwarder for every domain that you have, it will forward to the email address in `DMARC_IMAP_USERNAME`. You can do this by running:
+
+ `php artisan vw:setup-dmarc-aliases`
+
+Then you need to change the dns for all the domains (ball ache, I know) to deliver to dmarc@domain
+
 ## Other things it does
 
 ### autodiscover
 Ever used Thunderbird and it's automatically found your mail server settings? Probably autodiscover (or magic).
 
-Autodiscover is an XML file with the settings for your email account (IMAP, SMTP addresses). To get this working with your domain, you need to setup a website called autodiscover.your-email.domain (for every domain you provide email for, irritating I know). Use our nginx config as an example.
+Autodiscover is an XML file with the settings for your email account (IMAP, SMTP addresses). To get this working with your domain, you need to setup a website called autodiscover.your-email.domain (for every domain you provide email for, irritating I know). Use the nginx config as an example.
 
-Then, add a cname or a record of autodiscover.your-email.com pointing to the server where you have just setup the autodiscover website.
+Then, add a cname or a record of autodiscover.your-email-domain.com pointing to the server where you have just setup the autodiscover website.
 
-Thats pretty much it. Thunderbird always works, Outlook is (unsurprisingly) hit or miss.
+Thats pretty much it. Thunderbird always works, Outlook is (unsurprisingly) very hit or miss.
 
 Issues? [Post a new one on the git repository](https://github.com/MrSleeps/VExim-Web-UI/issues "Post a new one on the git repository").
