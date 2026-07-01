@@ -63,7 +63,6 @@ class VeximPanelProvider extends PanelProvider
             ->login()
             ->authGuard('web')
             ->databaseNotifications()
-            ->databaseNotificationsPolling('89s')
             ->passwordReset()
             ->profile(EditProfile::class, isSimple: false)
             ->colors([
@@ -87,7 +86,7 @@ class VeximPanelProvider extends PanelProvider
                 'Lists',
                 'Mailing Lists',
                 'Website Management',
-                'DNS Management',
+                'DNS',
                 'Reports & Analytics',
                 'Communications',
                 'System Settings',
