@@ -30,6 +30,7 @@ jobs:
     - name: Install PHP dependencies
       run: |
         composer config --unset repositories || true
+        rm composer.lock
         composer install --no-progress --no-suggest --prefer-dist --ignore-platform-req=php
 
     - name: Validate composer.json
