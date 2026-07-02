@@ -12,7 +12,7 @@ class ManagePlugins extends Command
 {
     protected $signature = 'vw:plugin
         {action : list|install|remove|update}
-        {package? : Composer package name, e.g. veximweb/plugin-pdns}
+        {identifier? : Plugin ID (integer) or package name (string)}
         {--fresh : Bypass the manifest cache and fetch a fresh copy}';
 
     protected $description = 'List, install, remove, or update VExim Web plugins via composer.local.json';
@@ -50,6 +50,7 @@ class ManagePlugins extends Command
 
         $rows = collect($manifest['plugins'])
             ->map(fn (array $plugin) => [
+                $plugin['id'] ?? 'N/A',
                 $plugin['package'],
                 $plugin['name'] ?? '',
                 $plugin['description'] ?? '',
@@ -57,17 +58,17 @@ class ManagePlugins extends Command
             ])
             ->all();
 
-        $this->table(['Package', 'Name', 'Description', 'Status'], $rows);
+        $this->table(['ID', 'Package', 'Name', 'Description', 'Status'], $rows);
 
         return self::SUCCESS;
     }
 
     protected function handleInstall(): int
     {
-        $package = $this->argument('package');
+        $identifier = $this->argument('identifier');
 
-        if (! $package) {
-            return $this->failWith('You must specify a package to install, e.g. vexim:plugin install vexim/vexim-web-plugin-pdns');
+        if (! $identifier) {
+            return $this->failWith('You must specify a plugin ID or package name to install.');
         }
 
         $manifest = $this->fetchManifest();
@@ -76,11 +77,14 @@ class ManagePlugins extends Command
             return self::FAILURE;
         }
 
-        $entry = collect($manifest['plugins'])->firstWhere('package', $package);
+        // Determine if identifier is numeric (ID) or string (package name)
+        $entry = $this->findPluginByIdentifier($identifier, $manifest);
 
         if ($entry === null) {
-            return $this->failWith("'{$package}' is not in the plugin manifest. Run 'vexim:plugin list' to see available plugins.");
+            return $this->failWith("Plugin '{$identifier}' not found in the manifest. Run 'vw:plugin list' to see available plugins.");
         }
+
+        $package = $entry['package'];
 
         if (in_array($package, $this->getInstalledPackages(), true)) {
             $this->warn("'{$package}' is already installed. Skipping.");
@@ -91,6 +95,7 @@ class ManagePlugins extends Command
         $constraint = $entry['constraint'] ?? '*';
         $requireArg = $constraint === '*' ? $package : "{$package}:{$constraint}";
 
+        $this->info("Installing: {$entry['name']} ({$package})");
         $this->info("Requiring {$requireArg} in composer.local.json...");
 
         if (! $this->runComposer(['require', $requireArg, '--no-update'], localFile: true)) {
@@ -108,26 +113,41 @@ class ManagePlugins extends Command
             return self::FAILURE;
         }
 
-        $this->info("'{$package}' installed successfully.");
+        $this->info("✓ '{$entry['name']}' installed successfully.");
 
         return self::SUCCESS;
     }
 
     protected function handleRemove(): int
     {
-        $package = $this->argument('package');
+        $identifier = $this->argument('identifier');
 
-        if (! $package) {
-            return $this->failWith('You must specify a package to remove, e.g. vexim:plugin remove veximweb/plugin-pdns');
+        if (! $identifier) {
+            return $this->failWith('You must specify a plugin ID or package name to remove.');
         }
 
+        $manifest = $this->fetchManifest();
+
+        if ($manifest === null) {
+            return self::FAILURE;
+        }
+
+        // Find the plugin by identifier to get the package name
+        $entry = $this->findPluginByIdentifier($identifier, $manifest);
+
+        if ($entry === null) {
+            return $this->failWith("Plugin '{$identifier}' not found in the manifest.");
+        }
+
+        $package = $entry['package'];
+
         if (! in_array($package, $this->getInstalledPackages(), true)) {
-            $this->warn("'{$package}' is not currently installed. Nothing to do.");
+            $this->warn("'{$entry['name']}' is not currently installed. Nothing to do.");
 
             return self::SUCCESS;
         }
 
-        $this->info("Removing {$package} from composer.local.json...");
+        $this->info("Removing {$entry['name']} ({$package}) from composer.local.json...");
 
         if (! $this->runComposer(['remove', $package, '--no-update'], localFile: true)) {
             return $this->failWith('Failed to remove the package from composer.local.json. See output above.');
@@ -143,7 +163,7 @@ class ManagePlugins extends Command
             return self::FAILURE;
         }
 
-        $this->info("'{$package}' removed successfully.");
+        $this->info("✓ '{$entry['name']}' removed successfully.");
 
         return self::SUCCESS;
     }
@@ -163,6 +183,22 @@ class ManagePlugins extends Command
                 $manifest = $response->json();
 
                 if (is_array($manifest) && isset($manifest['plugins'])) {
+                    // Validate that all plugins have IDs
+                    $hasIds = collect($manifest['plugins'])->every(fn ($plugin) => isset($plugin['id']));
+                    
+                    if (! $hasIds) {
+                        $this->warn('Some plugins in the manifest are missing IDs. Auto-assigning IDs...');
+                        $manifest['plugins'] = collect($manifest['plugins'])
+                            ->map(function ($plugin, $index) {
+                                if (! isset($plugin['id'])) {
+                                    $plugin['id'] = $index + 1;
+                                }
+                                return $plugin;
+                            })
+                            ->values()
+                            ->all();
+                    }
+
                     // Update the cache
                     Cache::put(self::MANIFEST_CACHE_KEY, $manifest, now()->addHours(6));
                     
@@ -183,12 +219,13 @@ class ManagePlugins extends Command
                     if ($newPlugins->isNotEmpty()) {
                         $this->info('New plugins available:');
                         $rows = $newPlugins->map(fn (array $plugin) => [
+                            $plugin['id'] ?? 'N/A',
                             $plugin['package'],
                             $plugin['name'] ?? '',
                             $plugin['description'] ?? '',
                         ])->take(10)->all();
                         
-                        $this->table(['Package', 'Name', 'Description'], $rows);
+                        $this->table(['ID', 'Package', 'Name', 'Description'], $rows);
                         
                         if ($newPlugins->count() > 10) {
                             $this->line("... and " . ($newPlugins->count() - 10) . " more. Run 'vw:plugin list' to see all.");
@@ -206,6 +243,30 @@ class ManagePlugins extends Command
         } catch (\Throwable $e) {
             return $this->failWith("Failed to fetch the plugin manifest: {$e->getMessage()}");
         }
+    }
+
+    /**
+     * Find a plugin by ID (integer) or package name (string)
+     */
+    protected function findPluginByIdentifier(string|int $identifier, array $manifest): ?array
+    {
+        $plugins = collect($manifest['plugins']);
+
+        // Try to find by ID if identifier is numeric
+        if (is_numeric($identifier)) {
+            $id = (int) $identifier;
+            $plugin = $plugins->firstWhere('id', $id);
+            
+            if ($plugin !== null) {
+                return $plugin;
+            }
+        }
+
+        // Fallback: search by package name (case-insensitive partial match)
+        return $plugins->first(function ($plugin) use ($identifier) {
+            return strcasecmp($plugin['package'], $identifier) === 0
+                || strcasecmp($plugin['name'] ?? '', $identifier) === 0;
+        });
     }
 
     /**
@@ -282,6 +343,17 @@ class ManagePlugins extends Command
                 $manifest = $response->json();
 
                 if (is_array($manifest) && isset($manifest['plugins'])) {
+                    // Ensure all plugins have IDs
+                    $manifest['plugins'] = collect($manifest['plugins'])
+                        ->map(function ($plugin, $index) {
+                            if (! isset($plugin['id'])) {
+                                $plugin['id'] = $index + 1;
+                            }
+                            return $plugin;
+                        })
+                        ->values()
+                        ->all();
+
                     Cache::put(self::MANIFEST_CACHE_KEY, $manifest, now()->addHours(6));
                     $this->writeFallbackManifest($manifest);
 
