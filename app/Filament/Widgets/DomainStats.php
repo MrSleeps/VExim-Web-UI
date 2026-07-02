@@ -2,8 +2,8 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\Domain;
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\Domain;
+use VEximweb\Core\Data\Models\EximUser;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Facades\Auth;

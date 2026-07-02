@@ -2,8 +2,8 @@
 
 namespace App\Auth;
 
-use App\Models\EximUser;
-use App\Models\User;
+use VEximweb\Core\Data\Models\EximUser;
+use VEximweb\Core\Data\Models\User;
 use Illuminate\Auth\Passwords\PasswordBroker;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 

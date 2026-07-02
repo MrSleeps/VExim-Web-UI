@@ -27,7 +27,7 @@ use App\Filament\Widgets\DomainStats;
 use App\Filament\Resources\DomainUsers\DomainUserResource; 
 use Filament\Navigation\NavigationItem;
 use Filament\Support\Icons\Heroicon;
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use FinityLabs\FinMail\FinMailPlugin;
 use App\Filament\Pages\Auth\CustomResetPassword;
 use App\Filament\Pages\Auth\CustomRequestPasswordReset;
@@ -35,6 +35,7 @@ use App\Filament\Pages\Auth\EditProfile;
 use App\Filament\Widgets\RecentLoginActivity;
 use Openplain\FilamentShadcnTheme\Color;
 use App\Filament\Widgets\SpamStats;
+use VEximweb\Core\Data\Models\VwDatabaseNotification;
 
 class VeximPanelProvider extends PanelProvider
 {
@@ -61,10 +62,11 @@ class VeximPanelProvider extends PanelProvider
             ->viteTheme('resources/css/filament/vexim/theme.css')
             ->login()
             ->authGuard('web')
+            ->databaseNotifications()
             ->passwordReset()
             ->profile(EditProfile::class, isSimple: false)
             ->colors([
-                'primary' => Color::Blue,  // The Shadcn effect
+                'primary' => Color::Blue,
             ])
             ->brandLogo(asset('images/logo.svg'))
             ->favicon(asset('favicon/favicon-96x96.png'))
@@ -83,18 +85,17 @@ class VeximPanelProvider extends PanelProvider
                 'Account Management',
                 'Lists',
                 'Mailing Lists',
-                'Website Management',
-                'DNS Management',
+                'DNS',                
+                'Reports & Analytics',
+                'Settings',
                 'Communications',
                 'System Settings',
-                'Reports & Analytics',
             ])           
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 DomainStats::class,
                 AccountTypesChart::class,
                 RecentLoginActivity::class,
-            SpamStats::class,
             ])
             ->plugins($plugins)
             ->middleware([

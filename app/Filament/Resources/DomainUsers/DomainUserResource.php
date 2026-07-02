@@ -2,7 +2,7 @@
 
 namespace App\Filament\Resources\DomainUsers;
 
-use App\Models\EximUser;
+use VEximweb\Core\Data\Models\EximUser;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Section;

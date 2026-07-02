@@ -2,12 +2,12 @@
 
 namespace App\Providers;
 
-use App\Models\Domain;
-use App\Models\EximUser;
-use App\Models\DomainAlias;
-use App\Models\Blocklist;
-use App\Models\Setting;
-use App\Models\User;
+use VEximweb\Core\Data\Models\Domain;
+use VEximweb\Core\Data\Models\EximUser;
+use VEximweb\Core\Data\Models\DomainAlias;
+//use App\Models\Blocklist;
+//use App\Models\Setting;
+use VEximweb\Core\Data\Models\User;
 use App\Observers\GlobalActivityObserver;
 use Illuminate\Support\ServiceProvider;
 use App\Auth\MultiTableUserProvider;
@@ -41,6 +41,22 @@ class AppServiceProvider extends ServiceProvider
             $editor->extraAttributes([
                 'style' => 'min-height: 650px;',
             ]);
-        });           
+        });   #
+\DB::listen(function ($query) {
+    if (str_contains($query->sql, 'delete') && str_contains($query->sql, 'vw_notifications')) {
+        \Log::warning('Raw DELETE on vw_notifications', [
+            'sql' => $query->sql,
+            'bindings' => $query->bindings,
+            'trace' => collect(debug_backtrace())->take(15)->map(fn($t) => ($t['class'] ?? '') . ($t['type'] ?? '') . $t['function'])->implode("\n"),
+        ]);
+    }
+});        
+        
+\VEximweb\Core\Data\Models\VwDatabaseNotification::deleting(function ($notification) {
+    \Log::warning('VwDatabaseNotification being deleted', [
+        'id' => $notification->id,
+        'trace' => collect(debug_backtrace())->take(15)->map(fn($t) => ($t['class'] ?? '') . ($t['type'] ?? '') . $t['function'] . ' (' . ($t['file'] ?? 'unknown') . ':' . ($t['line'] ?? '?') . ')')->implode("\n"),
+    ]);
+});        
     }
 }

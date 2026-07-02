@@ -20,7 +20,7 @@ class EditProfile extends BaseEditProfile
         $components = [];
         
         // Add 2FA/Passkey warning if needed
-        if ($user instanceof \App\Models\User && !$this->hasTwoFactorEnabled($user)) {
+        if ($user instanceof \VEximweb\Core\Data\Models\User && !$this->hasTwoFactorEnabled($user)) {
             // Check if 2FA is enforced by system admin
             $isEnforced = config('vexim.website.admin_enforce_2fa', false);
             
@@ -38,7 +38,7 @@ class EditProfile extends BaseEditProfile
         }
         
         // Determine which fields to show based on user type
-        if ($user instanceof \App\Models\EximUser) {
+        if ($user instanceof \VEximweb\Core\Data\Models\EximUser) {
             // Domain user - use EximUser columns
             $components = array_merge($components, [
                 TextInput::make('realname')
@@ -77,7 +77,7 @@ class EditProfile extends BaseEditProfile
 
     protected function handleRecordUpdate(Model $record, array $data): Model
     {
-        if ($record instanceof \App\Models\EximUser) {
+        if ($record instanceof \VEximweb\Core\Data\Models\EximUser) {
             // Map form fields to EximUser columns
             $updateData = [];
             if (isset($data['realname'])) {

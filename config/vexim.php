@@ -19,4 +19,7 @@ return [
         'name' => 'VExim-Web-UI',
         'url' => 'https://github.com/MrSleeps/VExim-Web-UI'
     ],
+    'communications' => [
+        'email_reports_to' => env('HEALTH_TO_ADDRESS', ''),
+    ]
 ];

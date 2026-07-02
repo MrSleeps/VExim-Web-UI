@@ -4,7 +4,7 @@ namespace App\Filament\Resources\ActivityLog;
 
 use App\Filament\Resources\ActivityLog\Pages\ListActivityLogs;
 use App\Filament\Resources\ActivityLog\Pages\ViewActivityLog;
-use App\Models\User;
+use VEximweb\Core\Data\Models\User;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,9 +22,9 @@ class ActivityLogResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Clock;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'System';
+    protected static string|\UnitEnum|null $navigationGroup = 'Reports & Analytics';
 
-    protected static ?string $navigationLabel = 'Activity Log';
+    protected static ?string $navigationLabel = 'Activity Logs';
 
     protected static ?int $navigationSort = 99;
 
@@ -82,20 +82,20 @@ public static function canView(Model $record): bool
         $domainIds = $user->domains()->pluck('domains.domain_id')->toArray();
         
         // Check if the subject is an EximUser in their domains
-        if ($record->subject_type === 'App\Models\EximUser') {
-            $eximUser = \App\Models\EximUser::where('user_id', $record->subject_id)->first();
+        if ($record->subject_type === 'VEximweb\Core\Data\Models\EximUser') {
+            $eximUser = \VEximweb\Core\Data\Models\EximUser::where('user_id', $record->subject_id)->first();
             if ($eximUser && in_array($eximUser->domain_id, $domainIds)) {
                 return true;
             }
         }
         
         // Check if the subject is a Domain they own
-        if ($record->subject_type === 'App\Models\Domain' && in_array($record->subject_id, $domainIds)) {
+        if ($record->subject_type === 'VEximweb\Core\Data\Models\Domain' && in_array($record->subject_id, $domainIds)) {
             return true;
         }
         
         // Check if they are the causer (performed the action)
-        if ($record->causer_id == $user->getAuthIdentifier() && $record->causer_type === 'App\Models\User') {
+        if ($record->causer_id == $user->getAuthIdentifier() && $record->causer_type === 'VEximweb\Core\Data\Models\User') {
             return true;
         }
         
@@ -104,7 +104,7 @@ public static function canView(Model $record): bool
     
     // Domain users can only view their own actions
     if ($user->isDomainUser()) {
-        return $record->causer_id == $user->getAuthIdentifier() && $record->causer_type === 'App\Models\User';
+        return $record->causer_id == $user->getAuthIdentifier() && $record->causer_type === 'VEximweb\Core\Data\Models\User';
     }
     
     return false;
@@ -159,18 +159,18 @@ public static function getEloquentQuery(): Builder
             // Show activities where the subject is an EximUser or Domain in their domains
             $query->where(function (Builder $subQuery) use ($domainIds) {
                 // For EximUser records
-                $subQuery->where('subject_type', 'App\Models\EximUser')
-                    ->whereHasMorph('subject', ['App\Models\EximUser'], function (Builder $q) use ($domainIds) {
+                $subQuery->where('subject_type', 'VEximweb\Core\Data\Models\EximUser')
+                    ->whereHasMorph('subject', ['VEximweb\Core\Data\Models\EximUser'], function (Builder $q) use ($domainIds) {
                         $q->whereIn('domain_id', $domainIds);
                     });
             })->orWhere(function (Builder $subQuery) use ($domainIds) {
                 // For Domain records
-                $subQuery->where('subject_type', 'App\Models\Domain')
+                $subQuery->where('subject_type', 'VEximweb\Core\Data\Models\Domain')
                     ->whereIn('subject_id', $domainIds);
             })->orWhere(function (Builder $subQuery) use ($user) {
                 // Show their own actions (as causer)
                 $subQuery->where('causer_id', $user->getAuthIdentifier())
-                    ->where('causer_type', 'App\Models\User');
+                    ->where('causer_type', 'VEximweb\Core\Data\Models\User');
             });
         });
     }
@@ -180,7 +180,7 @@ public static function getEloquentQuery(): Builder
         return $query->where(function (Builder $query) use ($user) {
             // Only show activities where they are the causer (the one who performed the action)
             $query->where('causer_id', $user->getAuthIdentifier())
-                ->where('causer_type', 'App\Models\User');
+                ->where('causer_type', 'VEximweb\Core\Data\Models\User');
         });
     }
 
@@ -355,7 +355,7 @@ public static function getEloquentQuery(): Builder
             if ($record->subject_id) {
                 try {
                     // The subject_id in activity_log corresponds to user_id in EximUser table
-                    $model = \App\Models\EximUser::where('user_id', $record->subject_id)->first();
+                    $model = \VEximweb\Core\Data\Models\EximUser::where('user_id', $record->subject_id)->first();
                     if ($model && $model->username) {
                         return $model->username;
                     }
@@ -371,7 +371,7 @@ public static function getEloquentQuery(): Builder
                     $domain = '';
                     if (isset($changes[$key]['domain_id'])) {
                         try {
-                            $domainModel = \App\Models\Domain::where('domain_id', $changes[$key]['domain_id'])->first();
+                            $domainModel = \VEximweb\Core\Data\Models\Domain::where('domain_id', $changes[$key]['domain_id'])->first();
                             if ($domainModel && $domainModel->domain) {
                                 $domain = '@' . $domainModel->domain;
                             }
@@ -398,7 +398,7 @@ public static function getEloquentQuery(): Builder
 
             if ($record->subject_id) {
                 try {
-                    $model = \App\Models\Domain::where('domain_id', $record->subject_id)->first();
+                    $model = \VEximweb\Core\Data\Models\Domain::where('domain_id', $record->subject_id)->first();
                     if ($model && $model->domain) {
                         return $model->domain;
                     }

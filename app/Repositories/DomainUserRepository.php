@@ -3,8 +3,8 @@
 namespace App\Repositories;
 
 use App\Models\DomainUser;
-use App\Models\User;
-use App\Models\Domain;
+use VEximweb\Core\Data\Models\User;
+use VEximweb\Core\Data\Models\Domain;
 use App\Repositories\Interfaces\DomainUserRepositoryInterface;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;

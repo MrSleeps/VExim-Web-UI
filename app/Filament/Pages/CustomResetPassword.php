@@ -2,8 +2,8 @@
 
 namespace App\Filament\Pages;
 
-use App\Models\EximUser;
-use App\Models\User;
+use VEximweb\Core\Data\Models\EximUser;
+use VEximweb\Core\Data\Models\User;
 use Filament\Auth\Http\Responses\Contracts\PasswordResetResponse;
 use Filament\Auth\Pages\PasswordReset\ResetPassword;
 use Filament\Forms\Components\TextInput;

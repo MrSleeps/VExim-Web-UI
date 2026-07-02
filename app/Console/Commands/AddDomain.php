@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Domain;
+use VEximweb\Core\Data\Models\Domain;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;

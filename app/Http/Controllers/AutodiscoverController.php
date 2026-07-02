@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\Interfaces\SettingRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\SettingRepositoryInterface;
 
 class AutodiscoverController extends Controller
 {

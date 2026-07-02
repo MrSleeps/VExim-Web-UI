@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Repositories\Interfaces\UserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\UserRepositoryInterface;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -560,7 +560,7 @@ class VEximUsers extends Command
     /**
      * Find user by ID or email.
      */
-    protected function findUserByIdentifier(string $identifier): ?\App\Models\User
+    protected function findUserByIdentifier(string $identifier): ?\VEximweb\Core\Data\Models\User
     {
         // Check if identifier is numeric (ID)
         if (is_numeric($identifier)) {

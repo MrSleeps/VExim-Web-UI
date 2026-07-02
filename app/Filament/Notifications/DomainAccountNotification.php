@@ -3,10 +3,10 @@
 namespace App\Filament\Notifications;
 
 use FinityLabs\FinMail\Mail\TemplateMail;
-use App\Models\Domain;
-use App\Models\User;
+use VEximweb\Core\Data\Models\Domain;
+use VEximweb\Core\Data\Models\User;
 use App\Services\EmailServerSettingsService;
-use App\Services\DomainAdminService;
+use VEximweb\Core\Domain\Services\DomainAdminService;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 

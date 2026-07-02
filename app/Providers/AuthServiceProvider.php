@@ -4,10 +4,10 @@ namespace App\Providers;
 
 use App\Auth\MultiTablePasswordBrokerManager;
 use App\Auth\MultiTableUserProvider;
-use App\Repositories\Interfaces\UserRepositoryInterface;
-use App\Repositories\Interfaces\EximUserRepositoryInterface;
-use App\Repositories\UserRepository;
-use App\Repositories\EximUserRepository;
+use VEximweb\Core\Data\Repositories\Interfaces\UserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\Interfaces\EximUserRepositoryInterface;
+use VEximweb\Core\Data\Repositories\UserRepository;
+use VEximweb\Core\Data\Repositories\EximUserRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\ServiceProvider;
