@@ -85,9 +85,9 @@ class VeximPanelProvider extends PanelProvider
                 'Account Management',
                 'Lists',
                 'Mailing Lists',
-                'Website Management',
-                'DNS',
+                'DNS',                
                 'Reports & Analytics',
+                'Settings',
                 'Communications',
                 'System Settings',
             ])           
