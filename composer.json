@@ -37,8 +37,6 @@
         "mrsleeps/vexim-web-core-settings": "^1.0",
         "mrsleeps/vexim-web-core-webuser": "^1.0",
         "mrsleeps/vexim-web-core-whitelist": "^1.0",
-        "mrsleeps/vexim-web-plugin-dnstools": "*",
-        "mrsleeps/vexim-web-plugin-mtasts": "^1.0@dev",
         "openplain/filament-shadcn-theme": "^1.1",
         "phpseclib/phpseclib": "^3.0",
         "rawilk/filament-password-input": "^3.2",

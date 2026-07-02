@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "462cf8724e65ac9257f2c1cfe9b23ce1",
+    "content-hash": "fa543166814dcdb3684413253cd6f644",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -579,59 +579,6 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
-        },
-        {
-            "name": "cbowofrivia/dmarc-record-builder",
-            "version": "v4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cbowofrivia/dmarc-record-builder.git",
-                "reference": "cbe7807bb1377815014d559624beddb7f7fe4db7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cbowofrivia/dmarc-record-builder/zipball/cbe7807bb1377815014d559624beddb7f7fe4db7",
-                "reference": "cbe7807bb1377815014d559624beddb7f7fe4db7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.3"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.15",
-                "pestphp/pest": "^3",
-                "rector/rector": "^2.2",
-                "symfony/var-dumper": "^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CbowOfRivia\\DmarcRecordBuilder\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charles Bowen",
-                    "email": "charlesrbowen93@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A lean package that makes creating DMARC records user friendly",
-            "homepage": "https://github.com/cbowofrivia/dmarc-record-builder",
-            "keywords": [
-                "cbowofrivia",
-                "dmarc",
-                "dmarc-record-builder"
-            ],
-            "support": {
-                "issues": "https://github.com/cbowofrivia/dmarc-record-builder/issues",
-                "source": "https://github.com/cbowofrivia/dmarc-record-builder/tree/v4.0.0"
-            },
-            "time": "2026-06-22T13:23:56+00:00"
         },
         {
             "name": "chillerlan/php-qrcode",
@@ -2849,100 +2796,6 @@
             "time": "2026-06-19T14:17:46+00:00"
         },
         {
-            "name": "jeremykendall/php-domain-parser",
-            "version": "6.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jeremykendall/php-domain-parser.git",
-                "reference": "98401b32371fc1a75d93d4653d311b38e71f0d82"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/98401b32371fc1a75d93d4653d311b38e71f0d82",
-                "reference": "98401b32371fc1a75d93d4653d311b38e71f0d82",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.65.0",
-                "guzzlehttp/guzzle": "^7.9.2",
-                "guzzlehttp/psr7": "^1.6 || ^2.7.0",
-                "phpstan/phpstan": "^1.12.13",
-                "phpstan/phpstan-phpunit": "^1.4.2",
-                "phpstan/phpstan-strict-rules": "^1.6.1",
-                "phpunit/phpunit": "^10.5.15 || ^11.5.1",
-                "psr/http-factory": "^1.1.0",
-                "psr/simple-cache": "^1.0.1 || ^2.0.0",
-                "symfony/cache": "^v5.0.0 || ^6.4.16",
-                "symfony/var-dumper": "^v6.4.18 || ^7.2"
-            },
-            "suggest": {
-                "league/uri": "To parse and extract the host from an URL using a RFC3986/RFC3987 URI parser",
-                "psr/http-client-implementation": "To use the storage functionality which depends on PSR-18",
-                "psr/http-factory-implementation": "To use the storage functionality which depends on PSR-17",
-                "psr/simple-cache-implementation": "To use the storage functionality which depends on PSR-16",
-                "rowbot/url": "To parse and extract the host from an URL using a  WHATWG URL parser",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pdp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Kendall",
-                    "homepage": "https://about.me/jeremykendall",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "homepage": "https://nyamsprod.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/jeremykendall/php-domain-parser/graphs/contributors"
-                }
-            ],
-            "description": "Public Suffix List and IANA Root Zone Database based Domain parsing implemented in PHP.",
-            "homepage": "https://github.com/jeremykendall/php-domain-parser",
-            "keywords": [
-                "PSL",
-                "Public Suffix List",
-                "Top Level Domains",
-                "domain parsing",
-                "iana",
-                "icann",
-                "idn",
-                "tld"
-            ],
-            "support": {
-                "issues": "https://github.com/jeremykendall/php-domain-parser/issues",
-                "source": "https://github.com/jeremykendall/php-domain-parser"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-26T11:19:48+00:00"
-        },
-        {
             "name": "kirschbaum-development/eloquent-power-joins",
             "version": "4.3.2",
             "source": {
@@ -4432,236 +4285,6 @@
             "time": "2026-06-22T16:40:05+00:00"
         },
         {
-            "name": "mlocati/idna",
-            "version": "1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/idna.git",
-                "reference": "c087f1308f6ad58a105ee5a183568e2e87416df9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/idna/zipball/c087f1308f6ad58a105ee5a183568e2e87416df9",
-                "reference": "c087f1308f6ad58a105ee5a183568e2e87416df9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.6 || ^10"
-            },
-            "bin": [
-                "bin/create-idnamap"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MLocati\\IDNA\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "mlocati@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Library for International Domain Names (IDNA) 2008",
-            "homepage": "https://github.com/mlocati/idna",
-            "keywords": [
-                "ansi",
-                "ascii",
-                "domain",
-                "domain name",
-                "domain names",
-                "domains",
-                "i18n",
-                "idn",
-                "idna",
-                "idna2003",
-                "idna2008",
-                "international",
-                "international domain",
-                "international domain name",
-                "international domain names",
-                "international domains",
-                "international name",
-                "international names",
-                "internationalization",
-                "internationalized",
-                "internationalized domain",
-                "internationalized domain name",
-                "internationalized domain names",
-                "internationalized domains",
-                "internationalized name",
-                "internationalized names",
-                "l10n",
-                "name",
-                "names",
-                "punycode",
-                "unicode"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/idna/issues",
-                "source": "https://github.com/mlocati/idna"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/mlocati",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-10T15:06:40+00:00"
-        },
-        {
-            "name": "mlocati/ip-lib",
-            "version": "1.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/ip-lib.git",
-                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/ip-lib/zipball/4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
-                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "ext-pdo_sqlite": "*",
-                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "IPLib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "mlocati@gmail.com",
-                    "homepage": "https://github.com/mlocati",
-                    "role": "Author"
-                }
-            ],
-            "description": "Handle IPv4, IPv6 addresses and ranges",
-            "homepage": "https://github.com/mlocati/ip-lib",
-            "keywords": [
-                "IP",
-                "address",
-                "addresses",
-                "ipv4",
-                "ipv6",
-                "manage",
-                "managing",
-                "matching",
-                "network",
-                "networking",
-                "range",
-                "subnet"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/ip-lib/issues",
-                "source": "https://github.com/mlocati/ip-lib/tree/1.22.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/mlocati",
-                    "type": "github"
-                },
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "other"
-                }
-            ],
-            "time": "2025-10-15T12:35:09+00:00"
-        },
-        {
-            "name": "mlocati/spf-lib",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/spf-lib.git",
-                "reference": "21afb4297d4985a4c9aaedb7e60e843819ca7924"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/spf-lib/zipball/21afb4297d4985a4c9aaedb7e60e843819ca7924",
-                "reference": "21afb4297d4985a4c9aaedb7e60e843819ca7924",
-                "shasum": ""
-            },
-            "require": {
-                "mlocati/idna": "^1",
-                "mlocati/ip-lib": "^1.11",
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
-                "symfony/yaml": "^4.4 || ^5.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SPFLib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "michele@locati.com",
-                    "homepage": "https://mlocati.github.io",
-                    "role": "author"
-                }
-            ],
-            "description": "Parse, build and validate SPF (Sender Policy Framework) DNS records",
-            "homepage": "https://github.com/mlocati/spf-lib",
-            "keywords": [
-                "MX",
-                "Sender Policy Framework",
-                "dns",
-                "email",
-                "mail",
-                "smtp",
-                "spf"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/spf-lib/issues",
-                "source": "https://github.com/mlocati/spf-lib"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/mlocati",
-                    "type": "github"
-                },
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "other"
-                }
-            ],
-            "time": "2025-06-23T12:30:43+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "3.10.0",
             "source": {
@@ -5355,7 +4978,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dns-core",
-                "reference": "dd7600a81be2db364410ceb47fb7769b83998100"
+                "reference": "663f94f65a18f2334b1db2e12a5a189a23d8370c"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5413,120 +5036,12 @@
             }
         },
         {
-            "name": "mrsleeps/vexim-web-plugin-dnstools",
-            "version": "dev-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dnstools",
-                "reference": "5859d1f17f384ddab84838f5160c00b56691b8ca"
-            },
-            "require": {
-                "cbowofrivia/dmarc-record-builder": "^4.0",
-                "filament/filament": "^5.0",
-                "mlocati/ip-lib": "^1.22",
-                "mlocati/spf-lib": "^3.3",
-                "php": "^8.4"
-            },
-            "require-dev": {
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-arch": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "pestphp/pest-plugin-livewire": "^4.0",
-                "rector/rector": "^2.0"
-            },
-            "type": "filament-plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\DnsTools\\Providers\\DnsToolsServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\DnsTools\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "MrSleeps",
-                    "homepage": "https://github.com/MrSleeps"
-                }
-            ],
-            "description": "DNS tools plugin for VExim Web UI dns plugins.",
-            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dnstools",
-            "keywords": [
-                "cloudflare",
-                "dns",
-                "filament",
-                "hosting",
-                "laravel"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-mtasts",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-mtasts",
-                "reference": "63e85ad894e015c11eeb03d8f15970d7c26c2dfc"
-            },
-            "require": {
-                "illuminate/support": "^13.0",
-                "jeremykendall/php-domain-parser": "^6.0",
-                "php": "^8.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\MTASTS\\Providers\\MTASTSServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\MTASTS\\": "src/"
-                }
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps"
-                }
-            ],
-            "description": "MTA-STS plugin to support in VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
             "name": "mrsleeps/vexim-web-plugin-pdns",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-pdns",
-                "reference": "15bdfad19f808e6ab0d89a843fafcb444eff8cc9"
+                "reference": "ddbee4b335aadb7c315a8ae99b8e532d2989dbec"
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -14835,16 +14350,16 @@
         },
         {
             "name": "php-debugbar/php-debugbar",
-            "version": "v3.7.6",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-debugbar/php-debugbar.git",
-                "reference": "1690ee1728827f9deb4b60457fa387cf44672c56"
+                "reference": "18ced90d4b882ed449b2278fea8692f8f7d1c13c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-debugbar/php-debugbar/zipball/1690ee1728827f9deb4b60457fa387cf44672c56",
-                "reference": "1690ee1728827f9deb4b60457fa387cf44672c56",
+                "url": "https://api.github.com/repos/php-debugbar/php-debugbar/zipball/18ced90d4b882ed449b2278fea8692f8f7d1c13c",
+                "reference": "18ced90d4b882ed449b2278fea8692f8f7d1c13c",
                 "shasum": ""
             },
             "require": {
@@ -14886,7 +14401,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.8-dev"
                 }
             },
             "autoload": {
@@ -14921,7 +14436,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-debugbar/php-debugbar/issues",
-                "source": "https://github.com/php-debugbar/php-debugbar/tree/v3.7.6"
+                "source": "https://github.com/php-debugbar/php-debugbar/tree/v3.8.0"
             },
             "funding": [
                 {
@@ -14933,7 +14448,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-04-30T07:31:44+00:00"
+            "time": "2026-07-02T12:38:20+00:00"
         },
         {
             "name": "php-debugbar/symfony-bridge",
@@ -16511,7 +16026,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "mrsleeps/vexim-web-plugin-dmarc": 20,
-        "mrsleeps/vexim-web-plugin-mtasts": 20,
         "mrsleeps/vexim-web-plugin-pdns": 20
     },
     "prefer-stable": true,
