@@ -28,8 +28,9 @@ jobs:
         mkdir -p storage/logs
         chmod -R 775 bootstrap storage
     - name: Install PHP dependencies
-      run: rm composer.lock
-      run: composer install --no-progress --no-suggest --prefer-dist
+      run: |
+        composer config --unset repositories || true
+        composer install --no-progress --no-suggest --prefer-dist --ignore-platform-req=php
 
     - name: Validate composer.json
       run: composer validate --no-check-all
