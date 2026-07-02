@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\Process;
 class ManagePlugins extends Command
 {
     protected $signature = 'vw:plugin
-        {action : list|install|remove}
+        {action : list|install|remove|update}
         {package? : Composer package name, e.g. veximweb/plugin-pdns}
         {--fresh : Bypass the manifest cache and fetch a fresh copy}';
 
-    protected $description = 'List, install, or remove VExim Web plugins via composer.local.json';
+    protected $description = 'List, install, remove, or update VExim Web plugins via composer.local.json';
 
     protected const MANIFEST_URL = 'https://raw.githubusercontent.com/MrSleeps/vexim-web-plugin-registry/refs/heads/main/main/plugins.json';
 
@@ -33,7 +33,8 @@ class ManagePlugins extends Command
             'list' => $this->handleList(),
             'install' => $this->handleInstall(),
             'remove' => $this->handleRemove(),
-            default => $this->failWith("Unknown action '{$action}'. Expected one of: list, install, remove."),
+            'update' => $this->handleUpdate(),
+            default => $this->failWith("Unknown action '{$action}'. Expected one of: list, install, remove, update."),
         };
     }
 
@@ -145,6 +146,66 @@ class ManagePlugins extends Command
         $this->info("'{$package}' removed successfully.");
 
         return self::SUCCESS;
+    }
+
+    /**
+     * Force update the plugin manifest from the remote registry.
+     * This bypasses the cache and fetches the latest version.
+     */
+    protected function handleUpdate(): int
+    {
+        $this->info('Fetching the latest plugin manifest from the registry...');
+
+        try {
+            $response = Http::timeout(10)->get(self::MANIFEST_URL);
+
+            if ($response->successful()) {
+                $manifest = $response->json();
+
+                if (is_array($manifest) && isset($manifest['plugins'])) {
+                    // Update the cache
+                    Cache::put(self::MANIFEST_CACHE_KEY, $manifest, now()->addHours(6));
+                    
+                    // Update the fallback file
+                    $this->writeFallbackManifest($manifest);
+
+                    $count = count($manifest['plugins']);
+                    $this->info("✅ Plugin manifest updated successfully! Found {$count} plugins.");
+                    $this->newLine();
+                    
+                    // Display a summary of what's available
+                    $installed = $this->getInstalledPackages();
+                    
+                    $newPlugins = collect($manifest['plugins'])
+                        ->filter(fn (array $plugin) => !in_array($plugin['package'], $installed, true))
+                        ->values();
+                    
+                    if ($newPlugins->isNotEmpty()) {
+                        $this->info('New plugins available:');
+                        $rows = $newPlugins->map(fn (array $plugin) => [
+                            $plugin['package'],
+                            $plugin['name'] ?? '',
+                            $plugin['description'] ?? '',
+                        ])->take(10)->all();
+                        
+                        $this->table(['Package', 'Name', 'Description'], $rows);
+                        
+                        if ($newPlugins->count() > 10) {
+                            $this->line("... and " . ($newPlugins->count() - 10) . " more. Run 'vw:plugin list' to see all.");
+                        }
+                    } else {
+                        $this->info('No new plugins available. All plugins are already installed.');
+                    }
+                    
+                    return self::SUCCESS;
+                }
+            }
+
+            return $this->failWith('Failed to fetch the plugin manifest from the registry. The server returned an invalid response.');
+            
+        } catch (\Throwable $e) {
+            return $this->failWith("Failed to fetch the plugin manifest: {$e->getMessage()}");
+        }
     }
 
     /**
