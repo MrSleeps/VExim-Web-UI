@@ -377,7 +377,13 @@ HTML,
                 'address' => null,
                 'name' => null,
             ],
-            'token_schema' => [],
+            'token_schema' => [
+                ['token' => 'update_priority', 'description' => 'Update priority', 'example' => 'High'],
+                ['token' => 'latest_version', 'description' => 'Latest version number', 'example' => '2.0'],
+                ['token' => 'current_version', 'description' => 'Current version of the app', 'example' => '1.0'],
+                ['token' => 'update_message', 'description' => 'Message', 'example' => 'Your app is out of date'],
+                ['token' => 'check_time', 'description' => 'When it was last checked', 'example' => '12am'],
+            ],
         ];
     }
 

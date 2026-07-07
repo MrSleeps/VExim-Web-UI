@@ -28,7 +28,6 @@ Homestead.yaml
 Thumbs.db
 bootstrap/cache/
 composer.dev
-composer.lock
 OLDBACKUPS
 composer.local.json
 build/
