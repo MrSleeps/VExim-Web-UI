@@ -21,5 +21,13 @@ return [
     ],
     'communications' => [
         'email_reports_to' => env('HEALTH_TO_ADDRESS', ''),
-    ]
+    ],
+    'ignored_settings_categories' => [
+        'mailman',
+        'pwa',
+        'dmarc'
+        // Add any other categories you want to hide
+        // 'test',
+        // 'deprecated',
+    ]    
 ];
