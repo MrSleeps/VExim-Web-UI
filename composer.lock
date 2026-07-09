@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c84e4d5e3d16fc9d8c5eea750118291",
+    "content-hash": "8b31a5a7485a6aedb5d153cd2bce931d",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -581,59 +581,6 @@
             "time": "2024-02-09T16:56:22+00:00"
         },
         {
-            "name": "cbowofrivia/dmarc-record-builder",
-            "version": "v4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cbowofrivia/dmarc-record-builder.git",
-                "reference": "cbe7807bb1377815014d559624beddb7f7fe4db7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cbowofrivia/dmarc-record-builder/zipball/cbe7807bb1377815014d559624beddb7f7fe4db7",
-                "reference": "cbe7807bb1377815014d559624beddb7f7fe4db7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.3"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.15",
-                "pestphp/pest": "^3",
-                "rector/rector": "^2.2",
-                "symfony/var-dumper": "^7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "CbowOfRivia\\DmarcRecordBuilder\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Charles Bowen",
-                    "email": "charlesrbowen93@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A lean package that makes creating DMARC records user friendly",
-            "homepage": "https://github.com/cbowofrivia/dmarc-record-builder",
-            "keywords": [
-                "cbowofrivia",
-                "dmarc",
-                "dmarc-record-builder"
-            ],
-            "support": {
-                "issues": "https://github.com/cbowofrivia/dmarc-record-builder/issues",
-                "source": "https://github.com/cbowofrivia/dmarc-record-builder/tree/v4.0.0"
-            },
-            "time": "2026-06-22T13:23:56+00:00"
-        },
-        {
             "name": "chillerlan/php-qrcode",
             "version": "5.0.5",
             "source": {
@@ -974,68 +921,6 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
-        },
-        {
-            "name": "directorytree/imapengine",
-            "version": "v1.25.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DirectoryTree/ImapEngine.git",
-                "reference": "7dd94f76a800a4ca1fd06b132b71484f55b60767"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DirectoryTree/ImapEngine/zipball/7dd94f76a800a4ca1fd06b132b71484f55b60767",
-                "reference": "7dd94f76a800a4ca1fd06b132b71484f55b60767",
-                "shasum": ""
-            },
-            "require": {
-                "egulias/email-validator": "^4.0",
-                "illuminate/collections": ">=9.0",
-                "nesbot/carbon": ">=2.0",
-                "php": "^8.1",
-                "symfony/mime": ">=6.0",
-                "zbateson/mail-mime-parser": "^3.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^2.0|^3.0|^4.0",
-                "spatie/ray": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DirectoryTree\\ImapEngine\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Steve Bauman",
-                    "email": "steven_bauman@outlook.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fully-featured IMAP library -- without the PHP extension",
-            "homepage": "https://github.com/directorytree/imapengine",
-            "keywords": [
-                "engine",
-                "imap",
-                "mail"
-            ],
-            "support": {
-                "issues": "https://github.com/DirectoryTree/ImapEngine/issues",
-                "source": "https://github.com/DirectoryTree/ImapEngine/tree/v1.25.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/stevebauman",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-07-06T16:08:31+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1463,16 +1348,16 @@
         },
         {
             "name": "filament/actions",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/actions.git",
-                "reference": "bc9981be1ff5a1910c59709011ffefe91e827763"
+                "reference": "1c479a47ee1612f7c05a7921b2491230aeed392c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/actions/zipball/bc9981be1ff5a1910c59709011ffefe91e827763",
-                "reference": "bc9981be1ff5a1910c59709011ffefe91e827763",
+                "url": "https://api.github.com/repos/filamentphp/actions/zipball/1c479a47ee1612f7c05a7921b2491230aeed392c",
+                "reference": "1c479a47ee1612f7c05a7921b2491230aeed392c",
                 "shasum": ""
             },
             "require": {
@@ -1485,7 +1370,6 @@
                 "openspout/openspout": "^4.23",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1509,20 +1393,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:22:32+00:00"
+            "time": "2026-07-02T08:19:13+00:00"
         },
         {
             "name": "filament/filament",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/panels.git",
-                "reference": "7c083b779b2c6adccd471ff54f9cc13b3738bf38"
+                "reference": "c54ec7692245787057c24f82d92d9fee7bc24941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/panels/zipball/7c083b779b2c6adccd471ff54f9cc13b3738bf38",
-                "reference": "7c083b779b2c6adccd471ff54f9cc13b3738bf38",
+                "url": "https://api.github.com/repos/filamentphp/panels/zipball/c54ec7692245787057c24f82d92d9fee7bc24941",
+                "reference": "c54ec7692245787057c24f82d92d9fee7bc24941",
                 "shasum": ""
             },
             "require": {
@@ -1539,7 +1423,6 @@
                 "pragmarx/google2fa": "^8.0|^9.0",
                 "pragmarx/google2fa-qrcode": "^3.0|^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1567,20 +1450,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:21:39+00:00"
+            "time": "2026-07-02T08:17:14+00:00"
         },
         {
             "name": "filament/forms",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/forms.git",
-                "reference": "a676ae33c4b2bc13992a103113dca059dac14037"
+                "reference": "7e6e4e52a63f4fc11edb253201bdd8cbc7d956eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/forms/zipball/a676ae33c4b2bc13992a103113dca059dac14037",
-                "reference": "a676ae33c4b2bc13992a103113dca059dac14037",
+                "url": "https://api.github.com/repos/filamentphp/forms/zipball/7e6e4e52a63f4fc11edb253201bdd8cbc7d956eb",
+                "reference": "7e6e4e52a63f4fc11edb253201bdd8cbc7d956eb",
                 "shasum": ""
             },
             "require": {
@@ -1591,7 +1474,6 @@
                 "php": "^8.2",
                 "ueberdosis/tiptap-php": "^2.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1618,20 +1500,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:21:22+00:00"
+            "time": "2026-07-02T08:16:27+00:00"
         },
         {
             "name": "filament/infolists",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/infolists.git",
-                "reference": "19db5b205a5f9f8359edb5f11cdafbec9b823e33"
+                "reference": "01152bfc7d5d2b65a83eb1045a8f3625d4eaeae7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/19db5b205a5f9f8359edb5f11cdafbec9b823e33",
-                "reference": "19db5b205a5f9f8359edb5f11cdafbec9b823e33",
+                "url": "https://api.github.com/repos/filamentphp/infolists/zipball/01152bfc7d5d2b65a83eb1045a8f3625d4eaeae7",
+                "reference": "01152bfc7d5d2b65a83eb1045a8f3625d4eaeae7",
                 "shasum": ""
             },
             "require": {
@@ -1640,7 +1522,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1664,20 +1545,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:23:53+00:00"
+            "time": "2026-07-02T08:19:40+00:00"
         },
         {
             "name": "filament/notifications",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/notifications.git",
-                "reference": "86c94de1d4ebe61162f2aa566fa55c7c7681b93a"
+                "reference": "a2b4564d9c7fcb5b8e904da40b4f6c2782934071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/86c94de1d4ebe61162f2aa566fa55c7c7681b93a",
-                "reference": "86c94de1d4ebe61162f2aa566fa55c7c7681b93a",
+                "url": "https://api.github.com/repos/filamentphp/notifications/zipball/a2b4564d9c7fcb5b8e904da40b4f6c2782934071",
+                "reference": "a2b4564d9c7fcb5b8e904da40b4f6c2782934071",
                 "shasum": ""
             },
             "require": {
@@ -1685,7 +1566,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1712,11 +1592,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:23:03+00:00"
+            "time": "2026-07-02T08:08:59+00:00"
         },
         {
             "name": "filament/query-builder",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/query-builder.git",
@@ -1735,7 +1615,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1763,16 +1642,16 @@
         },
         {
             "name": "filament/schemas",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/schemas.git",
-                "reference": "d192767524ec06accd44b4a4b2db2f08821befe4"
+                "reference": "036549f1b6cbf3d908e1b9fa42f5e221d1db3240"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/schemas/zipball/d192767524ec06accd44b4a4b2db2f08821befe4",
-                "reference": "d192767524ec06accd44b4a4b2db2f08821befe4",
+                "url": "https://api.github.com/repos/filamentphp/schemas/zipball/036549f1b6cbf3d908e1b9fa42f5e221d1db3240",
+                "reference": "036549f1b6cbf3d908e1b9fa42f5e221d1db3240",
                 "shasum": ""
             },
             "require": {
@@ -1781,7 +1660,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1805,11 +1683,11 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:24:02+00:00"
+            "time": "2026-07-02T08:20:18+00:00"
         },
         {
             "name": "filament/spatie-laravel-settings-plugin",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/spatie-laravel-settings-plugin.git",
@@ -1826,7 +1704,6 @@
                 "php": "^8.2",
                 "spatie/laravel-settings": "^3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1854,16 +1731,16 @@
         },
         {
             "name": "filament/support",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/support.git",
-                "reference": "465da03a2a2d7f9124435b4222df8cbca3a58e36"
+                "reference": "024caa553010c2617bb90114eb0e78883e33138b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/support/zipball/465da03a2a2d7f9124435b4222df8cbca3a58e36",
-                "reference": "465da03a2a2d7f9124435b4222df8cbca3a58e36",
+                "url": "https://api.github.com/repos/filamentphp/support/zipball/024caa553010c2617bb90114eb0e78883e33138b",
+                "reference": "024caa553010c2617bb90114eb0e78883e33138b",
                 "shasum": ""
             },
             "require": {
@@ -1882,7 +1759,6 @@
                 "symfony/console": "^7.0|^8.0",
                 "symfony/html-sanitizer": "^7.0|^8.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1909,20 +1785,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:21:59+00:00"
+            "time": "2026-07-02T08:20:15+00:00"
         },
         {
             "name": "filament/tables",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/tables.git",
-                "reference": "750d2119c5247278fb58a5823436defed0e391a3"
+                "reference": "bfe49781b2879e0c1acdfd4065d1c8499ee7ba1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/tables/zipball/750d2119c5247278fb58a5823436defed0e391a3",
-                "reference": "750d2119c5247278fb58a5823436defed0e391a3",
+                "url": "https://api.github.com/repos/filamentphp/tables/zipball/bfe49781b2879e0c1acdfd4065d1c8499ee7ba1a",
+                "reference": "bfe49781b2879e0c1acdfd4065d1c8499ee7ba1a",
                 "shasum": ""
             },
             "require": {
@@ -1932,7 +1808,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -1956,20 +1831,20 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:21:40+00:00"
+            "time": "2026-07-02T08:20:10+00:00"
         },
         {
             "name": "filament/widgets",
-            "version": "5.x-dev",
+            "version": "v5.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filamentphp/widgets.git",
-                "reference": "bc4afa8d7321147351d6dba7f1ba60181b5d0c82"
+                "reference": "329c92e8560536fd6dd738b45eaf6ba063cd53ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/bc4afa8d7321147351d6dba7f1ba60181b5d0c82",
-                "reference": "bc4afa8d7321147351d6dba7f1ba60181b5d0c82",
+                "url": "https://api.github.com/repos/filamentphp/widgets/zipball/329c92e8560536fd6dd738b45eaf6ba063cd53ea",
+                "reference": "329c92e8560536fd6dd738b45eaf6ba063cd53ea",
                 "shasum": ""
             },
             "require": {
@@ -1977,7 +1852,6 @@
                 "filament/support": "self.version",
                 "php": "^8.2"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -2001,7 +1875,7 @@
                 "issues": "https://github.com/filamentphp/filament/issues",
                 "source": "https://github.com/filamentphp/filament"
             },
-            "time": "2026-07-02T08:26:02+00:00"
+            "time": "2026-07-02T08:19:55+00:00"
         },
         {
             "name": "finity-labs/fin-mail",
@@ -2860,100 +2734,6 @@
             "time": "2026-06-19T14:17:46+00:00"
         },
         {
-            "name": "jeremykendall/php-domain-parser",
-            "version": "6.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jeremykendall/php-domain-parser.git",
-                "reference": "98401b32371fc1a75d93d4653d311b38e71f0d82"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/98401b32371fc1a75d93d4653d311b38e71f0d82",
-                "reference": "98401b32371fc1a75d93d4653d311b38e71f0d82",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.65.0",
-                "guzzlehttp/guzzle": "^7.9.2",
-                "guzzlehttp/psr7": "^1.6 || ^2.7.0",
-                "phpstan/phpstan": "^1.12.13",
-                "phpstan/phpstan-phpunit": "^1.4.2",
-                "phpstan/phpstan-strict-rules": "^1.6.1",
-                "phpunit/phpunit": "^10.5.15 || ^11.5.1",
-                "psr/http-factory": "^1.1.0",
-                "psr/simple-cache": "^1.0.1 || ^2.0.0",
-                "symfony/cache": "^v5.0.0 || ^6.4.16",
-                "symfony/var-dumper": "^v6.4.18 || ^7.2"
-            },
-            "suggest": {
-                "league/uri": "To parse and extract the host from an URL using a RFC3986/RFC3987 URI parser",
-                "psr/http-client-implementation": "To use the storage functionality which depends on PSR-18",
-                "psr/http-factory-implementation": "To use the storage functionality which depends on PSR-17",
-                "psr/simple-cache-implementation": "To use the storage functionality which depends on PSR-16",
-                "rowbot/url": "To parse and extract the host from an URL using a  WHATWG URL parser",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pdp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Kendall",
-                    "homepage": "https://about.me/jeremykendall",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "homepage": "https://nyamsprod.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/jeremykendall/php-domain-parser/graphs/contributors"
-                }
-            ],
-            "description": "Public Suffix List and IANA Root Zone Database based Domain parsing implemented in PHP.",
-            "homepage": "https://github.com/jeremykendall/php-domain-parser",
-            "keywords": [
-                "PSL",
-                "Public Suffix List",
-                "Top Level Domains",
-                "domain parsing",
-                "iana",
-                "icann",
-                "idn",
-                "tld"
-            ],
-            "support": {
-                "issues": "https://github.com/jeremykendall/php-domain-parser/issues",
-                "source": "https://github.com/jeremykendall/php-domain-parser"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-26T11:19:48+00:00"
-        },
-        {
             "name": "kirschbaum-development/eloquent-power-joins",
             "version": "4.3.2",
             "source": {
@@ -3018,16 +2798,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "13.x-dev",
+            "version": "v13.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "8136d58841587508d5f2536dce4f90712f80418a"
+                "reference": "514502b38e11bd676ecf83b271c9452cc7500f16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/8136d58841587508d5f2536dce4f90712f80418a",
-                "reference": "8136d58841587508d5f2536dce4f90712f80418a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/514502b38e11bd676ecf83b271c9452cc7500f16",
+                "reference": "514502b38e11bd676ecf83b271c9452cc7500f16",
                 "shasum": ""
             },
             "require": {
@@ -3106,7 +2886,6 @@
                 "illuminate/filesystem": "self.version",
                 "illuminate/hashing": "self.version",
                 "illuminate/http": "self.version",
-                "illuminate/image": "self.version",
                 "illuminate/json-schema": "self.version",
                 "illuminate/log": "self.version",
                 "illuminate/macroable": "self.version",
@@ -3133,7 +2912,6 @@
                 "ext-gmp": "*",
                 "fakerphp/faker": "^1.24",
                 "guzzlehttp/psr7": "^2.9",
-                "intervention/image": "^4.0",
                 "laravel/pint": "^1.18",
                 "league/flysystem-aws-s3-v3": "^3.25.1",
                 "league/flysystem-ftp": "^3.25.1",
@@ -3170,7 +2948,6 @@
                 "ext-redis": "Required to use the Redis cache and queue drivers (^4.0 || ^5.0 || ^6.0).",
                 "fakerphp/faker": "Required to generate fake data using the fake() helper (^1.23).",
                 "filp/whoops": "Required for friendly error pages in development (^2.14.3).",
-                "intervention/image": "Required to use the image processing features (^4.0).",
                 "laravel/tinker": "Required to use the tinker console command (^2.0).",
                 "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^3.25.1).",
                 "league/flysystem-ftp": "Required to use the Flysystem FTP driver (^3.25.1).",
@@ -3193,7 +2970,6 @@
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^7.4 || ^8.0).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^7.4 || ^8.0)."
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -3242,7 +3018,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-07-09T12:59:33+00:00"
+            "time": "2026-07-07T14:13:33+00:00"
         },
         {
             "name": "laravel/passkeys",
@@ -4375,236 +4151,6 @@
             "time": "2026-06-27T03:16:11+00:00"
         },
         {
-            "name": "mlocati/idna",
-            "version": "1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/idna.git",
-                "reference": "c087f1308f6ad58a105ee5a183568e2e87416df9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/idna/zipball/c087f1308f6ad58a105ee5a183568e2e87416df9",
-                "reference": "c087f1308f6ad58a105ee5a183568e2e87416df9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.6 || ^10"
-            },
-            "bin": [
-                "bin/create-idnamap"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MLocati\\IDNA\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "mlocati@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Library for International Domain Names (IDNA) 2008",
-            "homepage": "https://github.com/mlocati/idna",
-            "keywords": [
-                "ansi",
-                "ascii",
-                "domain",
-                "domain name",
-                "domain names",
-                "domains",
-                "i18n",
-                "idn",
-                "idna",
-                "idna2003",
-                "idna2008",
-                "international",
-                "international domain",
-                "international domain name",
-                "international domain names",
-                "international domains",
-                "international name",
-                "international names",
-                "internationalization",
-                "internationalized",
-                "internationalized domain",
-                "internationalized domain name",
-                "internationalized domain names",
-                "internationalized domains",
-                "internationalized name",
-                "internationalized names",
-                "l10n",
-                "name",
-                "names",
-                "punycode",
-                "unicode"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/idna/issues",
-                "source": "https://github.com/mlocati/idna"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/mlocati",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-10T15:06:40+00:00"
-        },
-        {
-            "name": "mlocati/ip-lib",
-            "version": "1.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/ip-lib.git",
-                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/ip-lib/zipball/4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
-                "reference": "4e40ffd3bf9989db19403d89c4d8be44b87b8a91",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "ext-pdo_sqlite": "*",
-                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.5 || ^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "IPLib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "mlocati@gmail.com",
-                    "homepage": "https://github.com/mlocati",
-                    "role": "Author"
-                }
-            ],
-            "description": "Handle IPv4, IPv6 addresses and ranges",
-            "homepage": "https://github.com/mlocati/ip-lib",
-            "keywords": [
-                "IP",
-                "address",
-                "addresses",
-                "ipv4",
-                "ipv6",
-                "manage",
-                "managing",
-                "matching",
-                "network",
-                "networking",
-                "range",
-                "subnet"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/ip-lib/issues",
-                "source": "https://github.com/mlocati/ip-lib/tree/1.22.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/mlocati",
-                    "type": "github"
-                },
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "other"
-                }
-            ],
-            "time": "2025-10-15T12:35:09+00:00"
-        },
-        {
-            "name": "mlocati/spf-lib",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mlocati/spf-lib.git",
-                "reference": "21afb4297d4985a4c9aaedb7e60e843819ca7924"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mlocati/spf-lib/zipball/21afb4297d4985a4c9aaedb7e60e843819ca7924",
-                "reference": "21afb4297d4985a4c9aaedb7e60e843819ca7924",
-                "shasum": ""
-            },
-            "require": {
-                "mlocati/idna": "^1",
-                "mlocati/ip-lib": "^1.11",
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
-                "symfony/yaml": "^4.4 || ^5.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "SPFLib\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Michele Locati",
-                    "email": "michele@locati.com",
-                    "homepage": "https://mlocati.github.io",
-                    "role": "author"
-                }
-            ],
-            "description": "Parse, build and validate SPF (Sender Policy Framework) DNS records",
-            "homepage": "https://github.com/mlocati/spf-lib",
-            "keywords": [
-                "MX",
-                "Sender Policy Framework",
-                "dns",
-                "email",
-                "mail",
-                "smtp",
-                "spf"
-            ],
-            "support": {
-                "issues": "https://github.com/mlocati/spf-lib/issues",
-                "source": "https://github.com/mlocati/spf-lib"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/mlocati",
-                    "type": "github"
-                },
-                {
-                    "url": "https://paypal.me/mlocati",
-                    "type": "other"
-                }
-            ],
-            "time": "2025-06-23T12:30:43+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "3.10.0",
             "source": {
@@ -4709,7 +4255,7 @@
         },
         {
             "name": "mrsleeps/filament-passkeys",
-            "version": "4.x-dev",
+            "version": "v4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MrSleeps/filament-passkeys.git",
@@ -4731,16 +4277,15 @@
                 "laravel/pint": "^1.0",
                 "spatie/laravel-ray": "^1.26"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
-                    "providers": [
-                        "MarcelWeidum\\Passkeys\\PasskeysServiceProvider"
-                    ],
                     "aliases": {
                         "Passkeys": "MarcelWeidum\\Passkeys\\Facades\\Passkeys"
-                    }
+                    },
+                    "providers": [
+                        "MarcelWeidum\\Passkeys\\PasskeysServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -4749,14 +4294,7 @@
                     "MarcelWeidum\\Passkeys\\Database\\Factories\\": "database/factories/"
                 }
             },
-            "scripts": {
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "format": [
-                    "vendor/bin/pint"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4781,19 +4319,25 @@
             },
             "funding": [
                 {
-                    "type": "buy_me_a_coffee",
-                    "url": "https://www.buymeacoffee.com/MarcelWeidum"
+                    "url": "https://www.buymeacoffee.com/MarcelWeidum",
+                    "type": "buy_me_a_coffee"
                 }
             ],
             "time": "2026-07-09T15:00:46+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-blocklist",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-blocklist",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-blocklist.git",
                 "reference": "728a2a3536a9ebda438e1ed4b9b39f627cb24342"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-blocklist/zipball/728a2a3536a9ebda438e1ed4b9b39f627cb24342",
+                "reference": "728a2a3536a9ebda438e1ed4b9b39f627cb24342",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4816,6 +4360,7 @@
                     "VEximweb\\Core\\Blocklist\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -4825,18 +4370,25 @@
                 }
             ],
             "description": "Blocklist management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-blocklist/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-blocklist/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:30:03+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-data",
-            "version": "dev-main",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-data.git",
+                "reference": "8c73c618b6b423bd6d5c1a72d51add673bc746cf"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-data",
-                "reference": "621426d097477d190c3bffb6ae7815c130417775"
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-data/zipball/8c73c618b6b423bd6d5c1a72d51add673bc746cf",
+                "reference": "8c73c618b6b423bd6d5c1a72d51add673bc746cf",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4859,6 +4411,7 @@
                     "VEximweb\\Core\\Data\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -4868,18 +4421,24 @@
                 }
             ],
             "description": "Models and Repositories for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/MrSleeps/vexim-web-core-data/tree/v1.1.1"
+            },
+            "time": "2026-07-09T15:35:09+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-domain",
-            "version": "dev-main",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-domain.git",
+                "reference": "870272413df475e1868b93de2b805626da5631cc"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domain",
-                "reference": "d64439931f91d24720c100d4f136a6e141c7afa3"
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-domain/zipball/870272413df475e1868b93de2b805626da5631cc",
+                "reference": "870272413df475e1868b93de2b805626da5631cc",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4902,6 +4461,7 @@
                     "VEximweb\\Core\\Domain\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -4911,18 +4471,24 @@
                 }
             ],
             "description": "Domain management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/MrSleeps/vexim-web-core-domain/tree/v1.1.0"
+            },
+            "time": "2026-07-04T23:25:08+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-domainalias",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-domainalias",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-domainalias.git",
                 "reference": "5de7806aea2676256bd1bd4a8043ac4b534ceef9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-domainalias/zipball/5de7806aea2676256bd1bd4a8043ac4b534ceef9",
+                "reference": "5de7806aea2676256bd1bd4a8043ac4b534ceef9",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4945,6 +4511,7 @@
                     "VEximweb\\Core\\DomainAlias\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -4954,18 +4521,25 @@
                 }
             ],
             "description": "Domain Aliases management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-domainalias/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-domainalias/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:40:17+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-eximalias",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximalias",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-eximalias.git",
                 "reference": "df77ed0f52c87be7cfc4c851e7edbdeb40a86b5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-eximalias/zipball/df77ed0f52c87be7cfc4c851e7edbdeb40a86b5a",
+                "reference": "df77ed0f52c87be7cfc4c851e7edbdeb40a86b5a",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -4988,6 +4562,7 @@
                     "VEximweb\\Core\\EximAlias\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -4997,18 +4572,25 @@
                 }
             ],
             "description": "Email alias management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-eximalias/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-eximalias/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:42:01+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-eximcatchall",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximcatchall",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-eximcatchall.git",
                 "reference": "ee3dcbb597ee9697f15f834d14a7266ca02f62e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-eximcatchall/zipball/ee3dcbb597ee9697f15f834d14a7266ca02f62e9",
+                "reference": "ee3dcbb597ee9697f15f834d14a7266ca02f62e9",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5031,6 +4613,7 @@
                     "VEximweb\\Core\\EximCatchAll\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5040,18 +4623,25 @@
                 }
             ],
             "description": "Catchall email address management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-eximcatchall/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-eximcatchall/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:45:00+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-eximfail",
-            "version": "dev-main",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-eximfail.git",
+                "reference": "0421118fd36fcd726bc5a1c830826a0ca477482d"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximfail",
-                "reference": "835f8f98fc02d257c73714a1baa11b71590d4f94"
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-eximfail/zipball/0421118fd36fcd726bc5a1c830826a0ca477482d",
+                "reference": "0421118fd36fcd726bc5a1c830826a0ca477482d",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5074,6 +4664,7 @@
                     "VEximweb\\Core\\EximFail\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5083,18 +4674,25 @@
                 }
             ],
             "description": "Email address fail management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-eximfail/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-eximfail/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:48:11+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-eximuser",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-eximuser",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-eximuser.git",
                 "reference": "fe08c5367ad8a435f4aa5df8aef46b6874693e1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-eximuser/zipball/fe08c5367ad8a435f4aa5df8aef46b6874693e1f",
+                "reference": "fe08c5367ad8a435f4aa5df8aef46b6874693e1f",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5117,6 +4715,7 @@
                     "VEximweb\\Core\\EximUser\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5126,18 +4725,25 @@
                 }
             ],
             "description": "Email management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-eximuser/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-eximuser/tree/v1.0.0"
+            },
+            "time": "2026-06-25T18:56:59+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-group",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-group",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-group.git",
                 "reference": "1190719aef6c346eb882313bc01f5d3b9ecedea9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-group/zipball/1190719aef6c346eb882313bc01f5d3b9ecedea9",
+                "reference": "1190719aef6c346eb882313bc01f5d3b9ecedea9",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5160,6 +4766,7 @@
                     "VEximweb\\Core\\Group\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5169,18 +4776,25 @@
                 }
             ],
             "description": "Groups management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-group/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-group/tree/v1.0.0"
+            },
+            "time": "2026-06-25T19:09:05+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-settings",
-            "version": "dev-main",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-settings.git",
+                "reference": "609551fd66f61e95ca5400120ad332561223efbe"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-settings",
-                "reference": "e579c718ce3f3adcdfc688660f17da3a11022a56"
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-settings/zipball/609551fd66f61e95ca5400120ad332561223efbe",
+                "reference": "609551fd66f61e95ca5400120ad332561223efbe",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5203,6 +4817,7 @@
                     "VEximweb\\Core\\Settings\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5212,18 +4827,24 @@
                 }
             ],
             "description": "Settings module for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "source": "https://github.com/MrSleeps/vexim-web-core-settings/tree/v1.1.0"
+            },
+            "time": "2026-07-09T15:11:51+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-webuser",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-webuser",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-webuser.git",
                 "reference": "5839901939553a0aee12712e368766ba6b0d131d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-webuser/zipball/5839901939553a0aee12712e368766ba6b0d131d",
+                "reference": "5839901939553a0aee12712e368766ba6b0d131d",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5246,6 +4867,7 @@
                     "VEximweb\\Core\\WebUser\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5255,18 +4877,25 @@
                 }
             ],
             "description": "Web account management for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/MrSleeps/vexim-web-core-webuser/issues",
+                "source": "https://github.com/MrSleeps/vexim-web-core-webuser/tree/v1.0.0"
+            },
+            "time": "2026-06-25T19:17:59+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-whitelist",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/modules/vexim-web-core-whitelist",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MrSleeps/vexim-web-core-whitelist.git",
                 "reference": "2c28405a5fdf64627b2c61bc3f0bf45e8234d19e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-whitelist/zipball/2c28405a5fdf64627b2c61bc3f0bf45e8234d19e",
+                "reference": "2c28405a5fdf64627b2c61bc3f0bf45e8234d19e",
+                "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
@@ -5289,6 +4918,7 @@
                     "VEximweb\\Core\\Whitelist\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-only"
             ],
@@ -5302,480 +4932,7 @@
                 "issues": "https://github.com/MrSleeps/VExim-Web-UI/issues",
                 "source": "https://github.com/MrSleeps/vexim-web-core-whitelist"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-autodiscover",
-            "version": "dev-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-autodiscover",
-                "reference": "5df90c494dfb1f7d3519b4e703bf85e8bfef9dc0"
-            },
-            "require": {
-                "illuminate/support": "^13.0",
-                "jeremykendall/php-domain-parser": "^6.0",
-                "php": "^8.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\Autodiscover\\Providers\\AutodiscoverServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\Autodiscover\\": "src/"
-                }
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps"
-                }
-            ],
-            "description": "Autodiscover/Autoconfig plugin to support in VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-dmarc",
-            "version": "dev-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dmarc",
-                "reference": "70727f4a7f4d297729040dff26d0a7d0f18f450b"
-            },
-            "require": {
-                "directorytree/imapengine": "^1.25",
-                "filament/filament": "^5.0",
-                "phiki/phiki": "^2.2",
-                "php": "^8.4",
-                "spatie/laravel-permission": "^7.4"
-            },
-            "require-dev": {
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-arch": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "pestphp/pest-plugin-livewire": "^4.0",
-                "rector/rector": "^2.0"
-            },
-            "type": "filament-plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\DMARC\\DMARCServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\DMARC\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "MrSleeps",
-                    "homepage": "https://github.com/MrSleeps"
-                }
-            ],
-            "description": "DMARC package for VExim Web UI dns plugins.",
-            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dmarc",
-            "keywords": [
-                "cloudflare",
-                "dns",
-                "filament",
-                "hosting",
-                "laravel"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-dns-core",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dns-core",
-                "reference": "9bef90d95ee121a75640c56812b4d6a8a3d2b8d2"
-            },
-            "require": {
-                "filament/filament": "^5.0",
-                "php": "^8.4",
-                "spatie/laravel-permission": "^7.4"
-            },
-            "require-dev": {
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-arch": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "pestphp/pest-plugin-livewire": "^4.0",
-                "rector/rector": "^2.0"
-            },
-            "type": "filament-plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\DnsCore\\DnsCoreServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\DnsCore\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "MrSleeps",
-                    "homepage": "https://github.com/MrSleeps"
-                }
-            ],
-            "description": "Core DNS package for VExim Web UI dns plugins.",
-            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dns-core",
-            "keywords": [
-                "cloudflare",
-                "dns",
-                "filament",
-                "hosting",
-                "laravel"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-dnstools",
-            "version": "dev-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-dnstools",
-                "reference": "fd9523f56073ec225c76d74430c070b94019ee11"
-            },
-            "require": {
-                "cbowofrivia/dmarc-record-builder": "^4.0",
-                "filament/filament": "^5.0",
-                "mlocati/ip-lib": "^1.22",
-                "mlocati/spf-lib": "^3.3",
-                "php": "^8.4",
-                "phpseclib/phpseclib": "^3.0"
-            },
-            "require-dev": {
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-arch": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "pestphp/pest-plugin-livewire": "^4.0",
-                "rector/rector": "^2.0"
-            },
-            "type": "filament-plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\DnsTools\\Providers\\DnsToolsServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\DnsTools\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "MrSleeps",
-                    "homepage": "https://github.com/MrSleeps"
-                }
-            ],
-            "description": "DNS tools plugin for VExim Web UI dns plugins.",
-            "homepage": "https://github.com/MrSleeps/vexim-web-plugin-dnstools",
-            "keywords": [
-                "cloudflare",
-                "dns",
-                "filament",
-                "hosting",
-                "laravel"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-mtasts",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-mtasts",
-                "reference": "83813763a51b3cff29e33d3215ac708241e2165e"
-            },
-            "require": {
-                "illuminate/support": "^13.0",
-                "jeremykendall/php-domain-parser": "^6.0",
-                "mrsleeps/vexim-web-plugin-dnstools": "dev-dev",
-                "php": "^8.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\MTASTS\\Providers\\MTASTSServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\MTASTS\\": "src/"
-                }
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps"
-                }
-            ],
-            "description": "MTA-STS plugin to support in VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-pdns",
-            "version": "dev-dev",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-pdns",
-                "reference": "dd403ae93737c825ba6af7275687429c91d2d436"
-            },
-            "require": {
-                "filament/filament": "^5.0",
-                "guzzlehttp/guzzle": "^7.11",
-                "mrsleeps/vexim-web-plugin-dns-core": "^1.0",
-                "php": "^8.2",
-                "spatie/laravel-package-tools": "^1.15.0",
-                "spatie/laravel-permission": "^7.4"
-            },
-            "require-dev": {
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^9.0|^10.0|^11.0",
-                "pestphp/pest": "^3.7|^4.0",
-                "pestphp/pest-plugin-arch": "^3.0|^4.0",
-                "pestphp/pest-plugin-laravel": "^3.0|^4.0",
-                "pestphp/pest-plugin-livewire": "^3.0|^4.0",
-                "rector/rector": "^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\PDNS\\VEximPdnsServiceProvider"
-                    ],
-                    "aliases": {
-                        "VeximPdns": "VEximweb\\Plugin\\PDNS\\Facades\\VEximPdns"
-                    }
-                },
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\PDNS\\": "src/",
-                    "VEximweb\\Plugin\\PDNS\\Database\\Factories\\": "database/factories/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\PDNS\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "post-autoload-dump": [
-                    "@php ./vendor/bin/testbench package:discover --ansi"
-                ],
-                "analyse": [
-                    "phpstan analyse"
-                ],
-                "lint": [
-                    "pint"
-                ],
-                "refactor": [
-                    "rector"
-                ],
-                "test": [
-                    "pest"
-                ],
-                "test:lint": [
-                    "pint --test"
-                ],
-                "test:refactor": [
-                    "rector --dry-run"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps",
-                    "homepage": "https://github.com/MrSleeps",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A Package that allows VExim Web UI to interact with a PowerDNS API",
-            "homepage": "https://github.com/mrsleeps/vexim-web-plugin-pdns",
-            "keywords": [
-                "MrSleeps",
-                "filament",
-                "filament-plugin",
-                "filamentphp",
-                "laravel",
-                "vexim-web-plugin-pdns"
-            ],
-            "support": {
-                "issues": "https://github.com/mrsleeps/vexim-web-plugin-pdns/issues",
-                "source": "https://github.com/mrsleeps/vexim-web-plugin-pdns"
-            },
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
-        },
-        {
-            "name": "mrsleeps/vexim-web-plugin-pwa",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "/home/vexim2026/repos/github/plugins/vexim-web-plugin-pwa",
-                "reference": "67f182d5ece9d08f8141dd2e3b40ba1e279f9d15"
-            },
-            "require": {
-                "filament/filament": "^3.0|^4.0|^5.x-dev",
-                "laravel/framework": "^11.0|^12.0|^13.x-dev",
-                "php": "^8.2|^8.3",
-                "spatie/laravel-permission": "^6.0|^7.0|^8.x-dev"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.0",
-                "orchestra/testbench": "^9.0|^10.0",
-                "phpunit/phpunit": "^10.0|^11.0"
-            },
-            "type": "plugin",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "VEximweb\\Plugin\\PWA\\Providers\\PWAServiceProvider"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-main": "1.0.x-dev"
-                },
-                "plugin": {
-                    "name": "VExim Web UI PWA Plugin",
-                    "version": "1.0.0",
-                    "namespace": "VEximweb\\Plugin\\PWA"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\PWA\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "VEximweb\\Plugin\\PWA\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "post-autoload-dump": [
-                    "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-                    "@php artisan package:discover --ansi"
-                ],
-                "test": [
-                    "vendor/bin/phpunit"
-                ],
-                "test-coverage": [
-                    "vendor/bin/phpunit --coverage-html coverage"
-                ],
-                "pint": [
-                    "vendor/bin/pint"
-                ],
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "post-install-cmd": [
-                    "@php artisan vendor:publish --tag=pwa-migrations --force"
-                ],
-                "post-update-cmd": [
-                    "@php artisan vendor:publish --tag=pwa-migrations --force"
-                ]
-            },
-            "license": [
-                "GPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Mr Sleeps",
-                    "email": "mr.sleeps@example.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PWA plugin for VExim Web UI",
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "time": "2026-06-25T19:20:58+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -6259,147 +5416,6 @@
             "time": "2026-02-16T23:10:27+00:00"
         },
         {
-            "name": "opcodesio/log-viewer",
-            "version": "v3.24.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "bdf931182c40001dd3ebf728fdded0648b121ae0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/bdf931182c40001dd3ebf728fdded0648b121ae0",
-                "reference": "bdf931182c40001dd3ebf728fdded0648b121ae0",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0|^12.0|^13.0",
-                "opcodesio/mail-parser": "^0.2.3",
-                "php": "^8.0"
-            },
-            "conflict": {
-                "arcanedev/log-viewer": "^8.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "^7.2",
-                "itsgoingd/clockwork": "^5.1",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^7.0|^8.0",
-                "orchestra/testbench": "^7.6|^8.0|^9.5|^10.0|^11.0",
-                "pestphp/pest": "^2.0|^3.7|^4.4",
-                "pestphp/pest-plugin-laravel": "^2.0|^3.1|^4.1",
-                "spatie/test-time": "^1.3"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Required for multi-host support. ^7.2"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "LogViewer": "Opcodes\\LogViewer\\Facades\\LogViewer"
-                    },
-                    "providers": [
-                        "Opcodes\\LogViewer\\LogViewerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Opcodes\\LogViewer\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arunas Skirius",
-                    "email": "arukomp@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Fast and easy-to-use log viewer for your Laravel application",
-            "homepage": "https://github.com/opcodesio/log-viewer",
-            "keywords": [
-                "arukompas",
-                "better-log-viewer",
-                "laravel",
-                "log viewer",
-                "logs",
-                "opcodesio"
-            ],
-            "support": {
-                "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v3.24.2"
-            },
-            "funding": [
-                {
-                    "url": "https://www.buymeacoffee.com/arunas",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/arukompas",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-11T13:41:17+00:00"
-        },
-        {
-            "name": "opcodesio/mail-parser",
-            "version": "v0.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/opcodesio/mail-parser.git",
-                "reference": "7151e4183288e46d911a76803c5545a1c8822226"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/mail-parser/zipball/7151e4183288e46d911a76803c5545a1c8822226",
-                "reference": "7151e4183288e46d911a76803c5545a1c8822226",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^2.16",
-                "symfony/var-dumper": "^6.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Opcodes\\MailParser\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arunas Skirius",
-                    "email": "arukomp@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Parse emails without the mailparse extension",
-            "keywords": [
-                "arukompas",
-                "email",
-                "email parser",
-                "mail",
-                "opcodesio",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/opcodesio/mail-parser/issues",
-                "source": "https://github.com/opcodesio/mail-parser/tree/v0.2.4"
-            },
-            "time": "2026-06-11T08:50:37+00:00"
-        },
-        {
             "name": "openplain/filament-shadcn-theme",
             "version": "v1.1.0",
             "source": {
@@ -6619,258 +5635,6 @@
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
             "time": "2025-09-24T15:06:41+00:00"
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "v9.99.100",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
-                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 7"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*|5.*",
-                "vimeo/psalm": "^1"
-            },
-            "suggest": {
-                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "polyfill",
-                "pseudorandom",
-                "random"
-            ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/random_compat/issues",
-                "source": "https://github.com/paragonie/random_compat"
-            },
-            "time": "2020-10-15T08:29:30+00:00"
-        },
-        {
-            "name": "phiki/phiki",
-            "version": "v2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phikiphp/phiki.git",
-                "reference": "24375dbc474dbc484de7d53c6bab0bb9e198f647"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phikiphp/phiki/zipball/24375dbc474dbc484de7d53c6bab0bb9e198f647",
-                "reference": "24375dbc474dbc484de7d53c6bab0bb9e198f647",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "php": "^8.2",
-                "psr/simple-cache": "^3.0"
-            },
-            "require-dev": {
-                "illuminate/support": "^11.45",
-                "laravel/pint": "^1.18.1",
-                "league/commonmark": "^2.5.3",
-                "orchestra/testbench": "^9.15",
-                "pestphp/pest": "^3.5.1",
-                "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^2.0",
-                "symfony/var-dumper": "^7.1.6"
-            },
-            "suggest": {
-                "league/commonmark": "Required to use the CommonMark adapter (^2.5.3)"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Phiki\\Adapters\\Laravel\\PhikiServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Phiki\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ryan Chandler",
-                    "email": "support@ryangjchandler.co.uk",
-                    "homepage": "https://ryangjchandler.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Syntax highlighting using TextMate grammars in PHP.",
-            "support": {
-                "issues": "https://github.com/phikiphp/phiki/issues",
-                "source": "https://github.com/phikiphp/phiki/tree/v2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ryangjchandler",
-                    "type": "github"
-                },
-                {
-                    "url": "https://buymeacoffee.com/ryangjchandler",
-                    "type": "other"
-                }
-            ],
-            "time": "2026-04-01T15:56:08+00:00"
-        },
-        {
-            "name": "php-di/invoker",
-            "version": "2.3.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-DI/Invoker.git",
-                "reference": "3c1ddfdef181431fbc4be83378f6d036d59e81e1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/Invoker/zipball/3c1ddfdef181431fbc4be83378f6d036d59e81e1",
-                "reference": "3c1ddfdef181431fbc4be83378f6d036d59e81e1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.3",
-                "psr/container": "^1.0|^2.0"
-            },
-            "require-dev": {
-                "athletic/athletic": "~0.1.8",
-                "mnapoli/hard-mode": "~0.3.0",
-                "phpunit/phpunit": "^9.0 || ^10 || ^11 || ^12"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Invoker\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Generic and extensible callable invoker",
-            "homepage": "https://github.com/PHP-DI/Invoker",
-            "keywords": [
-                "callable",
-                "dependency",
-                "dependency-injection",
-                "injection",
-                "invoke",
-                "invoker"
-            ],
-            "support": {
-                "issues": "https://github.com/PHP-DI/Invoker/issues",
-                "source": "https://github.com/PHP-DI/Invoker/tree/2.3.7"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-08-30T10:22:22+00:00"
-        },
-        {
-            "name": "php-di/php-di",
-            "version": "7.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-DI/PHP-DI.git",
-                "reference": "f88054cc052e40dbe7b383c8817c19442d480352"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/f88054cc052e40dbe7b383c8817c19442d480352",
-                "reference": "f88054cc052e40dbe7b383c8817c19442d480352",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/serializable-closure": "^1.0 || ^2.0",
-                "php": ">=8.0",
-                "php-di/invoker": "^2.0",
-                "psr/container": "^1.1 || ^2.0"
-            },
-            "provide": {
-                "psr/container-implementation": "^1.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3",
-                "friendsofphp/proxy-manager-lts": "^1",
-                "mnapoli/phpunit-easymock": "^1.3",
-                "phpunit/phpunit": "^9.6 || ^10 || ^11",
-                "vimeo/psalm": "^5|^6"
-            },
-            "suggest": {
-                "friendsofphp/proxy-manager-lts": "Install it if you want to use lazy injection (version ^1)"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "DI\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The dependency injection container for humans",
-            "homepage": "https://php-di.org/",
-            "keywords": [
-                "PSR-11",
-                "container",
-                "container-interop",
-                "dependency injection",
-                "di",
-                "ioc",
-                "psr11"
-            ],
-            "support": {
-                "issues": "https://github.com/PHP-DI/PHP-DI/issues",
-                "source": "https://github.com/PHP-DI/PHP-DI/tree/7.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/php-di/php-di",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2025-08-16T11:10:48+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -7122,116 +5886,6 @@
                 }
             ],
             "time": "2025-12-27T19:41:33+00:00"
-        },
-        {
-            "name": "phpseclib/phpseclib",
-            "version": "3.0.55",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "db9744e6d47e742b1f974e965ad49bdd041105af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/db9744e6d47e742b1f974e965ad49bdd041105af",
-                "reference": "db9744e6d47e742b1f974e965ad49bdd041105af",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/constant_time_encoding": "^1|^2|^3",
-                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
-                "php": ">=5.6.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "suggest": {
-                "ext-dom": "Install the DOM extension to load XML formatted public keys.",
-                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
-                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
-                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "phpseclib/bootstrap.php"
-                ],
-                "psr-4": {
-                    "phpseclib3\\": "phpseclib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jim Wigginton",
-                    "email": "terrafrost@php.net",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Patrick Monnerat",
-                    "email": "pm@datasphere.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Fischer",
-                    "email": "bantu@phpbb.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Hans-Jürgen Petrich",
-                    "email": "petrich@tronic-media.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
-            "homepage": "http://phpseclib.sourceforge.net",
-            "keywords": [
-                "BigInteger",
-                "aes",
-                "asn.1",
-                "asn1",
-                "blowfish",
-                "crypto",
-                "cryptography",
-                "encryption",
-                "rsa",
-                "security",
-                "sftp",
-                "signature",
-                "signing",
-                "ssh",
-                "twofish",
-                "x.509",
-                "x509"
-            ],
-            "support": {
-                "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.55"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/terrafrost",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/phpseclib",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-06-14T23:24:10+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -10526,90 +9180,6 @@
             "time": "2026-04-10T16:19:22+00:00"
         },
         {
-            "name": "symfony/polyfill-iconv",
-            "version": "v1.37.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-iconv.git",
-                "reference": "2c5729fd241b4b22f6e4b436bc3354a4f262df57"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/2c5729fd241b4b22f6e4b436bc3354a4f262df57",
-                "reference": "2c5729fd241b4b22f6e4b436bc3354a4f262df57",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "provide": {
-                "ext-iconv": "*"
-            },
-            "suggest": {
-                "ext-iconv": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "url": "https://github.com/symfony/polyfill",
-                    "name": "symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Iconv\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Iconv extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "iconv",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-iconv/tree/v1.37.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-04-10T16:19:22+00:00"
-        },
-        {
             "name": "symfony/polyfill-intl-grapheme",
             "version": "v1.38.1",
             "source": {
@@ -12925,214 +11495,6 @@
                 "source": "https://github.com/wikimedia/composer-merge-plugin/tree/v2.1.0"
             },
             "time": "2023-04-15T19:07:00+00:00"
-        },
-        {
-            "name": "zbateson/mail-mime-parser",
-            "version": "3.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/mail-mime-parser.git",
-                "reference": "395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/mail-mime-parser/zipball/395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0",
-                "reference": "395c406cc1c5d1eb171d9decb0a3b509e8bd6bc0",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/psr7": "^2.5",
-                "php": ">=8.0",
-                "php-di/php-di": "^6.0|^7.0",
-                "psr/log": "^1|^2|^3",
-                "zbateson/mb-wrapper": "^2.0",
-                "zbateson/stream-decorators": "^2.1"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "monolog/monolog": "^2|^3",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6"
-            },
-            "suggest": {
-                "ext-iconv": "For best support/performance",
-                "ext-mbstring": "For best support/performance"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\MailMimeParser\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/zbateson/mail-mime-parser/graphs/contributors"
-                }
-            ],
-            "description": "MIME email message parser",
-            "homepage": "https://mail-mime-parser.org",
-            "keywords": [
-                "MimeMailParser",
-                "email",
-                "mail",
-                "mailparse",
-                "mime",
-                "mimeparse",
-                "parser",
-                "php-imap"
-            ],
-            "support": {
-                "docs": "https://mail-mime-parser.org/#usage-guide",
-                "issues": "https://github.com/zbateson/mail-mime-parser/issues",
-                "source": "https://github.com/zbateson/mail-mime-parser"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-06-24T13:42:46+00:00"
-        },
-        {
-            "name": "zbateson/mb-wrapper",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/mb-wrapper.git",
-                "reference": "50a14c0c9537f978a61cde9fdc192a0267cc9cff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/mb-wrapper/zipball/50a14c0c9537f978a61cde9fdc192a0267cc9cff",
-                "reference": "50a14c0c9537f978a61cde9fdc192a0267cc9cff",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.0",
-                "symfony/polyfill-iconv": "^1.9",
-                "symfony/polyfill-mbstring": "^1.9"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6|^10.0"
-            },
-            "suggest": {
-                "ext-iconv": "For best support/performance",
-                "ext-mbstring": "For best support/performance"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\MbWrapper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                }
-            ],
-            "description": "Wrapper for mbstring with fallback to iconv for encoding conversion and string manipulation",
-            "keywords": [
-                "charset",
-                "encoding",
-                "http",
-                "iconv",
-                "mail",
-                "mb",
-                "mb_convert_encoding",
-                "mbstring",
-                "mime",
-                "multibyte",
-                "string"
-            ],
-            "support": {
-                "issues": "https://github.com/zbateson/mb-wrapper/issues",
-                "source": "https://github.com/zbateson/mb-wrapper/tree/2.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-20T22:05:33+00:00"
-        },
-        {
-            "name": "zbateson/stream-decorators",
-            "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zbateson/stream-decorators.git",
-                "reference": "32a2a62fb0f26313395c996ebd658d33c3f9c4e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zbateson/stream-decorators/zipball/32a2a62fb0f26313395c996ebd658d33c3f9c4e5",
-                "reference": "32a2a62fb0f26313395c996ebd658d33c3f9c4e5",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/psr7": "^2.5",
-                "php": ">=8.0",
-                "zbateson/mb-wrapper": "^2.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "*",
-                "phpstan/phpstan": "*",
-                "phpunit/phpunit": "^9.6|^10.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ZBateson\\StreamDecorators\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Zaahid Bateson"
-                }
-            ],
-            "description": "PHP psr7 stream decorators for mime message part streams",
-            "keywords": [
-                "base64",
-                "charset",
-                "decorators",
-                "mail",
-                "mime",
-                "psr7",
-                "quoted-printable",
-                "stream",
-                "uuencode"
-            ],
-            "support": {
-                "issues": "https://github.com/zbateson/stream-decorators/issues",
-                "source": "https://github.com/zbateson/stream-decorators/tree/2.1.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/zbateson",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-04-29T21:42:39+00:00"
         }
     ],
     "packages-dev": [
@@ -16574,13 +14936,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mrsleeps/vexim-web-core-settings": 20,
-        "mrsleeps/vexim-web-plugin-autodiscover": 20,
-        "mrsleeps/vexim-web-plugin-dmarc": 20,
-        "mrsleeps/vexim-web-plugin-dnstools": 20,
-        "mrsleeps/vexim-web-plugin-mtasts": 20,
-        "mrsleeps/vexim-web-plugin-pdns": 20,
-        "mrsleeps/vexim-web-plugin-pwa": 20
+        "mrsleeps/vexim-web-core-settings": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

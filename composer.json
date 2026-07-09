@@ -131,12 +131,6 @@
             "wikimedia/composer-merge-plugin": true
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mrsleeps/filament-passkeys"
-        }
-    ],
     "_comment": "Original package was marcelweidum/filament-passkeys ^4.0.4 - forked to mrsleeps/filament-passkeys to update laravel/passkeys dependency to ^0.2.0",
     "minimum-stability": "dev",
     "prefer-stable": true
