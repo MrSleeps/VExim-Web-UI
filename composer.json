@@ -24,7 +24,7 @@
         "laravel/sanctum": "^4.3",
         "laravel/tinker": "^3.0",
         "livewire/livewire": "^4.0",
-        "marcelweidum/filament-passkeys": "^4.0",
+        "mrsleeps/filament-passkeys": "^4.0",
         "mrsleeps/vexim-web-core-blocklist": "^1.0",
         "mrsleeps/vexim-web-core-data": "^1.0",
         "mrsleeps/vexim-web-core-domain": "^1.0",
@@ -34,16 +34,15 @@
         "mrsleeps/vexim-web-core-eximfail": "^1.0",
         "mrsleeps/vexim-web-core-eximuser": "^1.0",
         "mrsleeps/vexim-web-core-group": "^1.0",
-        "mrsleeps/vexim-web-core-settings": "^1.0",
+        "mrsleeps/vexim-web-core-settings": "@dev",
         "mrsleeps/vexim-web-core-webuser": "^1.0",
         "mrsleeps/vexim-web-core-whitelist": "^1.0",
         "openplain/filament-shadcn-theme": "^1.1",
-        "phpseclib/phpseclib": "^3.0",
         "rawilk/filament-password-input": "^3.2",
         "relaticle/activity-log": "^1.0",
         "spatie/laravel-activitylog": "^5.0",
         "spatie/laravel-health": "^1.40",
-        "spatie/laravel-permission": "^7.4",
+        "spatie/laravel-permission": "^7.4|^8.0",
         "spatie/laravel-settings": "^3.8",
         "wikimedia/composer-merge-plugin": "^2.1"
     },
@@ -132,6 +131,13 @@
             "wikimedia/composer-merge-plugin": true
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mrsleeps/filament-passkeys"
+        }
+    ],
+    "_comment": "Original package was marcelweidum/filament-passkeys ^4.0.4 - forked to mrsleeps/filament-passkeys to update laravel/passkeys dependency to ^0.2.0",
     "minimum-stability": "dev",
     "prefer-stable": true
 }

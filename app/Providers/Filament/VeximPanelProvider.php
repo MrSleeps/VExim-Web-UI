@@ -46,7 +46,7 @@ class VeximPanelProvider extends PanelProvider
             PasskeysPlugin::make(),
             ActivityLogPlugin::make(),
             FilamentEChartsPlugin::make(),
-            FinMailPlugin::make()->enableSentEmails(false)->navigationGroup('Communications'),
+            FinMailPlugin::make()->enableSentEmails(false)->navigationGroup('Communications'),            
         ];
         
         // Only add FilamentShieldPlugin if SHIELD_VISIBLE is true
