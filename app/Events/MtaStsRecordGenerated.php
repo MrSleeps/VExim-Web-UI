@@ -12,9 +12,9 @@ class MtaStsRecordGenerated
     use Dispatchable, SerializesModels;
     
     /**
-     * The MTA-STS record
+     * The MTA-STS record (null for CNAME records)
      */
-    public MtaSts $mtaSts;
+    public ?MtaSts $mtaSts;
     
     /**
      * The DNS zone/domain
@@ -22,12 +22,12 @@ class MtaStsRecordGenerated
     public string $zone;
     
     /**
-     * The record name (e.g., "_mta-sts.example.com")
+     * The record name (e.g., "_mta-sts.example.com" or "mta-sts")
      */
     public string $name;
     
     /**
-     * The record type (TXT)
+     * The record type (TXT, CNAME, etc.)
      */
     public string $type;
     
@@ -52,12 +52,22 @@ class MtaStsRecordGenerated
     public ?string $recordId;
     
     /**
-     * Create a new MTA-STS record created event.
+     * Create a new MTA-STS record generated event.
+     * 
+     * @param MtaSts|null $mtaSts The MTA-STS record (null for CNAME records)
+     * @param string $zone The DNS zone/domain
+     * @param string $name The record name
+     * @param string $type The record type (TXT, CNAME, etc.)
+     * @param string $content The record content/value
+     * @param int $ttl Time to live in seconds
+     * @param string $operation The operation type (create, update, delete)
+     * @param string|null $recordId Optional record ID for updates/deletes
      */
     public function __construct(
-        MtaSts $mtaSts,
+        ?MtaSts $mtaSts,
         string $zone,
         string $name,
+        string $type,
         string $content,
         int $ttl = 3600,
         string $operation = 'create',
@@ -66,17 +76,18 @@ class MtaStsRecordGenerated
         $this->mtaSts = $mtaSts;
         $this->zone = $zone;
         $this->name = $name;
-        $this->type = 'TXT';
+        $this->type = $type;
         $this->content = $content;
         $this->ttl = $ttl;
         $this->operation = $operation;
         $this->recordId = $recordId;
         
         // Log when the event is instantiated
-        Log::info('MtaStsRecordCreated event constructed', [
+        Log::info('MtaStsRecordGenerated event constructed', [
             'zone' => $zone,
             'name' => $name,
-            'mta_sts_id' => $mtaSts->id,
+            'type' => $type,
+            'mta_sts_id' => $mtaSts?->id ?? 'null',
             'operation' => $operation,
         ]);
     }

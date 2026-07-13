@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
@@ -13,7 +14,10 @@ class ManagePlugins extends Command
     protected $signature = 'vw:plugin
         {action : list|install|remove|update}
         {identifier? : Plugin ID (integer) or package name (string)}
-        {--fresh : Bypass the manifest cache and fetch a fresh copy}';
+        {--fresh : Bypass the manifest cache and fetch a fresh copy}
+        {--no-cache-clear : Skip clearing Laravel caches after plugin operations}
+        {--no-migrate : Skip running database migrations after plugin operations}
+        {--seed : Run database seeders after migrations (only used with --migrate)}';
 
     protected $description = 'List, install, remove, or update VExim Web plugins via composer.local.json';
 
@@ -115,6 +119,9 @@ class ManagePlugins extends Command
 
         $this->info("✓ '{$entry['name']}' installed successfully.");
 
+        // Run migrations and clear caches after successful installation
+        $this->postInstallTasks();
+
         return self::SUCCESS;
     }
 
@@ -164,6 +171,9 @@ class ManagePlugins extends Command
         }
 
         $this->info("✓ '{$entry['name']}' removed successfully.");
+
+        // Run migrations and clear caches after successful removal
+        $this->postInstallTasks();
 
         return self::SUCCESS;
     }
@@ -243,6 +253,155 @@ class ManagePlugins extends Command
         } catch (\Throwable $e) {
             return $this->failWith("Failed to fetch the plugin manifest: {$e->getMessage()}");
         }
+    }
+
+    /**
+     * Run post-installation tasks including migrations and cache clearing.
+     */
+    protected function postInstallTasks(): void
+    {
+        // Run database migrations
+        if (! $this->option('no-migrate')) {
+            $this->runMigrations();
+        } else {
+            $this->info('Skipping database migrations as requested.');
+        }
+
+        // Clear Laravel caches
+        $this->clearLaravelCaches();
+    }
+
+    /**
+     * Run database migrations for the plugin.
+     */
+    protected function runMigrations(): void
+    {
+        $this->info('Running database migrations...');
+
+        try {
+            $migrationOptions = ['--force' => true];
+
+            // Add seed option if requested
+            if ($this->option('seed')) {
+                $migrationOptions['--seed'] = true;
+                $this->info('Database seeding will be performed after migrations.');
+            }
+
+            Artisan::call('migrate', $migrationOptions);
+            
+            $output = Artisan::output();
+            if (! empty($output)) {
+                $this->line($output);
+            }
+
+            // Check if migrations were actually run
+            $migrationOutput = Artisan::output();
+            if (str_contains($migrationOutput, 'Nothing to migrate') || 
+                str_contains($migrationOutput, 'No migrations')) {
+                $this->info('No new migrations to run.');
+            } else {
+                $this->info('✅ Database migrations completed successfully.');
+            }
+
+            // Run fresh migrations for specific plugin packages if needed
+            // This can be extended to check for plugin-specific migration paths
+            $this->runPluginSpecificMigrations();
+
+        } catch (\Throwable $e) {
+            $this->warn("⚠ Failed to run migrations: {$e->getMessage()}");
+            $this->warn('You may need to run migrations manually: php artisan migrate');
+        }
+    }
+
+    /**
+     * Run plugin-specific migrations if they exist.
+     * This allows plugins to have their own migration paths.
+     */
+    protected function runPluginSpecificMigrations(): void
+    {
+        // Check for common plugin migration paths
+        $pluginPaths = [
+            base_path('vendor/*/*/database/migrations'),
+            base_path('plugins/*/database/migrations'),
+        ];
+
+        foreach ($pluginPaths as $path) {
+            if (File::exists($path) && File::isDirectory($path)) {
+                $this->info("Checking for plugin migrations in: {$path}");
+                
+                try {
+                    Artisan::call('migrate', [
+                        '--path' => str_replace(base_path(), '', $path),
+                        '--force' => true,
+                    ]);
+                    
+                    $output = Artisan::output();
+                    if (! empty($output) && ! str_contains($output, 'Nothing to migrate')) {
+                        $this->line($output);
+                    }
+                } catch (\Throwable $e) {
+                    $this->warn("⚠ Failed to run plugin migrations from {$path}: {$e->getMessage()}");
+                }
+            }
+        }
+    }
+
+    /**
+     * Clear Laravel caches after plugin installation or removal.
+     * This ensures that any service providers, configs, or routes
+     * registered by the plugin are properly loaded.
+     */
+    protected function clearLaravelCaches(): void
+    {
+        if ($this->option('no-cache-clear')) {
+            $this->info('Skipping cache clearing as requested.');
+            return;
+        }
+
+        $this->info('Clearing Laravel caches...');
+
+        $commands = [
+            'cache:clear' => 'Application cache',
+            'config:clear' => 'Configuration cache',
+            'route:clear' => 'Route cache',
+            'view:clear' => 'View cache',
+            'event:clear' => 'Event cache',
+        ];
+
+        foreach ($commands as $command => $description) {
+            try {
+                Artisan::call($command);
+                if ($this->getOutput()->isVerbose()) {
+                    $this->line("  ✓ {$description} cleared");
+                }
+            } catch (\Throwable $e) {
+                $this->warn("  ⚠ Failed to clear {$description}: {$e->getMessage()}");
+            }
+        }
+
+        // Optional: Re-cache for production
+        if (app()->environment('production')) {
+            $this->info('Re-caching for production environment...');
+            
+            $cacheCommands = [
+                'config:cache' => 'Configuration',
+                'route:cache' => 'Routes',
+                'event:cache' => 'Events',
+            ];
+            
+            foreach ($cacheCommands as $command => $description) {
+                try {
+                    Artisan::call($command);
+                    if ($this->getOutput()->isVerbose()) {
+                        $this->line("  ✓ {$description} cached");
+                    }
+                } catch (\Throwable $e) {
+                    $this->warn("  ⚠ Failed to cache {$description}: {$e->getMessage()}");
+                }
+            }
+        }
+
+        $this->info('✅ Laravel caches cleared successfully.');
     }
 
     /**
