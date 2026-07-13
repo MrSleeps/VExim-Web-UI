@@ -34,7 +34,7 @@
         "mrsleeps/vexim-web-core-eximfail": "^1.0",
         "mrsleeps/vexim-web-core-eximuser": "^1.0",
         "mrsleeps/vexim-web-core-group": "^1.0",
-        "mrsleeps/vexim-web-core-settings": "^1.0",
+        "mrsleeps/vexim-web-core-settings": "@dev",
         "mrsleeps/vexim-web-core-webuser": "^1.0",
         "mrsleeps/vexim-web-core-whitelist": "^1.0",
         "openplain/filament-shadcn-theme": "^1.1",
