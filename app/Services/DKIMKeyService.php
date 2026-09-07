@@ -4,7 +4,7 @@ namespace App\Services;
 
 use phpseclib3\Crypt\RSA;
 use VEximweb\Core\Data\Models\Domain;
-use App\Models\DKIM;
+use VEximweb\Core\Data\Models\DKIM;
 
 class DKIMKeyService
 {
