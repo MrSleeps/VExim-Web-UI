@@ -7,43 +7,42 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  php-tests:
     runs-on: ubuntu-latest
+    env:
+      APP_ENV: testing
+      APP_KEY: base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      DB_CONNECTION: sqlite
+      DB_DATABASE: ':memory:'
 
     steps:
-    - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.4'
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
 
-    - name: Create bootstrap cache directory
-      run: |
-        mkdir -p bootstrap/cache
-        mkdir -p storage/framework/cache
-        mkdir -p storage/framework/sessions
-        mkdir -p storage/framework/testing
-        mkdir -p storage/framework/views
-        mkdir -p storage/logs
-        chmod -R 775 bootstrap storage
-    - name: Install PHP dependencies
-      run: |
-        composer config --unset repositories || true
-        rm composer.lock
-        composer install --no-progress --no-suggest --prefer-dist --ignore-platform-req=php
+      - name: Create test runtime
+        run: |
+          touch .env
+          mkdir -p bootstrap/cache
+          mkdir -p storage/framework/cache
+          mkdir -p storage/framework/sessions
+          mkdir -p storage/framework/testing
+          mkdir -p storage/framework/views
+          mkdir -p storage/logs
+          chmod -R 775 bootstrap storage
 
-    - name: Validate composer.json
-      run: composer validate --no-check-all
+      - name: Validate Composer configuration
+        run: composer validate --no-check-all
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v7
-      with:
-        node-version: '24'
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
 
-    - name: Install npm dependencies
-      run: npm install
+      - name: Check PHP syntax
+        run: find app config database routes tests -name '*.php' -print0 | xargs -0 -n1 php -l
 
-    - name: Check PHP syntax errors
-      run: |
-        find ./app ./config ./database ./routes ./tests -name "*.php" -exec php -l {} \; 2>/dev/null || true
+      - name: Run PHP tests
+        run: php artisan test --colors=always --display-warnings
