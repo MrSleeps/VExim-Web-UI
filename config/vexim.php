@@ -17,7 +17,8 @@ return [
     'package' => [
         'org' => 'MrSleeps',
         'name' => 'VExim-Web-UI',
-        'url' => 'https://github.com/MrSleeps/VExim-Web-UI'
+        'url' => 'https://github.com/MrSleeps/VExim-Web-UI',
+        'version' => env('VEXIM_VERSION'),
     ],
     'communications' => [
         'email_reports_to' => env('HEALTH_TO_ADDRESS', ''),
