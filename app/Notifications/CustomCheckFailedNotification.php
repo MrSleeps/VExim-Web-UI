@@ -5,6 +5,7 @@ namespace App\Notifications;
 use App\Channels\FinMailChannel;
 use App\Checks\VersionCheck;
 use App\Services\HealthNotificationRecipients;
+use Carbon\Carbon;
 use FinityLabs\FinMail\Helpers\TokenValue;
 use FinityLabs\FinMail\Mail\TemplateMail;
 use Illuminate\Bus\Queueable;
@@ -36,6 +37,36 @@ class CustomCheckFailedNotification extends Notification
         }
 
         return ['mail'];
+    }
+
+    public function shouldSend(mixed $notifiable, string $channel): bool
+    {
+        if (! config('health.notifications.enabled')) {
+            return false;
+        }
+
+        $throttleMinutes = (int) config('health.notifications.throttle_notifications_for_minutes', 60);
+
+        if ($throttleMinutes === 0) {
+            return true;
+        }
+
+        $cacheKey = config('health.notifications.throttle_notifications_key', 'health:latestNotificationSentAt:').$channel;
+        $timestamp = cache()->get($cacheKey);
+
+        if (! $timestamp) {
+            cache()->put($cacheKey, now()->timestamp);
+
+            return true;
+        }
+
+        if (Carbon::createFromTimestamp($timestamp)->addMinutes($throttleMinutes)->isFuture()) {
+            return false;
+        }
+
+        cache()->put($cacheKey, now()->timestamp);
+
+        return true;
     }
 
     public function toFinMail(mixed $notifiable): ?TemplateMail
