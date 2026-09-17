@@ -55,8 +55,8 @@ fi
 
 # A deployed installation may have a site-specific composer.lock because the
 # plugin manager merges composer.local.json into the root Composer resolution.
-# Preserve that lock for recovery, then restore the tracked base lock so the
-# repository can fast-forward cleanly.
+# Preserve that lock for recovery, restore the tracked base lock for the pull,
+# then let Composer resolve the site's plugin set again against the new base.
 if [[ -n "$(git status --porcelain -- composer.lock)" ]]; then
     echo "Site-specific composer.lock detected; preserving it during the update."
 
