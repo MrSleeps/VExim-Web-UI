@@ -126,7 +126,8 @@ You will need to update the following:
 * VEXIM_MAILMAN_ENABLED
 * VEXIM_ENFORCE_2FA
 * VEXIM_SPAM_ENGINE
-* HEALTH_TO_ADDRESS (System does basic health checks, this is where you get the report emailed to)
+
+Health check and application update notifications are sent to users with the `system_admin` role. If you want to send them somewhere else, set `HEALTH_TO_ADDRESS` in `.env` as an optional override.
 
 Pretty self explanatory, just note that the database user needs to have write access to the VExim2 database, you can make a new sql user by running the commands below:
 
@@ -294,7 +295,7 @@ I have included a basic set of CLI commands that you can use. You can do basic c
 
 Plugins extend VExim Web UI by adding extra features, there are currently **4** plugins available.
 
-All plugins are installed via the cli, to get a list of available plugins cd into your vexim_web directory and run
+All plugins are installed via the cli, to get a list of available plugins cd into the vexim_web directory and run
 
 `php artisan vw:plugin list`
 
