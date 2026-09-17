@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1efb01f5b79317f8928a0f192d3f4863",
+    "content-hash": "d4c1cf1e114619e396b892b9ff25e94b",
     "packages": [
         {
             "name": "andreiio/blade-remix-icon",
@@ -4922,22 +4922,30 @@
         },
         {
             "name": "mrsleeps/vexim-web-core-settings",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MrSleeps/vexim-web-core-settings.git",
-                "reference": "609551fd66f61e95ca5400120ad332561223efbe"
+                "reference": "dfe4e93819aa1d7d713181b50450b4f3ae69dbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-settings/zipball/609551fd66f61e95ca5400120ad332561223efbe",
-                "reference": "609551fd66f61e95ca5400120ad332561223efbe",
+                "url": "https://api.github.com/repos/MrSleeps/vexim-web-core-settings/zipball/dfe4e93819aa1d7d713181b50450b4f3ae69dbea",
+                "reference": "dfe4e93819aa1d7d713181b50450b4f3ae69dbea",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^5.0",
                 "illuminate/support": "^13.0",
                 "php": "^8.4"
+            },
+            "require-dev": {
+                "mrsleeps/vexim-web-core-data": "^1.0",
+                "orchestra/testbench": "^11.0",
+                "pestphp/pest": "^4.0",
+                "pestphp/pest-plugin-laravel": "^4.0",
+                "relaticle/activity-log": "^1.0",
+                "spatie/laravel-activitylog": "^5.0"
             },
             "type": "filament-plugin",
             "extra": {
@@ -4966,9 +4974,9 @@
             ],
             "description": "Settings module for VExim Web UI",
             "support": {
-                "source": "https://github.com/MrSleeps/vexim-web-core-settings/tree/v1.1.0"
+                "source": "https://github.com/MrSleeps/vexim-web-core-settings/tree/v1.2.0"
             },
-            "time": "2026-07-09T15:11:51+00:00"
+            "time": "2026-09-17T15:18:46+00:00"
         },
         {
             "name": "mrsleeps/vexim-web-core-webuser",
@@ -6777,12 +6785,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "40988c506689c11cfc76c18445f7b26819d0d259"
+                "reference": "75d73f48d02797c2c285a7e9f348fadc0102ffe2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/40988c506689c11cfc76c18445f7b26819d0d259",
-                "reference": "40988c506689c11cfc76c18445f7b26819d0d259",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/75d73f48d02797c2c285a7e9f348fadc0102ffe2",
+                "reference": "75d73f48d02797c2c285a7e9f348fadc0102ffe2",
                 "shasum": ""
             },
             "require": {
@@ -6846,9 +6854,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
-                "source": "https://github.com/ramsey/uuid/tree/4.x"
+                "source": "https://github.com/ramsey/uuid/tree/4.9.4"
             },
-            "time": "2026-09-13T14:33:28+00:00"
+            "time": "2026-09-16T11:39:30+00:00"
         },
         {
             "name": "rawilk/filament-password-input",
@@ -15127,9 +15135,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mrsleeps/vexim-web-core-settings": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
