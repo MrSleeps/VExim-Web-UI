@@ -98,7 +98,9 @@ class CustomCheckFailedNotification extends Notification
     private function getVersionCheckResult(): mixed
     {
         return $this->results->first(
-            fn($r) => $r->check instanceof VersionCheck && $r->status != Status::ok()
+            fn($r) => $r->check instanceof VersionCheck
+                && $r->status != Status::ok()
+                && (($r->meta['update_available'] ?? false) === true)
         );
     }
 }
