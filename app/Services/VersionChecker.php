@@ -191,10 +191,18 @@ class VersionChecker
      */
     protected function getVersionChannel(string $version): string
     {
-        if (str_contains($version, '-beta')) return 'beta';
-        if (str_contains($version, '-alpha')) return 'alpha';
-        if (str_contains($version, '-rc')) return 'release candidate';
-        if (str_contains($version, '-dev')) return 'development';
+        if (str_contains($version, '-beta')) {
+            return 'beta';
+        }
+        if (str_contains($version, '-alpha')) {
+            return 'alpha';
+        }
+        if (str_contains($version, '-rc')) {
+            return 'release candidate';
+        }
+        if (str_contains($version, '-dev')) {
+            return 'development';
+        }
 
         return 'stable';
     }
