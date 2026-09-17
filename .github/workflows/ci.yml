@@ -46,3 +46,68 @@ jobs:
 
       - name: Run PHP tests
         run: php artisan test --colors=always --display-warnings
+
+  php-tests-core-dev:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: testing
+      APP_KEY: base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      DB_CONNECTION: sqlite
+      DB_DATABASE: ':memory:'
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Create test runtime
+        run: |
+          touch .env
+          mkdir -p bootstrap/cache
+          mkdir -p storage/framework/cache
+          mkdir -p storage/framework/sessions
+          mkdir -p storage/framework/testing
+          mkdir -p storage/framework/views
+          mkdir -p storage/logs
+          chmod -R 775 bootstrap storage
+
+      - name: Generate core development Composer files
+        run: |
+          sha256sum composer.lock > /tmp/production-composer-lock.sha256
+          php scripts/create-core-dev-composer.php
+          cp composer.lock composer.dev.lock
+
+      - name: Update core packages to development branches
+        run: COMPOSER=composer.dev.json composer update 'mrsleeps/vexim-web-core-*' --with-dependencies --minimal-changes --no-interaction --no-progress --prefer-dist
+
+      - name: Verify core development packages
+        run: |
+          php -r '
+          $lock = json_decode(file_get_contents("composer.dev.lock"), true, 512, JSON_THROW_ON_ERROR);
+          $versions = [];
+          foreach ($lock["packages"] as $package) {
+              if (str_starts_with($package["name"], "mrsleeps/vexim-web-core-")) {
+                  $versions[$package["name"]] = $package["version"];
+              }
+          }
+          ksort($versions);
+          foreach ($versions as $name => $version) {
+              echo $name . ": " . $version . PHP_EOL;
+          }
+          $invalid = array_filter($versions, fn ($version) => $version !== "dev-main");
+          if (count($versions) !== 12 || $invalid !== []) {
+              fwrite(STDERR, "Expected all 12 core packages to resolve to dev-main." . PHP_EOL);
+              exit(1);
+          }
+          '
+          sha256sum --check /tmp/production-composer-lock.sha256
+
+      - name: Check PHP syntax
+        run: find app config database routes tests -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Run PHP tests
+        run: php artisan test --colors=always --display-warnings
