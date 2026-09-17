@@ -1,5 +1,7 @@
 <?php
 
+use App\Channels\FinMailChannel;
+use App\Notifications\CustomCheckFailedNotification;
 use App\Notifications\HealthNotifiable;
 use Spatie\Health\Models\HealthCheckResultHistoryItem;
 use Spatie\Health\Notifications\CheckFailedNotification;
@@ -14,8 +16,8 @@ return [
     'result_stores' => [
         EloquentHealthResultStore::class => [
             'connection' => env('HEALTH_DB_CONNECTION', env('DB_CONNECTION')),
-            //'model' => HealthCheckResultHistoryItem::class,
-            'model' => \App\Models\HealthCheckResultHistoryItem::class,
+            // 'model' => HealthCheckResultHistoryItem::class,
+            'model' => App\Models\HealthCheckResultHistoryItem::class,
             'keep_history_for_days' => 5,
         ],
 
@@ -45,7 +47,7 @@ return [
 
         'notifications' => [
             // CheckFailedNotification::class => ['mail'],
-            \App\Notifications\CustomCheckFailedNotification::class => ['mail', \App\Channels\FinMailChannel::class],
+            CustomCheckFailedNotification::class => ['mail', FinMailChannel::class],
         ],
 
         /*
@@ -163,11 +165,11 @@ return [
      */
     'secret_token' => env('HEALTH_SECRET_TOKEN'),
 
-/**
- * By default, conditionally skipped health checks are treated as failures.
- * You can override this behavior by uncommenting the configuration below.
- *
- * @link https://spatie.be/docs/laravel-health/v1/basic-usage/conditionally-running-or-modifying-checks
- */
-    'treat_skipped_as_failure' => false
+    /**
+     * By default, conditionally skipped health checks are treated as failures.
+     * You can override this behavior by uncommenting the configuration below.
+     *
+     * @link https://spatie.be/docs/laravel-health/v1/basic-usage/conditionally-running-or-modifying-checks
+     */
+    'treat_skipped_as_failure' => false,
 ];
