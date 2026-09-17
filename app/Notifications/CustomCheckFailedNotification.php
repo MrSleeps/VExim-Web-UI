@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Notifications;
 
 use App\Channels\FinMailChannel;
 use App\Checks\VersionCheck;
+use FinityLabs\FinMail\Helpers\TokenValue;
 use FinityLabs\FinMail\Mail\TemplateMail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -10,7 +12,6 @@ use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Collection;
 use Spatie\Health\Enums\Status;
-use FinityLabs\FinMail\Helpers\TokenValue;
 
 class CustomCheckFailedNotification extends Notification
 {
@@ -40,7 +41,7 @@ class CustomCheckFailedNotification extends Notification
             return null;
         }
 
-        $meta     = $result->meta ?? [];
+        $meta = $result->meta ?? [];
         $priority = $meta['update_priority'] ?? 'medium';
 
         if ($priority === 'low') {
@@ -51,23 +52,23 @@ class CustomCheckFailedNotification extends Notification
             ->to(config('health.notifications.mail.to'))
             ->models([
                 'current_version' => new TokenValue($meta['current_version'] ?? 'Unknown'),
-                'latest_version'  => new TokenValue($meta['latest_version']  ?? 'Unknown'),
+                'latest_version' => new TokenValue($meta['latest_version'] ?? 'Unknown'),
                 'update_priority' => new TokenValue(strtoupper($meta['update_priority'] ?? 'MEDIUM')),
-                'update_message'  => new TokenValue($result->getNotificationMessage()),
-                'check_time'      => new TokenValue($result->ended_at?->format('Y-m-d H:i:s') ?? 'Unknown'),
-                'status'          => new TokenValue($result->status->value),
-        ]);
+                'update_message' => new TokenValue($result->getNotificationMessage()),
+                'check_time' => new TokenValue($result->ended_at?->format('Y-m-d H:i:s') ?? 'Unknown'),
+                'status' => new TokenValue($result->status->value),
+            ]);
     }
 
     public function toMail(): MailMessage
     {
         return (new MailMessage)
             ->error()
-            ->subject('Health check failed for ' . config('app.name'))
+            ->subject('Health check failed for '.config('app.name'))
             ->lines(
                 $this->results
-                    ->filter(fn($r) => $r->status != Status::ok())
-                    ->map(fn($r) => $r->getNotificationMessage())
+                    ->filter(fn ($r) => $r->status != Status::ok())
+                    ->map(fn ($r) => $r->getNotificationMessage())
                     ->toArray()
             );
     }
@@ -76,21 +77,21 @@ class CustomCheckFailedNotification extends Notification
     {
         $hasVersionOnly = $this->getVersionCheckResult() &&
             $this->results->every(
-                fn($r) => $r->check instanceof VersionCheck || $r->status == Status::ok()
+                fn ($r) => $r->check instanceof VersionCheck || $r->status == Status::ok()
             );
 
         if ($hasVersionOnly) {
             return (new SlackMessage)
                 ->warning()
-                ->content('Version update available for ' . config('app.name'));
+                ->content('Version update available for '.config('app.name'));
         }
 
         return (new SlackMessage)
             ->error()
             ->content(
                 $this->results
-                    ->filter(fn($r) => $r->status != Status::ok())
-                    ->map(fn($r) => $r->getNotificationMessage())
+                    ->filter(fn ($r) => $r->status != Status::ok())
+                    ->map(fn ($r) => $r->getNotificationMessage())
                     ->join("\n")
             );
     }
@@ -98,7 +99,9 @@ class CustomCheckFailedNotification extends Notification
     private function getVersionCheckResult(): mixed
     {
         return $this->results->first(
-            fn($r) => $r->check instanceof VersionCheck && $r->status != Status::ok()
+            fn ($r) => $r->check instanceof VersionCheck
+                && $r->status != Status::ok()
+                && (($r->meta['update_available'] ?? false) === true)
         );
     }
 }
