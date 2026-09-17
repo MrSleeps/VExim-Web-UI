@@ -2,6 +2,7 @@
 set -euo pipefail
 
 SCRIPT_URL="https://raw.githubusercontent.com/MrSleeps/VExim-Web-UI/refs/heads/main/update-web.sh"
+LOCK_BACKUP=""
 
 update_self() {
     echo "Checking for update script changes..."
@@ -18,81 +19,95 @@ update_self() {
         cp "$tmpfile" "$0"
         chmod +x "$0"
         rm -f "$tmpfile"
-        echo "update.sh updated. Re-running..."
+        echo "update-web.sh updated. Re-running..."
         exec "$0" "$@"
     fi
 
     rm -f "$tmpfile"
 }
 
+restore_lock_backup() {
+    if [[ -n "$LOCK_BACKUP" && -f "$LOCK_BACKUP" ]]; then
+        cp "$LOCK_BACKUP" composer.lock
+        rm -f "$LOCK_BACKUP"
+        LOCK_BACKUP=""
+        echo "Restored the pre-update site composer.lock."
+    fi
+}
+
+cleanup_lock_backup() {
+    if [[ -n "$LOCK_BACKUP" && -f "$LOCK_BACKUP" ]]; then
+        rm -f "$LOCK_BACKUP"
+        LOCK_BACKUP=""
+    fi
+}
+
 update_self "$@"
 
-# Check if composer files have local changes
-if git diff --quiet composer.json composer.lock; then
-    echo "No local changes to composer files."
-else
-    echo "⚠️  Local changes detected in composer.json and/or composer.lock"
-    echo ""
-    echo "What would you like to do?"
-    echo "  1) Discard local composer changes and use remote version (recommended)"
-    echo "  2) Keep your local composer files and try to merge"
-    echo "  3) Stash your composer changes and reapply after update"
-    echo "  4) Abort the update"
-    echo ""
-    read -p "Enter your choice (1-4): " choice
-
-    case $choice in
-        1)
-            echo "Discarding local composer.json and composer.lock..."
-            git checkout -- composer.json composer.lock
-            ;;
-        2)
-            echo "Attempting to merge with your local changes..."
-            # Stash to allow pull, then pop after
-            git stash push -m "composer files before update" composer.json composer.lock
-            ;;
-        3)
-            echo "Stashing composer changes..."
-            git stash push -m "composer files before update" composer.json composer.lock
-            echo "Changes stashed. They will remain stashed after the update."
-            echo "To reapply: git stash pop"
-            ;;
-        4)
-            echo "Update aborted."
-            exit 1
-            ;;
-        *)
-            echo "Invalid choice. Update aborted."
-            exit 1
-            ;;
-    esac
+# composer.json is upstream-owned. Site-specific plugins belong in the ignored
+# composer.local.json file and must not be added directly to composer.json.
+if [[ -n "$(git status --porcelain -- composer.json)" ]]; then
+    echo "❌ Local changes detected in composer.json."
+    echo "Site-specific dependencies should be kept in composer.local.json."
+    echo "Commit, revert, or move these changes before running the updater."
+    exit 1
 fi
 
-echo "Pulling latest Git Repository"
-if ! git pull; then
-    echo "❌ Git pull failed! Attempting to recover..."
-    # If stash was created, pop it back
-    if git stash list | grep -q "composer files before update"; then
-        git stash pop
+# A deployed installation may have a site-specific composer.lock because the
+# plugin manager merges composer.local.json into the root Composer resolution.
+# Preserve that lock for recovery, restore the tracked base lock for the pull,
+# then let Composer resolve the site's plugin set again against the new base.
+if [[ -n "$(git status --porcelain -- composer.lock)" ]]; then
+    echo "Site-specific composer.lock detected; preserving it during the update."
+
+    if [[ -f composer.lock ]]; then
+        LOCK_BACKUP=$(mktemp "${TMPDIR:-/tmp}/vexim-composer-lock.XXXXXX")
+        cp composer.lock "$LOCK_BACKUP"
+    fi
+
+    git restore --source=HEAD --staged --worktree composer.lock
+else
+    echo "composer.lock matches the repository base lock."
+fi
+
+echo "Pulling latest Git repository..."
+if ! git pull --ff-only; then
+    echo "❌ Git pull failed."
+    restore_lock_backup
+    exit 1
+fi
+
+echo "Checking Composer dependency resolution..."
+if ! composer update \
+    --no-dev \
+    --optimize-autoloader \
+    --with-all-dependencies \
+    --dry-run \
+    --no-scripts \
+    --no-interaction \
+    --no-progress; then
+    echo "❌ Composer could not resolve the updated core and installed plugin set."
+    restore_lock_backup
+    echo "No Composer package changes were applied. Fix the dependency conflict and run update-web.sh again."
+    exit 1
+fi
+
+echo "Updating core and installed plugins via Composer..."
+if ! composer update \
+    --no-dev \
+    --optimize-autoloader \
+    --with-all-dependencies \
+    --no-interaction \
+    --no-progress; then
+    echo "❌ Composer update failed after dependency resolution succeeded."
+    if [[ -n "$LOCK_BACKUP" && -f "$LOCK_BACKUP" ]]; then
+        echo "The pre-update composer.lock has been kept at: $LOCK_BACKUP"
+        echo "It has not been restored automatically because vendor may have been partially updated."
     fi
     exit 1
 fi
 
-# If we stashed for option 2, pop the stash now
-if git stash list | grep -q "composer files before update"; then
-    echo "Reapplying your local composer changes..."
-    if ! git stash pop; then
-        echo "⚠️  Conflicts detected in composer files!"
-        echo "Please resolve conflicts manually, then run:"
-        echo "  composer update --no-dev --optimize-autoloader"
-        echo "  php artisan migrate --force"
-        echo "  php artisan optimize:clear && php artisan optimize"
-        exit 1
-    fi
-fi
-
-echo "Updating core and plugins via Composer..."
-composer update --no-dev --optimize-autoloader
+cleanup_lock_backup
 
 echo "Running migrations..."
 php artisan migrate --force
