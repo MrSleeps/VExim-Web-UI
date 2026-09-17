@@ -5,12 +5,12 @@ namespace App\Services;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Symfony\Component\Process\Process;
 
 class VersionChecker
 {
-    
     protected const INCLUDE_PRERELEASES = false;
-    
+
     /**
      * Get GitHub owner from config
      */
@@ -18,7 +18,7 @@ class VersionChecker
     {
         return config('vexim.package.org', 'MrSleeps');
     }
-    
+
     /**
      * Get GitHub repo name from config
      */
@@ -26,40 +26,91 @@ class VersionChecker
     {
         return config('vexim.package.name', 'VExim-Web-UI');
     }
-    
+
     /**
-     * Get current version from composer.json
+     * Get the installed application version.
+     *
+     * Prefer an explicit deployment override, then the nearest Git release tag.
+     * Keep composer.json as a final backwards-compatible fallback for installs
+     * that still define a version there.
      */
     public function getCurrentVersion(): ?string
     {
+        $configuredVersion = config('vexim.package.version');
+
+        if (is_string($configuredVersion) && trim($configuredVersion) !== '') {
+            return ltrim(trim($configuredVersion), 'vV');
+        }
+
+        $gitVersion = $this->getGitVersion();
+
+        if ($gitVersion !== null) {
+            return $gitVersion;
+        }
+
         $composerPath = base_path('composer.json');
-        
-        if (!file_exists($composerPath)) {
+
+        if (! file_exists($composerPath)) {
             return null;
         }
-        
+
         $composerData = json_decode(file_get_contents($composerPath), true);
-        return $composerData['version'] ?? null;
+        $composerVersion = $composerData['version'] ?? null;
+
+        if (! is_string($composerVersion) || trim($composerVersion) === '') {
+            return null;
+        }
+
+        return ltrim(trim($composerVersion), 'vV');
     }
-    
+
+    /**
+     * Determine the installed release from the nearest reachable Git tag.
+     */
+    protected function getGitVersion(): ?string
+    {
+        try {
+            $process = new Process(
+                ['git', 'describe', '--tags', '--abbrev=0', '--match', 'v[0-9]*'],
+                base_path()
+            );
+            $process->setTimeout(5);
+            $process->run();
+
+            if (! $process->isSuccessful()) {
+                return null;
+            }
+
+            $version = trim($process->getOutput());
+
+            return $version !== '' ? ltrim($version, 'vV') : null;
+        } catch (\Throwable $e) {
+            Log::debug('Could not determine VExim version from Git', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return null;
+        }
+    }
+
     /**
      * Check if update is available
      */
     public function checkForUpdates(): array
     {
         $currentVersion = $this->getCurrentVersion();
-        
-        if (!$currentVersion) {
+
+        if (! $currentVersion) {
             return [
                 'success' => false,
-                'message' => 'No version defined in composer.json',
+                'message' => 'Could not determine the installed version',
                 'update_available' => false,
             ];
         }
-        
+
         $latestVersion = $this->fetchLatestVersion();
-        
-        if (!$latestVersion) {
+
+        if (! $latestVersion) {
             return [
                 'success' => false,
                 'message' => 'Could not fetch latest version from GitHub',
@@ -67,15 +118,15 @@ class VersionChecker
                 'current_version' => $currentVersion,
             ];
         }
-        
+
         $updateAvailable = $this->isNewerVersionAvailable($currentVersion, $latestVersion);
-        
+
         // ONLY calculate priority if an update is available
         $updatePriority = null;
         if ($updateAvailable) {
             $updatePriority = $this->getUpdatePriority($currentVersion, $latestVersion['version']);
         }
-        
+
         return [
             'success' => true,
             'current_version' => $currentVersion,
@@ -84,10 +135,10 @@ class VersionChecker
             'update_available' => $updateAvailable,
             'update_priority' => $updatePriority,
             'channel' => $this->getVersionChannel($latestVersion['version']),
-            'repository' => $this->getGitHubOwner() . '/' . $this->getGitHubRepo(), // Added for context
+            'repository' => $this->getGitHubOwner().'/'.$this->getGitHubRepo(),
         ];
     }
-    
+
     /**
      * Determine update priority level
      */
@@ -95,30 +146,30 @@ class VersionChecker
     {
         $currentIsBeta = $this->isPrerelease($currentVersion);
         $latestIsBeta = $this->isPrerelease($latestVersion);
-        
+
         // Critical: Stable update available while on beta
-        if ($currentIsBeta && !$latestIsBeta) {
+        if ($currentIsBeta && ! $latestIsBeta) {
             return 'high';
         }
-        
+
         // Normal: Both stable or both beta
-        if (!$currentIsBeta && !$latestIsBeta) {
+        if (! $currentIsBeta && ! $latestIsBeta) {
             return 'medium';
         }
-        
+
         // Low priority: Newer beta version
         if ($currentIsBeta && $latestIsBeta) {
             return 'low';
         }
-        
+
         // Minor: Latest is beta but you're on stable (probably don't want this)
-        if (!$currentIsBeta && $latestIsBeta) {
+        if (! $currentIsBeta && $latestIsBeta) {
             return 'ignore';
         }
-        
+
         return 'medium';
     }
-    
+
     /**
      * Check if a version is prerelease (beta, alpha, rc, etc.)
      */
@@ -126,7 +177,7 @@ class VersionChecker
     {
         return preg_match('/-(beta|alpha|rc|dev|pre|test|preview)/i', $version) === 1;
     }
-    
+
     /**
      * Get base version without prerelease suffix
      */
@@ -134,7 +185,7 @@ class VersionChecker
     {
         return preg_replace('/[-+].*$/', '', $version);
     }
-    
+
     /**
      * Get the version channel
      */
@@ -144,39 +195,40 @@ class VersionChecker
         if (str_contains($version, '-alpha')) return 'alpha';
         if (str_contains($version, '-rc')) return 'release candidate';
         if (str_contains($version, '-dev')) return 'development';
+
         return 'stable';
     }
-    
+
     /**
      * Compare versions with prerelease awareness
      */
     protected function isNewerVersionAvailable(string $current, array $latest): bool
     {
         $latestVersion = $latest['version'];
-        
+
         $currentBase = $this->getBaseVersion($current);
         $latestBase = $this->getBaseVersion($latestVersion);
-        
+
         if (version_compare($latestBase, $currentBase, '>')) {
             return true;
         }
-        
+
         if (version_compare($latestBase, $currentBase, '==')) {
             $currentIsPrerelease = $this->isPrerelease($current);
             $latestIsPrerelease = $this->isPrerelease($latestVersion);
-            
-            if ($currentIsPrerelease && !$latestIsPrerelease) {
+
+            if ($currentIsPrerelease && ! $latestIsPrerelease) {
                 return true;
             }
-            
+
             if ($currentIsPrerelease && $latestIsPrerelease) {
                 return $this->comparePrereleaseVersions($current, $latestVersion) > 0;
             }
         }
-        
+
         return false;
     }
-    
+
     /**
      * Fetch the latest version from GitHub using config values
      */
@@ -185,84 +237,86 @@ class VersionChecker
         $owner = $this->getGitHubOwner();
         $repo = $this->getGitHubRepo();
         $cacheKey = "github_latest_version_{$owner}_{$repo}";
-        
-        return Cache::remember($cacheKey, 3600, function() use ($owner, $repo) {
+
+        return Cache::remember($cacheKey, 3600, function () use ($owner, $repo) {
             try {
                 $response = Http::withHeaders([
-                    'User-Agent' => 'VExim-Web-UI/' . $this->getCurrentVersion(),
+                    'User-Agent' => 'VExim-Web-UI/'.$this->getCurrentVersion(),
                 ])->get("https://api.github.com/repos/{$owner}/{$repo}/releases");
-                
-                if (!$response->successful()) {
+
+                if (! $response->successful()) {
                     Log::warning('GitHub API request failed', [
                         'owner' => $owner,
                         'repo' => $repo,
                         'status' => $response->status(),
                     ]);
+
                     return null;
                 }
-                
+
                 $releases = $response->json();
-                
+
                 foreach ($releases as $release) {
                     $tagName = ltrim($release['tag_name'], 'v');
                     $isPrerelease = $release['prerelease'] ?? false;
-                    
+
                     if (self::INCLUDE_PRERELEASES) {
                         return [
                             'version' => $tagName,
                             'is_prerelease' => $isPrerelease,
                         ];
                     }
-                    
-                    if (!$isPrerelease) {
+
+                    if (! $isPrerelease) {
                         return [
                             'version' => $tagName,
                             'is_prerelease' => false,
                         ];
                     }
                 }
-                
-                if (!empty($releases)) {
+
+                if (! empty($releases)) {
                     $tagName = ltrim($releases[0]['tag_name'], 'v');
+
                     return [
                         'version' => $tagName,
                         'is_prerelease' => $releases[0]['prerelease'] ?? false,
                     ];
                 }
-                
+
                 return null;
-                
             } catch (\Exception $e) {
-                Log::warning('GitHub version check failed: ' . $e->getMessage());
+                Log::warning('GitHub version check failed: '.$e->getMessage());
+
                 return null;
             }
         });
     }
-    
+
     /**
      * Compare two prerelease versions
      */
     protected function comparePrereleaseVersions(string $version1, string $version2): int
     {
         $pattern = '/-(beta|alpha|rc|dev)\.?(\d+)?/i';
-        
+
         preg_match($pattern, $version1, $matches1);
         preg_match($pattern, $version2, $matches2);
-        
+
         $type1 = $matches1[1] ?? '';
         $type2 = $matches2[1] ?? '';
-        $num1 = isset($matches1[2]) ? (int)$matches1[2] : 0;
-        $num2 = isset($matches2[2]) ? (int)$matches2[2] : 0;
-        
+        $num1 = isset($matches1[2]) ? (int) $matches1[2] : 0;
+        $num2 = isset($matches2[2]) ? (int) $matches2[2] : 0;
+
         $typeOrder = ['dev' => 1, 'alpha' => 2, 'beta' => 3, 'rc' => 4];
-        
+
         $order1 = $typeOrder[strtolower($type1)] ?? 0;
         $order2 = $typeOrder[strtolower($type2)] ?? 0;
-        
+
         if ($order1 !== $order2) {
             return $order2 - $order1;
         }
-        
+
         return $num2 - $num1;
     }
 }
