@@ -1,8 +1,8 @@
 <?php
 
+use App\Notifications\HealthNotifiable;
 use Spatie\Health\Models\HealthCheckResultHistoryItem;
 use Spatie\Health\Notifications\CheckFailedNotification;
-use Spatie\Health\Notifications\Notifiable;
 use Spatie\Health\ResultStores\EloquentHealthResultStore;
 
 return [
@@ -49,10 +49,11 @@ return [
         ],
 
         /*
-         * Here you can specify the notifiable to which the notifications should be sent. The default
-         * notifiable will use the variables specified in this config file.
+         * Here you can specify the notifiable to which the notifications should be sent.
+         * VExim uses the system administrator accounts by default, with
+         * HEALTH_TO_ADDRESS available as an optional override.
          */
-        'notifiable' => Notifiable::class,
+        'notifiable' => HealthNotifiable::class,
 
         /*
          * When checks start failing, you could potentially end up getting
@@ -71,6 +72,7 @@ return [
         'only_on_failure' => false,
 
         'mail' => [
+            // Optional override. Leave empty to notify users with the system_admin role.
             'to' => env('HEALTH_TO_ADDRESS', ''),
 
             'from' => [
