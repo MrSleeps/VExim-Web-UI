@@ -141,6 +141,40 @@ return [
     ],
 
     /*
+     * VExim defaults for the built-in health checks. Queue and Redis checks
+     * automatically enable when those services are actually configured, but
+     * can be explicitly enabled or disabled using the environment overrides.
+     */
+    'vexim' => [
+        'expected_environment' => env('HEALTH_EXPECTED_ENVIRONMENT', 'production'),
+
+        'disk' => [
+            'warning' => (int) env('HEALTH_DISK_WARNING_PERCENT', 80),
+            'failure' => (int) env('HEALTH_DISK_FAILURE_PERCENT', 90),
+        ],
+
+        'database_connections' => [
+            'warning' => (int) env('HEALTH_DB_CONNECTION_WARNING', 40),
+            'failure' => (int) env('HEALTH_DB_CONNECTION_FAILURE', 50),
+        ],
+
+        'schedule' => [
+            'max_age_minutes' => (int) env('HEALTH_SCHEDULE_MAX_AGE_MINUTES', 2),
+        ],
+
+        'queue' => [
+            'enabled' => env('HEALTH_QUEUE_ENABLED'),
+            'max_age_minutes' => (int) env('HEALTH_QUEUE_MAX_AGE_MINUTES', 5),
+        ],
+
+        'redis' => [
+            'enabled' => env('HEALTH_REDIS_ENABLED'),
+            'memory_warning_mb' => (float) env('HEALTH_REDIS_MEMORY_WARNING_MB', 256),
+            'memory_failure_mb' => (float) env('HEALTH_REDIS_MEMORY_FAILURE_MB', 500),
+        ],
+    ],
+
+    /*
      * You can set a theme for the local results page
      *
      * - light: light mode
