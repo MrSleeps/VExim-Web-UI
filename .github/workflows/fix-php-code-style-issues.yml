@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '**.php'
+      - '.github/workflows/fix-php-code-style-issues.yml'
 
 permissions:
   contents: write
@@ -20,12 +21,41 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fix PHP code style issues
-        uses: aglipanci/laravel-pint-action@2.6
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          onlyDiff: main
+          php-version: '8.4'
+          coverage: none
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist --no-scripts
+
+      - name: Find changed PHP files
+        id: changed-php
+        shell: bash
+        run: |
+          git fetch origin main:refs/remotes/origin/main --no-tags
+
+          mapfile -d '' files < <(
+            git diff --name-only --diff-filter=ACMRT -z origin/main...HEAD -- '*.php'
+          )
+
+          if (( ${#files[@]} == 0 )); then
+            echo "has_files=false" >> "$GITHUB_OUTPUT"
+            echo "No changed PHP files to format."
+            exit 0
+          fi
+
+          printf '%s\0' "${files[@]}" > /tmp/pint-files
+          printf 'Changed PHP files:\n%s\n' "${files[@]}"
+          echo "has_files=true" >> "$GITHUB_OUTPUT"
+
+      - name: Fix PHP code style issues
+        if: steps.changed-php.outputs.has_files == 'true'
+        run: xargs -0 -r ./vendor/bin/pint < /tmp/pint-files
 
       - name: Commit changes
+        if: steps.changed-php.outputs.has_files == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: Fix styling
