@@ -1,0 +1,40 @@
+name: Regenerate clean base Composer lock
+
+on:
+  push:
+    branches:
+      - fix/composer-update-workflow
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate-lock:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: fix/composer-update-workflow
+          fetch-depth: 0
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - name: Regenerate only the Core Settings lock entry
+        run: |
+          git checkout origin/main -- composer.lock
+          composer update mrsleeps/vexim-web-core-settings --with-dependencies --minimal-changes --no-interaction --no-progress --prefer-dist --no-scripts
+
+      - name: Commit regenerated lock and remove temporary workflow
+        run: |
+          rm .github/workflows/regenerate-base-lock-clean.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add composer.lock .github/workflows/regenerate-base-lock-clean.yml
+          git commit -m "Regenerate Core Settings base lock without dependency drift"
+          git push origin HEAD:fix/composer-update-workflow
