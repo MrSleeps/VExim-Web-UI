@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\Channels\FinMailChannel;
 use App\Checks\VersionCheck;
+use App\Services\HealthNotificationRecipients;
 use FinityLabs\FinMail\Helpers\TokenValue;
 use FinityLabs\FinMail\Mail\TemplateMail;
 use Illuminate\Bus\Queueable;
@@ -26,6 +27,10 @@ class CustomCheckFailedNotification extends Notification
 
     public function via(): array
     {
+        if (HealthNotificationRecipients::mail() === []) {
+            return [];
+        }
+
         if ($this->getVersionCheckResult()) {
             return [FinMailChannel::class];
         }
@@ -41,6 +46,12 @@ class CustomCheckFailedNotification extends Notification
             return null;
         }
 
+        $recipients = HealthNotificationRecipients::mail();
+
+        if ($recipients === []) {
+            return null;
+        }
+
         $meta = $result->meta ?? [];
         $priority = $meta['update_priority'] ?? 'medium';
 
@@ -49,7 +60,7 @@ class CustomCheckFailedNotification extends Notification
         }
 
         return TemplateMail::make('out-of-date-app')
-            ->to(config('health.notifications.mail.to'))
+            ->to($recipients)
             ->models([
                 'current_version' => new TokenValue($meta['current_version'] ?? 'Unknown'),
                 'latest_version' => new TokenValue($meta['latest_version'] ?? 'Unknown'),

@@ -1,8 +1,10 @@
 <?php
 
+use App\Channels\FinMailChannel;
+use App\Notifications\CustomCheckFailedNotification;
+use App\Notifications\HealthNotifiable;
 use Spatie\Health\Models\HealthCheckResultHistoryItem;
 use Spatie\Health\Notifications\CheckFailedNotification;
-use Spatie\Health\Notifications\Notifiable;
 use Spatie\Health\ResultStores\EloquentHealthResultStore;
 
 return [
@@ -14,8 +16,8 @@ return [
     'result_stores' => [
         EloquentHealthResultStore::class => [
             'connection' => env('HEALTH_DB_CONNECTION', env('DB_CONNECTION')),
-            //'model' => HealthCheckResultHistoryItem::class,
-            'model' => \App\Models\HealthCheckResultHistoryItem::class,
+            // 'model' => HealthCheckResultHistoryItem::class,
+            'model' => App\Models\HealthCheckResultHistoryItem::class,
             'keep_history_for_days' => 5,
         ],
 
@@ -45,14 +47,15 @@ return [
 
         'notifications' => [
             // CheckFailedNotification::class => ['mail'],
-            \App\Notifications\CustomCheckFailedNotification::class => ['mail', \App\Channels\FinMailChannel::class],
+            CustomCheckFailedNotification::class => ['mail', FinMailChannel::class],
         ],
 
         /*
-         * Here you can specify the notifiable to which the notifications should be sent. The default
-         * notifiable will use the variables specified in this config file.
+         * Here you can specify the notifiable to which the notifications should be sent.
+         * VExim uses the system administrator accounts by default, with
+         * HEALTH_TO_ADDRESS available as an optional override.
          */
-        'notifiable' => Notifiable::class,
+        'notifiable' => HealthNotifiable::class,
 
         /*
          * When checks start failing, you could potentially end up getting
@@ -71,6 +74,7 @@ return [
         'only_on_failure' => false,
 
         'mail' => [
+            // Optional override. Leave empty to notify users with the system_admin role.
             'to' => env('HEALTH_TO_ADDRESS', ''),
 
             'from' => [
@@ -161,11 +165,11 @@ return [
      */
     'secret_token' => env('HEALTH_SECRET_TOKEN'),
 
-/**
- * By default, conditionally skipped health checks are treated as failures.
- * You can override this behavior by uncommenting the configuration below.
- *
- * @link https://spatie.be/docs/laravel-health/v1/basic-usage/conditionally-running-or-modifying-checks
- */
-    'treat_skipped_as_failure' => false
+    /**
+     * By default, conditionally skipped health checks are treated as failures.
+     * You can override this behavior by uncommenting the configuration below.
+     *
+     * @link https://spatie.be/docs/laravel-health/v1/basic-usage/conditionally-running-or-modifying-checks
+     */
+    'treat_skipped_as_failure' => false,
 ];
