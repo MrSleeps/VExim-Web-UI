@@ -17,6 +17,7 @@ use Filament\Forms\Components\RichEditor;
 use Laravel\Sanctum\PersonalAccessToken;
 use Illuminate\Support\Facades\Log; 
 use Laravel\Sanctum\Sanctum;
+use Laravel\Passkeys\Passkeys;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {   
+        Passkeys::useUserModel(User::class);
         Sanctum::usePersonalAccessTokenModel(\App\Models\VwPersonalAccessToken::class);
         
         RichEditor::configureUsing(function (RichEditor $editor): void {
