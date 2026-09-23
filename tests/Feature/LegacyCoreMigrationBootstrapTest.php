@@ -10,8 +10,8 @@ beforeEach(function () {
         'vw_roles',
         'vw_permissions',
         'vw_activity_log',
-        'cache_locks',
-        'cache',
+        'vw_ccache_locks',
+        'vw_cache',
     ] as $table) {
         Schema::dropIfExists($table);
     }
@@ -25,8 +25,8 @@ afterEach(function () {
         'vw_roles',
         'vw_permissions',
         'vw_activity_log',
-        'cache_locks',
-        'cache',
+        'vw_ccache_locks',
+        'vw_cache',
     ] as $table) {
         Schema::dropIfExists($table);
     }
@@ -39,7 +39,7 @@ it('bootstraps the tables required by the legacy eximuser migration', function (
     (require $coreMigrations.'/2026_05_18_133743_create_permission_tables.php')->up();
     (require $coreMigrations.'/2026_05_18_194201_create_activity_log_table.php')->up();
 
-    expect(Schema::hasTable('cache'))->toBeTrue()
+    expect(Schema::hasTable('vw_cache'))->toBeTrue()
         ->and(Schema::hasTable('vw_model_has_roles'))->toBeTrue()
         ->and(Schema::hasTable('vw_activity_log'))->toBeTrue();
 
