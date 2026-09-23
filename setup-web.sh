@@ -179,14 +179,69 @@ bootstrap_legacy_core_migration_prerequisites() {
     done
 }
 
+
+# Remove timestamped FinMail migration copies left behind by older setup runs.
+# The application owns the canonical May 2026 FinMail migrations.
+cleanup_duplicate_finmail_migrations() {
+    echo -e "${GREEN}Removing duplicate FinMail migration copies${NC}"
+
+    local canonical_migrations=(
+        "database/migrations/2026_05_21_143400_create_email_themes_table.php"
+        "database/migrations/2026_05_21_143401_create_email_templates_table.php"
+        "database/migrations/2026_05_21_143402_create_email_template_versions_table.php"
+        "database/migrations/2026_05_21_143403_create_sent_emails_table.php"
+        "database/migrations/2026_05_21_143404_add_reply_to_on_email_templates_table.php"
+        "database/settings/2026_05_21_143405_create_attachment_settings.php"
+        "database/settings/2026_05_21_143406_create_branding_settings.php"
+        "database/settings/2026_05_21_143407_create_logging_settings.php"
+        "database/settings/2026_05_21_143408_create_general_settings.php"
+        "database/settings/2026_05_21_143409_create_auth_email_settings.php"
+    )
+
+    local suffixes=(
+        "database/migrations/*_create_email_themes_table.php"
+        "database/migrations/*_create_email_templates_table.php"
+        "database/migrations/*_create_email_template_versions_table.php"
+        "database/migrations/*_create_sent_emails_table.php"
+        "database/migrations/*_add_reply_to_on_email_templates_table.php"
+        "database/settings/*_create_attachment_settings.php"
+        "database/settings/*_create_branding_settings.php"
+        "database/settings/*_create_logging_settings.php"
+        "database/settings/*_create_general_settings.php"
+        "database/settings/*_create_auth_email_settings.php"
+    )
+
+    local file
+    local keep
+    local canonical
+
+    for pattern in "${suffixes[@]}"; do
+        for file in $pattern; do
+            [[ -e "${file}" ]] || continue
+
+            keep=false
+            for canonical in "${canonical_migrations[@]}"; do
+                if [[ "${file}" == "${canonical}" ]]; then
+                    keep=true
+                    break
+                fi
+            done
+
+            if [[ "${keep}" == false ]]; then
+                echo -e "${YELLOW}Removing duplicate FinMail migration: ${file}${NC}"
+                rm -f -- "${file}"
+            fi
+        done
+    done
+}
+
 # Function for main setup
 main_setup() {
     echo -e "${GREEN}Running main setup...${NC}"
     echo -e "${GREEN}Generating app key${NC}"
     php artisan key:generate
     echo -e "${GREEN}Creating web database tables${NC}"
-    echo -e "${GREEN}Publishing FinMail database migrations${NC}"
-    php artisan vendor:publish --tag="fin-mail-migrations"
+    cleanup_duplicate_finmail_migrations
     php artisan vw:repair-setup-migrations
     bootstrap_legacy_core_migration_prerequisites
     php artisan migrate --force
