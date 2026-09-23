@@ -187,6 +187,7 @@ main_setup() {
     echo -e "${GREEN}Creating web database tables${NC}"
     echo -e "${GREEN}Publishing FinMail database migrations${NC}"
     php artisan vendor:publish --tag="fin-mail-migrations"
+    php artisan vw:repair-setup-migrations
     bootstrap_legacy_core_migration_prerequisites
     php artisan migrate --force
     echo -e "${GREEN}Seeding new tables${NC}"
