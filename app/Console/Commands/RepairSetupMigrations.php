@@ -19,11 +19,11 @@ class RepairSetupMigrations extends Command
         }
 
         $definitions = [
-            'create_email_themes_table' => [
+            '2026_05_21_143400_create_email_themes_table' => [
                 'table' => config('fin-mail.table_names.themes', 'email_themes'),
                 'columns' => ['id', 'name', 'colors', 'is_default', 'created_at', 'updated_at'],
             ],
-            'create_email_templates_table' => [
+            '2026_05_21_143401_create_email_templates_table' => [
                 'table' => config('fin-mail.table_names.templates', 'email_templates'),
                 'columns' => [
                     'id', 'key', 'name', 'category', 'tags', 'subject', 'preheader', 'body',
@@ -31,14 +31,14 @@ class RepairSetupMigrations extends Command
                     'created_at', 'updated_at', 'deleted_at',
                 ],
             ],
-            'create_email_template_versions_table' => [
+            '2026_05_21_143402_create_email_template_versions_table' => [
                 'table' => config('fin-mail.table_names.versions', 'email_template_versions'),
                 'columns' => [
                     'id', 'email_template_id', 'version', 'subject', 'preheader', 'body',
                     'created_by', 'created_at', 'updated_at',
                 ],
             ],
-            'create_sent_emails_table' => [
+            '2026_05_21_143403_create_sent_emails_table' => [
                 'table' => config('fin-mail.table_names.sent', 'sent_emails'),
                 'columns' => [
                     'id', 'email_template_id', 'sender', 'to', 'cc', 'bcc', 'subject',
@@ -46,7 +46,7 @@ class RepairSetupMigrations extends Command
                     'sent_by', 'sendable_type', 'sendable_id', 'created_at', 'updated_at',
                 ],
             ],
-            'add_reply_to_on_email_templates_table' => [
+            '2026_05_21_143404_add_reply_to_on_email_templates_table' => [
                 'table' => config('fin-mail.table_names.templates', 'email_templates'),
                 'columns' => ['reply_to'],
             ],
@@ -55,39 +55,33 @@ class RepairSetupMigrations extends Command
         $batch = ((int) DB::table('migrations')->max('batch')) + 1;
         $reconciled = 0;
 
-        foreach ($definitions as $suffix => $definition) {
-            $files = glob(database_path("migrations/*_{$suffix}.php")) ?: [];
+        foreach ($definitions as $migration => $definition) {
+            if (DB::table('migrations')->where('migration', $migration)->exists()) {
+                continue;
+            }
 
-            foreach ($files as $file) {
-                $migration = pathinfo($file, PATHINFO_FILENAME);
+            if (! Schema::hasTable($definition['table'])) {
+                continue;
+            }
 
-                if (DB::table('migrations')->where('migration', $migration)->exists()) {
-                    continue;
-                }
-
-                if (! Schema::hasTable($definition['table'])) {
-                    continue;
-                }
-
-                if (! Schema::hasColumns($definition['table'], $definition['columns'])) {
-                    $this->components->error(
-                        "Cannot reconcile {$migration}: {$definition['table']} exists but does not match the expected FinMail schema."
-                    );
-
-                    return self::FAILURE;
-                }
-
-                DB::table('migrations')->insert([
-                    'migration' => $migration,
-                    'batch' => $batch,
-                ]);
-
-                $this->components->info(
-                    "Reconciled {$migration}; {$definition['table']} already exists with the expected schema."
+            if (! Schema::hasColumns($definition['table'], $definition['columns'])) {
+                $this->components->error(
+                    "Cannot reconcile {$migration}: {$definition['table']} exists but does not match the expected FinMail schema."
                 );
 
-                $reconciled++;
+                return self::FAILURE;
             }
+
+            DB::table('migrations')->insert([
+                'migration' => $migration,
+                'batch' => $batch,
+            ]);
+
+            $this->components->info(
+                "Reconciled {$migration}; {$definition['table']} already exists with the expected schema."
+            );
+
+            $reconciled++;
         }
 
         if ($reconciled === 0) {
