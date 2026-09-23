@@ -157,6 +157,28 @@ add_default_domain() {
     fi
 }
 
+# Bootstrap migrations required by legacy core package migrations.
+bootstrap_legacy_core_migration_prerequisites() {
+    local core_data_migrations="vendor/mrsleeps/vexim-web-core-data/database/migrations"
+    local prerequisite_migrations=(
+        "0001_01_01_000001_create_cache_table.php"
+        "2026_05_18_133743_create_permission_tables.php"
+        "2026_05_18_194201_create_activity_log_table.php"
+    )
+
+    echo -e "${GREEN}Bootstrapping legacy core migration prerequisites${NC}"
+
+    for migration in "${prerequisite_migrations[@]}"; do
+        local path="${core_data_migrations}/${migration}"
+
+        if [[ ! -f "${path}" ]]; then
+            error_exit "Required core-data migration not found: ${path}"
+        fi
+
+        php artisan migrate --path="${path}" --force
+    done
+}
+
 # Function for main setup
 main_setup() {
     echo -e "${GREEN}Running main setup...${NC}"
@@ -165,6 +187,7 @@ main_setup() {
     echo -e "${GREEN}Creating web database tables${NC}"
     echo -e "${GREEN}Publishing FinMail database migrations${NC}"
     php artisan vendor:publish --tag="fin-mail-migrations"
+    bootstrap_legacy_core_migration_prerequisites
     php artisan migrate --force
     echo -e "${GREEN}Seeding new tables${NC}"
     php artisan db:seed --class=RolesAndPermissionsSeeder
