@@ -37,6 +37,7 @@ it('is safe to run when the VExim activity log table already exists', function (
 
     $migration->up();
 
-    expect(fn () => $migration->up())->not->toThrow(Throwable::class)
-        ->and(Schema::hasTable('vw_activity_log'))->toBeTrue();
+    $migration->up();
+
+    expect(Schema::hasTable('vw_activity_log'))->toBeTrue();
 });
