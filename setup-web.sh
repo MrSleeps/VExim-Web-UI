@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eEo pipefail
+
 # Color codes for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -161,8 +163,9 @@ main_setup() {
     echo -e "${GREEN}Generating app key${NC}"
     php artisan key:generate
     echo -e "${GREEN}Creating web database tables${NC}"
-    php artisan vendor:publish --provider="Spatie\Activitylog\ActivitylogServiceProvider" --tag="migrations"
-    php artisan migrate
+    echo -e "${GREEN}Publishing FinMail database migrations${NC}"
+    php artisan vendor:publish --tag="fin-mail-migrations"
+    php artisan migrate --force
     echo -e "${GREEN}Seeding new tables${NC}"
     php artisan db:seed --class=RolesAndPermissionsSeeder
     php artisan db:seed --class=SettingsSeeder
