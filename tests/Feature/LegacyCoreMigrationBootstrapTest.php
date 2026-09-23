@@ -4,47 +4,35 @@ use Illuminate\Support\Facades\Schema;
 use Laravel\Passkeys\Passkeys;
 use VEximweb\Core\Data\Models\User;
 
-beforeEach(function () {
-    foreach ([
-        'passkeys',
-        'passkeys',
-        'vw_role_has_permissions',
-        'vw_model_has_roles',
-        'vw_model_has_permissions',
-        'vw_roles',
-        'vw_permissions',
-        'vw_activity_log',
-        'vw_ccache_locks',
-        'vw_cache_locks',
-        'vw_cache',
-        'vw_sessions',
-        'vw_password_reset_tokens',
-        'users_web',
-        'vw_sessions',
-        'vw_password_reset_tokens',
-        'users_web',
-    ] as $table) {
+$tables = [
+    'passkeys',
+    'vw_role_has_permissions',
+    'vw_model_has_roles',
+    'vw_model_has_permissions',
+    'vw_roles',
+    'vw_permissions',
+    'vw_activity_log',
+    'vw_ccache_locks',
+    'vw_cache_locks',
+    'vw_cache',
+    'vw_sessions',
+    'vw_password_reset_tokens',
+    'users_web',
+];
+
+beforeEach(function () use ($tables) {
+    foreach ($tables as $table) {
         Schema::dropIfExists($table);
     }
 });
 
-afterEach(function () {
-    foreach ([
-        'vw_role_has_permissions',
-        'vw_model_has_roles',
-        'vw_model_has_permissions',
-        'vw_roles',
-        'vw_permissions',
-        'vw_activity_log',
-        'vw_ccache_locks',
-        'vw_cache_locks',
-        'vw_cache',
-    ] as $table) {
+afterEach(function () use ($tables) {
+    foreach ($tables as $table) {
         Schema::dropIfExists($table);
     }
 });
 
-it('bootstraps the tables required by the legacy eximuser migration', function () {
+it('bootstraps the tables required by legacy core migrations', function () {
     $coreMigrations = base_path('vendor/mrsleeps/vexim-web-core-data/database/migrations');
 
     (require $coreMigrations.'/0001_01_01_000000_create_users_web_table.php')->up();
