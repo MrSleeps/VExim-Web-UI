@@ -4,24 +4,30 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-it('reconciles an already-created FinMail table whose migration was not recorded', function () {
-    $migration = '2099_01_01_000000_create_email_themes_table';
-    $path = database_path("migrations/{$migration}.php");
+function ensureMigrationsTableExists(): void
+{
+    if (Schema::hasTable('migrations')) {
+        return;
+    }
 
-    file_put_contents($path, "<?php\n");
+    Schema::create('migrations', function (Blueprint $table): void {
+        $table->increments('id');
+        $table->string('migration');
+        $table->integer('batch');
+    });
+}
+
+it('reconciles an already-created canonical FinMail table whose migration was not recorded', function () {
+    $migration = '2026_05_21_143400_create_email_themes_table';
+
+    ensureMigrationsTableExists();
+
+    $existingMigration = DB::table('migrations')->where('migration', $migration)->first();
+
+    DB::table('migrations')->where('migration', $migration)->delete();
+    Schema::dropIfExists('vw_email_themes');
 
     try {
-        if (! Schema::hasTable('migrations')) {
-            Schema::create('migrations', function (Blueprint $table): void {
-                $table->increments('id');
-                $table->string('migration');
-                $table->integer('batch');
-            });
-        }
-
-        DB::table('migrations')->where('migration', $migration)->delete();
-        Schema::dropIfExists('vw_email_themes');
-
         Schema::create('vw_email_themes', function (Blueprint $table): void {
             $table->id();
             $table->string('name', 255);
@@ -38,30 +44,27 @@ it('reconciles an already-created FinMail table whose migration was not recorded
             DB::table('migrations')->where('migration', $migration)->exists()
         )->toBeTrue();
     } finally {
-        @unlink($path);
         DB::table('migrations')->where('migration', $migration)->delete();
+
+        if ($existingMigration !== null) {
+            DB::table('migrations')->insert((array) $existingMigration);
+        }
+
         Schema::dropIfExists('vw_email_themes');
     }
 });
 
-it('refuses to reconcile a FinMail table with an incompatible schema', function () {
-    $migration = '2099_01_01_000001_create_email_themes_table';
-    $path = database_path("migrations/{$migration}.php");
+it('refuses to reconcile a canonical FinMail table with an incompatible schema', function () {
+    $migration = '2026_05_21_143400_create_email_themes_table';
 
-    file_put_contents($path, "<?php\n");
+    ensureMigrationsTableExists();
+
+    $existingMigration = DB::table('migrations')->where('migration', $migration)->first();
+
+    DB::table('migrations')->where('migration', $migration)->delete();
+    Schema::dropIfExists('vw_email_themes');
 
     try {
-        if (! Schema::hasTable('migrations')) {
-            Schema::create('migrations', function (Blueprint $table): void {
-                $table->increments('id');
-                $table->string('migration');
-                $table->integer('batch');
-            });
-        }
-
-        DB::table('migrations')->where('migration', $migration)->delete();
-        Schema::dropIfExists('vw_email_themes');
-
         Schema::create('vw_email_themes', function (Blueprint $table): void {
             $table->id();
             $table->string('name', 255);
@@ -75,8 +78,12 @@ it('refuses to reconcile a FinMail table with an incompatible schema', function 
             DB::table('migrations')->where('migration', $migration)->exists()
         )->toBeFalse();
     } finally {
-        @unlink($path);
         DB::table('migrations')->where('migration', $migration)->delete();
+
+        if ($existingMigration !== null) {
+            DB::table('migrations')->insert((array) $existingMigration);
+        }
+
         Schema::dropIfExists('vw_email_themes');
     }
 });
