@@ -25,7 +25,7 @@ echo "deb-src [signed-by=/etc/apt/keyrings/rspamd.gpg] http://rspamd.com/apt-sta
 sudo apt update
 sudo apt install rspamd
 ```
-Now you need to add the config files located in docs/rspamd
+Copy the example files from `docs/rspamd/etc/rspamd/` into `/etc/rspamd/`, keeping the same directory structure. Review the existing files before overwriting local settings.
 
 In local.d you have the following:
 
@@ -34,11 +34,16 @@ In local.d you have the following:
 **groups.conf** - This tells RSpamd what to score virus mails (leave it high so it auto-rejects)
 **redis.conf** - the ip address of your redis server
 **worker-controller.inc** - settings for rspamd
+**hfilter.conf** - enables HELO, hostname and URL checks
+**greylist.conf** - skips greylisting for authenticated users
+**options.inc** - gives message scans a 12-second timeout
 
 In the lua.local.d folder:
 **vexim_metadata_exporter.lua** - passes data for the rspamd stats in the ui
 **vexim_users_settings.lua**  - gets the users tag/reject scores
 **vexim_whitelist_blocklist.lua** - checks the users lists
+
+The whitelist script checks both the SMTP sender and a DMARC-verified From address. This requires the corresponding VExim Rspamd Core plugin update. The script examples are loaded from `lua.local.d`; don't keep older copies with different filenames alongside them, or the rules may run twice.
 
 Finally, modules.local.d:
 **vexim.conf** - settings that are used by the lua scripts. 
@@ -59,4 +64,14 @@ Take a note of that token (the full token will look something like 1|alongstring
 
 and paste your token into the api_key section (don't forget to enclose it in ""), you will also need to add api_url, this is just the host of your VExim web ui ie http://vexim.your.domain/ (again enclose it in "").
 
-Restart RSpamd and it should all work, not working? Have a look at /var/log/rspamd/rspamd.log or your syslog, it should tell you what is going on.
+Check the configuration before restarting:
+
+```bash
+sudo rspamadm configtest
+sudo systemctl restart rspamd
+sudo systemctl status rspamd --no-pager
+```
+
+If whitelist checks are not matching, check `/var/log/rspamd/rspamd.log` (or syslog if configured) for `VEXIM_FILTER`, `VEXIM_WHITELIST` and `VEXIM_API_ERROR`.
+
+Keep the API token out of Git and rotate it if it has been shared.
