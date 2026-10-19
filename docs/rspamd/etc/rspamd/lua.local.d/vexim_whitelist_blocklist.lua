@@ -130,7 +130,7 @@ local parent_id = rspamd_config:register_symbol({
                 if result.whitelist == true then
                     task:insert_result("VEXIM_WHITELIST", 1.0, sender)
                     task:set_pre_result("no action", "Vexim whitelisted sender", "vexim")
-                    rspamd_logger.infox(task, "VEXIM_FILTER: ✓ WHITELIST hit for %s", sender)
+                    rspamd_logger.infox(task, "VEXIM_FILTER: WHITELIST hit for %s", sender)
                     return
                 end
 
@@ -140,7 +140,7 @@ local parent_id = rspamd_config:register_symbol({
                     if result.action == "reject" then
                         task:set_pre_result("reject", "IP/domain blocked by global policy")
                     end
-                    rspamd_logger.infox(task, "VEXIM_FILTER: ✗ GLOBAL BLOCK for %s", sender)
+                    rspamd_logger.infox(task, "VEXIM_FILTER: GLOBAL BLOCK for %s", sender)
                     return
                 end
 
@@ -152,11 +152,11 @@ local parent_id = rspamd_config:register_symbol({
                     if color == "red" then
                         task:insert_result("VEXIM_BLOCK_RED", 1.0, sender)
                         task:set_pre_result("reject", string.format("Blocked sender (%s)", matched_rule))
-                        rspamd_logger.infox(task, "VEXIM_FILTER: ✗ RED BLOCK for %s (rule: %s)", sender, matched_rule)
+                        rspamd_logger.infox(task, "VEXIM_FILTER: RED BLOCK for %s (rule: %s)", sender, matched_rule)
 
                     elseif color == "yellow" then
                         task:insert_result("VEXIM_BLOCK_YELLOW", 1.0, sender)
-                        rspamd_logger.infox(task, "VEXIM_FILTER: ⚠ YELLOW BLOCK for %s, score increased", sender)
+                        rspamd_logger.infox(task, "VEXIM_FILTER: YELLOW BLOCK for %s, score increased", sender)
                     else
                         task:insert_result("VEXIM_BLOCK", (tonumber(result.score) or 12.0) / 12.0, sender)
                     end
@@ -166,7 +166,7 @@ local parent_id = rspamd_config:register_symbol({
                 -- Subject blocklist
                 if result.subject_blocked == true then
                     task:insert_result("VEXIM_SUBJECT_BLOCK", (tonumber(result.subject_score) or 8.0) / 8.0, subject)
-                    rspamd_logger.infox(task, "VEXIM_FILTER: ⚠ SUBJECT BLOCK: %s", subject)
+                    rspamd_logger.infox(task, "VEXIM_FILTER: SUBJECT BLOCK: %s", subject)
                     return
                 end
 
