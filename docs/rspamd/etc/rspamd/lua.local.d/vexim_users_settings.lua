@@ -149,7 +149,7 @@ local function vexim_settings_callback(task)
     end
     
     -- Also skip for local networks (optional - configurable)
-    local skip_local = module_cfg.skip_local or true
+    local skip_local = module_cfg.skip_local ~= false
     if skip_local and task:has_flag("local") then
         rspamd_logger.debugx(task, "%s: Skipping for local connection", N)
         return
@@ -172,7 +172,8 @@ end
 -- Register the symbol
 rspamd_config:register_symbol({
     name = "VEXIM_USER_SETTINGS",
-    type = "normal",
+    type = "callback",
+    score = 0.0,
     callback = vexim_settings_callback,
     priority = 10,
     flags = {"empty"}
